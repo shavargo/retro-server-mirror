@@ -1,9 +1,9 @@
 # Server address list for Call of Duty: United Offensive (coduo)
-# Last fetch (UTC): 2026-11-02T03:13:16Z
+# Last fetch (UTC): 2026-11-02T03:14:32Z
 # Category: idTech / Quake | Protocol: quake3 | Default Port: 28960
 # Active servers found: 181
 # Sources:
-#   - cache: 170 found
+#   - cache: 181 found
 #   - quake3://coduomaster.activision.com:20610: 161 found
 # Format: ip:port
 #

@@ -1,9 +1,9 @@
 # Server address list for Star Trek: Bridge Commander (bcommander)
-# Last fetch (UTC): 2026-11-02T03:13:16Z
+# Last fetch (UTC): 2026-11-02T03:14:32Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 22101
 # Active servers found: 3
 # Sources:
-#   - cache: 2 found
+#   - cache: 3 found
 #   - gamespy1://master.openspy.net:28900: 2 found
 #   - gamespy1://master.333networks.com:28900: 0 found
 # Format: ip:port

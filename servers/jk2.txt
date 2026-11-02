@@ -1,9 +1,9 @@
 # Server address list for Star Wars Jedi Knight II: Jedi Outcast Multiplayer (jk2)
-# Last fetch (UTC): 2026-11-02T03:13:16Z
+# Last fetch (UTC): 2026-11-02T03:14:32Z
 # Category: idTech / Quake | Protocol: quake3 | Default Port: 28070
 # Active servers found: 108
 # Sources:
-#   - cache: 92 found
+#   - cache: 108 found
 #   - quake3://master.jkhub.org:28060: 75 found
 #   - quake3://master.jk2mv.org:28060: 60 found
 #   - quake3://master.jk2.daggolin.de:28060: 61 found

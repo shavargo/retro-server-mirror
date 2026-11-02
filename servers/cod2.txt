@@ -1,11 +1,11 @@
 # Server address list for Call of Duty 2 (cod2)
-# Last fetch (UTC): 2026-11-02T03:13:16Z
+# Last fetch (UTC): 2026-11-02T03:14:32Z
 # Category: idTech / Quake | Protocol: quake3 | Default Port: 28960
-# Active servers found: 538
+# Active servers found: 539
 # Sources:
-#   - cache: 511 found
+#   - cache: 538 found
 #   - quake3://cod2master.activision.com:20710: 491 found
-#   - quake3://master.cod2x.me:20710: 412 found
+#   - quake3://master.cod2x.me:20710: 413 found
 # Format: ip:port
 #
 2.28.113.115:28960
@@ -453,6 +453,7 @@
 185.248.101.155:28721
 185.248.101.155:28723
 185.248.101.155:28732
+186.52.222.156:28960
 186.105.222.161:28960
 186.123.100.158:28968
 187.0.1.201:28960

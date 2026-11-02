@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-02T03:13:16Z",
-  "total_servers": 9520,
+  "updated_at": "2026-11-02T03:14:32Z",
+  "total_servers": 9566,
   "total_games": 4841,
   "active_games_count": 89,
   "games": {
@@ -4327,7 +4327,7 @@
       "name": "Call of Duty 2",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 538,
+      "server_count": 539,
       "file": "servers/cod2.txt"
     },
     "codbigredps2": {
@@ -4348,7 +4348,7 @@
       "name": "Call of Duty 4: Modern Warfare",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 1526,
+      "server_count": 1535,
       "file": "servers/cod4.txt"
     },
     "callofduty4d2d": {
@@ -22065,21 +22065,21 @@
       "name": "Quake III Arena",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 1437,
+      "server_count": 1452,
       "file": "servers/quake3.txt"
     },
     "q3a": {
       "name": "Quake III Arena",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 1111,
+      "server_count": 1126,
       "file": "servers/q3a.txt"
     },
     "quake3arena": {
       "name": "Quake III Arena",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 1111,
+      "server_count": 1127,
       "file": "servers/quake3arena.txt"
     },
     "quake1": {
@@ -26734,7 +26734,7 @@
       "name": "Star Wars Jedi Knight: Jedi Academy",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 316,
+      "server_count": 320,
       "file": "servers/jka.txt"
     },
     "rebellion": {
@@ -29793,7 +29793,7 @@
       "name": "THUG Pro",
       "category": "GameSpy PC Classic",
       "protocol": "gamespy1",
-      "server_count": 9,
+      "server_count": 10,
       "file": "servers/thugpro.txt"
     },
     "Tidalis": {
@@ -31564,7 +31564,7 @@
       "name": "Urban Terror",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 298,
+      "server_count": 299,
       "file": "servers/urbanterror.txt"
     },
     "URUagesbeyondMYST": {
@@ -32747,21 +32747,21 @@
       "name": "Wolfenstein: Enemy Territory",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 599,
+      "server_count": 606,
       "file": "servers/et.txt"
     },
     "wolfet": {
       "name": "Wolfenstein: Enemy Territory",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 500,
+      "server_count": 507,
       "file": "servers/wolfet.txt"
     },
     "enemyterritory": {
       "name": "Wolfenstein: Enemy Territory",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 500,
+      "server_count": 507,
       "file": "servers/enemyterritory.txt"
     },
     "rtcwett": {
@@ -33587,7 +33587,7 @@
       "name": "Xonotic",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 455,
+      "server_count": 464,
       "file": "servers/xonotic.txt"
     },
     "XpandRally": {

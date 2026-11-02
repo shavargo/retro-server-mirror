@@ -1,11 +1,12 @@
 # Server address list for Star Wars Jedi Knight: Jedi Academy (jka)
-# Last fetch (UTC): 2026-11-02T03:13:16Z
+# Last fetch (UTC): 2026-11-02T03:14:32Z
 # Category: idTech / Quake | Protocol: quake3 | Default Port: 29070
-# Active servers found: 316
+# Active servers found: 320
 # Sources:
-#   - cache: 291 found
+#   - cache: 316 found
 #   - quake3://master.jkhub.org:29060: 259 found
-#   - quake3://master.jk2mv.org:29060: 222 found
+# Master connection issues (cached entries preserved):
+#   - quake3://master.jk2mv.org:29060: no response from master
 # Format: ip:port
 #
 5.161.190.173:29070
@@ -160,15 +161,18 @@
 91.212.121.93:29075
 93.115.19.44:29070
 94.23.252.71:1425
+94.23.252.71:3245
 94.23.252.71:3612
 94.23.252.71:5274
 94.23.252.71:7583
+94.23.252.71:8781
 94.23.252.71:11435
 94.23.252.71:15451
 94.23.252.71:17489
 94.23.252.71:22355
 94.23.252.71:23460
 94.23.252.71:24105
+94.23.252.71:25004
 94.23.252.71:25191
 94.23.252.71:29171
 94.23.252.71:31827
@@ -207,6 +211,7 @@
 108.61.241.128:29070
 108.248.225.177:2199
 108.248.225.177:3123
+108.248.225.177:9201
 108.248.225.177:28618
 108.248.225.177:28884
 108.248.225.177:29214

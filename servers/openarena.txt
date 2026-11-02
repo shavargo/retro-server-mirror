@@ -1,9 +1,9 @@
 # Server address list for OpenArena (openarena)
-# Last fetch (UTC): 2026-11-02T03:13:16Z
+# Last fetch (UTC): 2026-11-02T03:14:32Z
 # Category: idTech / Quake | Protocol: quake3 | Default Port: 27950
 # Active servers found: 112
 # Sources:
-#   - cache: 104 found
+#   - cache: 112 found
 #   - quake3://dpmaster.deathmask.net:27950: 100 found
 # Master connection issues (cached entries preserved):
 #   - quake3://master.ioquake3.org:27950: no response from master

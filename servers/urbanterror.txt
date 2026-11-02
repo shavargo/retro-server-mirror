@@ -1,9 +1,9 @@
 # Server address list for Urban Terror (urbanterror)
-# Last fetch (UTC): 2026-11-02T03:13:16Z
+# Last fetch (UTC): 2026-11-02T03:14:32Z
 # Category: idTech / Quake | Protocol: quake3 | Default Port: 27900
-# Active servers found: 298
+# Active servers found: 299
 # Sources:
-#   - cache: 285 found
+#   - cache: 298 found
 #   - quake3://master.urbanterror.info:27900: 271 found
 # Format: ip:port
 #
@@ -265,6 +265,7 @@
 187.110.178.167:56029
 187.110.178.167:56929
 187.110.178.167:58215
+187.110.178.167:58597
 190.3.94.115:27960
 192.210.193.150:27960
 192.210.193.150:27961

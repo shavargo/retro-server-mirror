@@ -1,12 +1,12 @@
 # Server address list for Quake II (quake2)
-# Last fetch (UTC): 2026-11-02T03:13:16Z
+# Last fetch (UTC): 2026-11-02T03:14:32Z
 # Category: idTech / Quake | Protocol: quake2 | Default Port: 27910
 # Active servers found: 440
 # Sources:
 #   - cache: 440 found
-#   - quake2://master.maraakate.org:27900: 433 found
 # Master connection issues (cached entries preserved):
 #   - quake2://master.quakeservers.net:27900: no response from master
+#   - quake2://master.maraakate.org:27900: no response from master
 # Format: ip:port
 #
 5.2.16.16:27910
