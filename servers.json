@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-02T02:36:03Z",
-  "total_servers": 8457,
+  "updated_at": "2026-11-02T02:43:40Z",
+  "total_servers": 8707,
   "total_games": 4841,
   "games": {
     "1001MinigolfChalle": {
@@ -4305,7 +4305,7 @@
       "name": "Call of Duty",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 61,
+      "server_count": 62,
       "file": "servers/cod.txt"
     },
     "callofdutyps2d": {
@@ -4326,7 +4326,7 @@
       "name": "Call of Duty 2",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 507,
+      "server_count": 511,
       "file": "servers/cod2.txt"
     },
     "codbigredps2": {
@@ -4347,7 +4347,7 @@
       "name": "Call of Duty 4: Modern Warfare",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 1312,
+      "server_count": 1363,
       "file": "servers/cod4.txt"
     },
     "callofduty4d2d": {
@@ -4473,7 +4473,7 @@
       "name": "Call of Duty: United Offensive",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 167,
+      "server_count": 170,
       "file": "servers/coduo.txt"
     },
     "codwawbeta": {
@@ -20209,7 +20209,7 @@
       "name": "OpenArena",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 100,
+      "server_count": 104,
       "file": "servers/openarena.txt"
     },
     "openseasonds": {
@@ -22064,7 +22064,7 @@
       "name": "Quake III Arena",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 1190,
+      "server_count": 1278,
       "file": "servers/quake3.txt"
     },
     "q3a": {
@@ -22897,7 +22897,7 @@
       "name": "Return to Castle Wolfenstein",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 86,
+      "server_count": 88,
       "file": "servers/rtcw.txt"
     },
     "returntocastlewolfenstein": {
@@ -25774,7 +25774,7 @@
       "name": "Soldier of Fortune II: Double Helix",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 47,
+      "server_count": 48,
       "file": "servers/sof2.txt"
     },
     "sofpayback": {
@@ -26719,7 +26719,7 @@
       "name": "Star Wars Jedi Knight II: Jedi Outcast",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 84,
+      "server_count": 92,
       "file": "servers/jk2.txt"
     },
     "starwarsjediknightjediacademy": {
@@ -26733,7 +26733,7 @@
       "name": "Star Wars Jedi Knight: Jedi Academy",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 279,
+      "server_count": 291,
       "file": "servers/jka.txt"
     },
     "rebellion": {
@@ -29792,7 +29792,7 @@
       "name": "THUG Pro",
       "category": "GameSpy PC Classic",
       "protocol": "gamespy1",
-      "server_count": 8,
+      "server_count": 9,
       "file": "servers/thugpro.txt"
     },
     "Tidalis": {
@@ -31353,7 +31353,7 @@
       "name": "Unreal Tournament 2004",
       "category": "Unreal Engine",
       "protocol": "unreal2",
-      "server_count": 665,
+      "server_count": 666,
       "file": "servers/ut2004.txt"
     },
     "unrealtournament2004": {
@@ -31563,7 +31563,7 @@
       "name": "Urban Terror",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 280,
+      "server_count": 285,
       "file": "servers/urbanterror.txt"
     },
     "URUagesbeyondMYST": {
@@ -32368,7 +32368,7 @@
       "name": "Warsow",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 31,
+      "server_count": 35,
       "file": "servers/warsow.txt"
     },
     "wz2100demo": {
@@ -32746,7 +32746,7 @@
       "name": "Enemy Territory",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 515,
+      "server_count": 541,
       "file": "servers/et.txt"
     },
     "wolfet": {
@@ -33586,7 +33586,7 @@
       "name": "Xonotic",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 335,
+      "server_count": 375,
       "file": "servers/xonotic.txt"
     },
     "XpandRally": {

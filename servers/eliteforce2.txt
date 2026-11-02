@@ -1,5 +1,5 @@
 # Server address list for Star Trek: Elite Force II (eliteforce2)
-# Last fetch (UTC): 2026-11-02T02:36:03Z
+# Last fetch (UTC): 2026-11-02T02:43:40Z
 # Category: idTech / Quake | Protocol: quake3 | Default Port: 29230
 # Active servers found: 0
 # Format: ip:port

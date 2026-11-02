@@ -1,5 +1,5 @@
 # Server address list for Deca Sports 3 (NA) (Wii) (decsprt3nawii)
-# Last fetch (UTC): 2026-11-02T02:36:02Z
+# Last fetch (UTC): 2026-11-02T02:43:39Z
 # Category: Nintendo DWC | Protocol: gamespy1 | Default Port: 0
 # Active servers found: 0
 # Format: ip:port

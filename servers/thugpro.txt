@@ -1,16 +1,17 @@
 # Server address list for THUG Pro (thugpro)
-# Last fetch (UTC): 2026-11-02T02:36:03Z
+# Last fetch (UTC): 2026-11-02T02:43:40Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 0
-# Active servers found: 8
+# Active servers found: 9
 # Sources:
 #   - cache: 8 found
-#   - gamespy1://master.openspy.net:28900: 5 found
+#   - gamespy1://master.openspy.net:28900: 6 found
 # Format: ip:port
 #
 47.6.1.27:5153
 47.6.1.27:5155
 104.33.208.116:5153
 104.33.208.116:59533
+108.49.231.203:5153
 108.204.225.149:5153
 146.168.144.92:5153
 162.84.149.179:5153

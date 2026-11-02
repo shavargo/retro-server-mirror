@@ -1,5 +1,5 @@
 # Server address list for Kodawari Saihai Simulation Ochanoma Pro Yakyu DS 2010 Verison (DS) (kodawar2010ds)
-# Last fetch (UTC): 2026-11-02T02:36:02Z
+# Last fetch (UTC): 2026-11-02T02:43:40Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
 # Active servers found: 0
 # Format: ip:port

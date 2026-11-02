@@ -1,5 +1,5 @@
 # Server address list for Medal of Honor: Allied Assault Breakthrough (Demo, Mac) (mohaabdm)
-# Last fetch (UTC): 2026-11-02T02:36:02Z
+# Last fetch (UTC): 2026-11-02T02:43:40Z
 # Category: idTech / Quake | Protocol: gamespy1 | Default Port: 6500
 # Active servers found: 0
 # Format: ip:port
