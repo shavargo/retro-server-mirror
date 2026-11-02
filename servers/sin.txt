@@ -1,12 +1,13 @@
 # Server address list for Sin (sin)
-# Last fetch (UTC): 2026-11-02T03:14:32Z
+# Last fetch (UTC): 2026-11-02T12:02:26Z
 # Category: idTech / Quake | Protocol: gamespy1 | Default Port: 6500
 # Active servers found: 3
 # Sources:
 #   - cache: 3 found
-#   - gamespy1://master.maraakate.org:28900: 3 found
 #   - gamespy1://master.openspy.net:28900: 0 found
 #   - gamespy1://master.333networks.com:28900: 0 found
+# Master connection issues (cached entries preserved):
+#   - gamespy1://master.maraakate.org:28900: timed out
 # Format: ip:port
 #
 52.240.58.168:22450

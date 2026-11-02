@@ -1,7 +1,7 @@
 # Server address list for Tony Hawk: Pro Skater 4 (PC) (thps4pc)
-# Last fetch (UTC): 2026-11-02T03:14:32Z
+# Last fetch (UTC): 2026-11-02T12:02:26Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
-# Active servers found: 2
+# Active servers found: 3
 # Sources:
 #   - cache: 2 found
 #   - gamespy1://master.openspy.net:28900: 2 found
@@ -10,3 +10,4 @@
 #
 72.83.151.214:5250
 82.16.40.185:5250
+210.5.38.93:5250
