@@ -48,7 +48,7 @@ Pulls from master servers across **[molycode/lookout-games](https://github.com/m
 
 ## Update Schedule
 
-- **Automated Workflow**: GitHub Actions runs twice daily (00:17 and 12:17 UTC).
+- **Automated Workflow**: GitHub Actions runs daily at 12:00 UTC sharp (`0 12 * * *`).
 - **Manual Trigger**: Actions → **Update server lists** → **Run workflow**.
 
 ## Local Development

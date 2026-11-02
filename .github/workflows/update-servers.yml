@@ -2,8 +2,8 @@ name: Update server lists
 
 on:
   schedule:
-    # Run once daily at 12:17 UTC
-    - cron: "17 12 * * *"
+    # Run once daily at 12:00 UTC
+    - cron: "0 12 * * *"
   workflow_dispatch:
 
 permissions:
