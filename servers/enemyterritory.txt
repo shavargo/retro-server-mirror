@@ -1,0 +1,6 @@
+# Server address list for Wolfenstein: Enemy Territory (enemyterritory)
+# Last fetch (UTC): 2026-11-02T02:36:03Z
+# Category: idTech / Quake | Protocol: quake3 | Default Port: 27960
+# Active servers found: 0
+# Format: ip:port
+#

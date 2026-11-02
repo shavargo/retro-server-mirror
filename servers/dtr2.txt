@@ -1,8 +1,10 @@
-# Merged server address list for Dirt Track Racing II (dtr2)
-# Last fetch (UTC): 2026-11-02T02:29:00Z
+# Server address list for Dirt Track Racing II (dtr2)
+# Last fetch (UTC): 2026-11-02T02:36:02Z
+# Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
+# Active servers found: 6
 # Sources:
 #   - cache: 6 found
-#   - gamespy1://master.openspy.net:28900: 6 found
+#   - gamespy1://master.openspy.net:28900: 0 found
 # Format: ip:port
 #
 74.91.122.77:32140

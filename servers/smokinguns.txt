@@ -1,5 +1,7 @@
-# Merged server address list for Smokin' Guns (smokinguns)
-# Last fetch (UTC): 2026-11-02T02:28:56Z
+# Server address list for Smokin' Guns (smokinguns)
+# Last fetch (UTC): 2026-11-02T02:36:03Z
+# Category: GameSpy PC Classic | Protocol: quake3 | Default Port: 27950
+# Active servers found: 8
 # Sources:
 #   - cache: 8 found
 #   - quake3://master.smokin-guns.org:27950: 8 found

@@ -1,8 +1,10 @@
-# Merged server address list for Gore (gore)
-# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Server address list for Gore Special Edition (gore)
+# Last fetch (UTC): 2026-11-02T02:36:02Z
+# Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
+# Active servers found: 2
 # Sources:
 #   - cache: 2 found
-#   - gamespy1://master.openspy.net:28900: 2 found
+#   - gamespy1://master.openspy.net:28900: 0 found
 # Format: ip:port
 #
 79.103.158.31:27784

@@ -1,8 +1,10 @@
-# Merged server address list for Painkiller (painkiller)
-# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Server address list for Painkiller (painkiller)
+# Last fetch (UTC): 2026-11-02T02:36:02Z
+# Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
+# Active servers found: 14
 # Sources:
 #   - cache: 14 found
-#   - gamespy1://master.openspy.net:28900: 14 found
+#   - gamespy1://master.openspy.net:28900: 0 found
 # Format: ip:port
 #
 50.46.141.80:3457

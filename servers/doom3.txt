@@ -1,0 +1,6 @@
+# Server address list for Doom 3: Resurrection of Evil (doom3)
+# Last fetch (UTC): 2026-11-02T02:36:02Z
+# Category: idTech / Quake | Protocol: doom3 | Default Port: 27666
+# Active servers found: 0
+# Format: ip:port
+#

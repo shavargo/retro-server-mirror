@@ -1,9 +1,12 @@
-# Merged server address list for Medal of Honor: Allied Assault (mohaa)
-# Last fetch (UTC): 2026-11-02T02:28:56Z
+# Server address list for Medal of Honor: Allied Assault (mohaa)
+# Last fetch (UTC): 2026-11-02T02:36:02Z
+# Category: idTech / Quake | Protocol: gamespy1 | Default Port: 12300
+# Active servers found: 192
 # Sources:
 #   - cache: 192 found
-#   - gamespy1://master.333networks.com:28900: 185 found
-#   - gamespy1://master.openspy.net:28900: 153 found
+#   - gamespy1://master.openspy.net:28900: 0 found
+# Master connection issues (cached entries preserved):
+#   - gamespy1://master.333networks.com:28900: empty list response
 # Format: ip:port
 #
 2.26.10.133:12203

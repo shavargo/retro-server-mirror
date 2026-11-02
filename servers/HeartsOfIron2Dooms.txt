@@ -1,0 +1,6 @@
+# Server address list for Hearts of Iron 2: Doomsday (HeartsOfIron2Dooms)
+# Last fetch (UTC): 2026-11-02T02:36:02Z
+# Category: idTech / Quake | Protocol: gamespy1 | Default Port: 0
+# Active servers found: 0
+# Format: ip:port
+#

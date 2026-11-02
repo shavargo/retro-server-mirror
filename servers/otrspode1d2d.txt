@@ -1,0 +1,6 @@
+# Server address list for On the Rain-Slick Precipice of Darkness, E1 (otrspode1d2d)
+# Last fetch (UTC): 2026-11-02T02:36:02Z
+# Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 0
+# Active servers found: 0
+# Format: ip:port
+#

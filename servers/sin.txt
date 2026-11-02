@@ -1,8 +1,11 @@
-# Merged server address list for SiN (sin)
-# Last fetch (UTC): 2026-11-02T02:28:57Z
+# Server address list for SiN (sin)
+# Last fetch (UTC): 2026-11-02T02:36:03Z
+# Category: idTech / Quake | Protocol: gamespy1 | Default Port: 6500
+# Active servers found: 3
 # Sources:
 #   - cache: 3 found
-#   - gamespy1://master.maraakate.org:28900: 3 found
+# Master connection issues (cached entries preserved):
+#   - gamespy1://master.maraakate.org:28900: empty list response
 # Format: ip:port
 #
 52.240.58.168:22450

@@ -1,8 +1,10 @@
-# Merged server address list for No One Lives Forever (nolf)
-# Last fetch (UTC): 2026-11-02T02:29:00Z
+# Server address list for The Operative: No One Lives Forever (nolf)
+# Last fetch (UTC): 2026-11-02T02:36:03Z
+# Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
+# Active servers found: 5
 # Sources:
 #   - cache: 5 found
-#   - gamespy1://master.openspy.net:28900: 5 found
+#   - gamespy1://master.openspy.net:28900: 0 found
 # Format: ip:port
 #
 65.109.237.130:27888

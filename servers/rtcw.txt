@@ -1,8 +1,10 @@
-# Merged server address list for Return to Castle Wolfenstein (rtcw)
-# Last fetch (UTC): 2026-11-02T02:28:56Z
+# Server address list for Return to Castle Wolfenstein (rtcw)
+# Last fetch (UTC): 2026-11-02T02:36:02Z
+# Category: idTech / Quake | Protocol: quake3 | Default Port: 27960
+# Active servers found: 86
 # Sources:
 #   - cache: 84 found
-#   - quake3://wolfmaster.idsoftware.com:27950: 84 found
+#   - quake3://wolfmaster.idsoftware.com:27950: 82 found
 # Format: ip:port
 #
 5.252.102.102:27960
@@ -40,11 +42,13 @@
 75.168.82.230:27970
 75.188.17.130:24275
 75.188.17.130:32101
+75.188.17.130:43087
 75.188.17.130:58753
 79.207.124.7:27962
 82.67.47.162:8646
 82.67.47.162:26505
 82.196.100.250:27970
+84.84.15.135:1032
 84.84.15.135:27962
 85.190.105.229:27961
 87.162.36.171:27962

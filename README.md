@@ -2,15 +2,15 @@
 
 Regularly updated multi-game server address lists for launchers, server browsers, and community tools.
 
-Pulls from master servers across **[molycode/lookout-games](https://github.com/molycode/lookout-games/)**, **[OpenSpy](https://openspy.net/server-list)**, and game-specific community masters (e.g. Hambloch for Kingpin).
+Pulls from master servers across **[molycode/lookout-games](https://github.com/molycode/lookout-games/)**, **[OpenSpy](https://openspy.net/server-list)**, the comprehensive **4,841-game SupportedGames catalog**, and game-specific community masters (e.g. Hambloch for Kingpin).
 
 ## Raw URLs
 
-- **All Servers Combined:**  
+- **All Servers Combined (8,400+ servers):**  
   `https://raw.githubusercontent.com/shavargo/game-servers-mirror/master/servers.txt`  
   (also aliased as `server.txt`)
 
-- **JSON Index / Metadata:**  
+- **JSON Index / Metadata (All 4,841 Games):**  
   `https://raw.githubusercontent.com/shavargo/game-servers-mirror/master/servers.json`
 
 - **Per-Game Server Lists:**  
@@ -28,12 +28,13 @@ Pulls from master servers across **[molycode/lookout-games](https://github.com/m
   - Call of Duty 4: `servers/cod4.txt`
   - Painkiller: `servers/painkiller.txt`
   - Rune: `servers/rune.txt`
+  - ... and 4,830 more games!
 
 ## Supported Protocols & Sources
 
 | Protocol | Masters / Sources | Description |
 |----------|-------------------|-------------|
-| **GameSpy 1** | `master.openspy.net:28900`, `master.333networks.com:28900`, `master.kingpin.info`, `master.errorist.eu`, `master.frag-net.com` | TCP master listing with challenge/validation (`gspylite` / `mgNUaC`). Covers UT99, Deus Ex, Rune, SiN, MOHAA, Kingpin, and all OpenSpy active titles. |
+| **GameSpy 1 & 2** | `master.openspy.net:28900`, `master.333networks.com:28900`, `master.kingpin.info`, `master.errorist.eu`, `master.frag-net.com` | TCP master listing with challenge/validation (`gspylite` / `mgNUaC`). Covers UT99, Deus Ex, Rune, SiN, MOHAA, Kingpin, and all OpenSpy active titles. |
 | **Quake 3** | `dpmaster.deathmask.net`, `master.quake3arena.com`, `master.ioquake3.org`, `etmaster.idsoftware.com`, `codmaster.activision.com`, etc. | UDP `getservers` protocol across id Tech 3 titles (Q3, CoD, CoD2, CoD4, ET, RTCW, JK2, JKA, Tremulous, Urban Terror, Warsow, Xonotic). Supports standard binary & hex entries (Elite Force). |
 | **Quake 2** | `master.alienarena.org`, `master.quakeservers.net`, `master.maraakate.org`, `master.hambloch.com`, `master.shavargo.com` | UDP `query` on port 27900. Quake II, Alien Arena, Kingpin-native masters. |
 | **QuakeWorld** | `master.quakeworld.nu:27000`, `master.quakeservers.net:27000`, `qwmaster.fodquake.net:27000` | UDP `c\n` query protocol. |
@@ -53,7 +54,7 @@ Pulls from master servers across **[molycode/lookout-games](https://github.com/m
 ## Local Development
 
 ```bash
-# Fetch and update all server lists
+# Fetch and update all server lists across all 4,841 games
 python3 scripts/fetch_servers.py
 ```
 

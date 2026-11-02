@@ -1,5 +1,7 @@
-# Merged server address list for Nexuiz (nexuiz)
-# Last fetch (UTC): 2026-11-02T02:29:00Z
+# Server address list for Nexuiz (nexuiz)
+# Last fetch (UTC): 2026-11-02T02:36:02Z
+# Category: idTech / Quake | Protocol: quake3 | Default Port: 27777
+# Active servers found: 19
 # Sources:
 #   - cache: 19 found
 #   - quake3://dpmaster.deathmask.net:27950: 19 found

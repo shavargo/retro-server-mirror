@@ -1,0 +1,6 @@
+# Server address list for Star Wars Jedi Knight II: Jedi Outcast (starwarsjediknightiijedioutcast)
+# Last fetch (UTC): 2026-11-02T02:36:03Z
+# Category: idTech / Quake | Protocol: gamespy1 | Default Port: 28060
+# Active servers found: 0
+# Format: ip:port
+#

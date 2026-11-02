@@ -1,8 +1,10 @@
-# Merged server address list for Star Wars Republic Commando (swrcommando)
-# Last fetch (UTC): 2026-11-02T02:28:58Z
+# Server address list for Star Wars Republic Commando (swrcommando)
+# Last fetch (UTC): 2026-11-02T02:36:03Z
+# Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
+# Active servers found: 11
 # Sources:
 #   - cache: 11 found
-#   - gamespy1://master.openspy.net:28900: 11 found
+#   - gamespy1://master.openspy.net:28900: 0 found
 # Format: ip:port
 #
 71.105.161.71:11138

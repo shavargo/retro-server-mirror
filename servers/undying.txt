@@ -1,8 +1,10 @@
-# Merged server address list for Clive Barker's Undying (undying)
-# Last fetch (UTC): 2026-11-02T02:29:00Z
+# Server address list for Clive Barker's Undying (undying)
+# Last fetch (UTC): 2026-11-02T02:36:02Z
+# Category: Unreal Engine | Protocol: unreal | Default Port: 7778
+# Active servers found: 2
 # Sources:
 #   - cache: 2 found
-#   - gamespy1://master.openspy.net:28900: 2 found
+#   - unreal://master.openspy.net:28900: 0 found
 # Format: ip:port
 #
 31.40.212.53:12231

@@ -1,0 +1,1729 @@
+{
+  "alienarena": {
+    "id": "alienarena",
+    "name": "Alien Arena",
+    "protocol": "quake2",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_teamgame",
+        "value": "1",
+        "label": "Team"
+      },
+      {
+        "key": "deathmatch",
+        "value": "1",
+        "label": "Deathmatch"
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "maxPlayers": "maxclients",
+      "//password": "needpass is a bitmask: 1 a player password, 2 a spectator password.",
+      "password": "needpass",
+      "//mods": "mods lists a server's changed gameplay settings, such as %ctf%insta_rockets; game is always arena.",
+      "mods": [
+        "mods",
+        "game"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.alienarena.org",
+        "port": 27900
+      },
+      {
+        "host": "master2.alienarena.org",
+        "port": 27900
+      }
+    ],
+    "protocolOptions": {}
+  },
+  "bf1942": {
+    "id": "bf1942",
+    "name": "Battlefield 1942",
+    "protocol": "gamespy1",
+    "queryPortOffset": 8433,
+    "modes": [
+      {
+        "key": "gametype",
+        "value": "conquest",
+        "label": "Conquest"
+      },
+      {
+        "key": "gametype",
+        "value": "ctf",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "gametype",
+        "value": "tdm",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "coop",
+        "label": "Co-op"
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "//mods": "bf1942, or the mod's own name, such as xpack1 or dc_final.",
+      "mods": [
+        "gameId"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.openspy.net",
+        "port": 28900
+      }
+    ],
+    "protocolOptions": {
+      "masterGame": "bfield1942"
+    }
+  },
+  "cod": {
+    "id": "cod",
+    "name": "Call of Duty",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "dm",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "tdm",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "sd",
+        "label": "Search and Destroy"
+      },
+      {
+        "key": "g_gametype",
+        "value": "re",
+        "label": "Retrieval"
+      },
+      {
+        "key": "g_gametype",
+        "value": "bel",
+        "label": "Behind Enemy Lines"
+      },
+      {
+        "key": "g_gametype",
+        "value": "hq",
+        "label": "Headquarters"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "pswrd",
+      "mods": [
+        "fs_game"
+      ]
+    },
+    "masters": [
+      {
+        "host": "codmaster.activision.com",
+        "port": 20510
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "6 full empty"
+    }
+  },
+  "cod2": {
+    "id": "cod2",
+    "name": "Call of Duty 2",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "dm",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "tdm",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "sd",
+        "label": "Search and Destroy"
+      },
+      {
+        "key": "g_gametype",
+        "value": "ctf",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "g_gametype",
+        "value": "hq",
+        "label": "Headquarters"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "pswrd",
+      "mods": [
+        "fs_game"
+      ]
+    },
+    "masters": [
+      {
+        "host": "cod2master.activision.com",
+        "port": 20710
+      },
+      {
+        "host": "master.cod2x.me",
+        "port": 20710
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "118,120 full empty"
+    }
+  },
+  "cod4": {
+    "id": "cod4",
+    "name": "Call of Duty 4: Modern Warfare",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "dm",
+        "label": "Free for All"
+      },
+      {
+        "key": "g_gametype",
+        "value": "war",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "sd",
+        "label": "Search and Destroy"
+      },
+      {
+        "key": "g_gametype",
+        "value": "sab",
+        "label": "Sabotage"
+      },
+      {
+        "key": "g_gametype",
+        "value": "dom",
+        "label": "Domination"
+      },
+      {
+        "key": "g_gametype",
+        "value": "koth",
+        "label": "Headquarters"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "//password": "CoD4X sends it only when a password is set.",
+      "password": "pswrd",
+      "mods": [
+        "fs_game"
+      ]
+    },
+    "masters": [
+      {
+        "host": "cod4master.activision.com",
+        "port": 20810
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "6 full empty"
+    }
+  },
+  "coduo": {
+    "id": "coduo",
+    "name": "Call of Duty: United Offensive",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "dm",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "tdm",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "sd",
+        "label": "Search and Destroy"
+      },
+      {
+        "key": "g_gametype",
+        "value": "re",
+        "label": "Retrieval"
+      },
+      {
+        "key": "g_gametype",
+        "value": "bel",
+        "label": "Behind Enemy Lines"
+      },
+      {
+        "key": "g_gametype",
+        "value": "hq",
+        "label": "Headquarters"
+      },
+      {
+        "key": "g_gametype",
+        "value": "ctf",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "g_gametype",
+        "value": "dom",
+        "label": "Domination"
+      },
+      {
+        "key": "g_gametype",
+        "value": "bas",
+        "label": "Base Assault"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "pswrd",
+      "mods": [
+        "fs_game"
+      ]
+    },
+    "masters": [
+      {
+        "host": "coduomaster.activision.com",
+        "port": 20610
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "22 full empty"
+    }
+  },
+  "deusex": {
+    "id": "deusex",
+    "name": "Deus Ex",
+    "protocol": "gamespy1",
+    "queryPortOffset": 1,
+    "modes": [
+      {
+        "key": "gametype",
+        "value": "MTLDeathMatch",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "MTLTeam",
+        "label": "Team Deathmatch"
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "mods": [
+        "gametype"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.333networks.com",
+        "port": 28900
+      }
+    ],
+    "protocolOptions": {
+      "masterGame": "deusex"
+    }
+  },
+  "eliteforce": {
+    "id": "eliteforce",
+    "name": "Star Trek Voyager: Elite Force",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "0",
+        "label": "Free for All"
+      },
+      {
+        "key": "g_gametype",
+        "value": "1",
+        "label": "Tournament"
+      },
+      {
+        "key": "g_gametype",
+        "value": "2",
+        "label": "Single Player"
+      },
+      {
+        "key": "g_gametype",
+        "value": "3",
+        "label": "Team Holomatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "4",
+        "label": "Capture the Flag"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
+    "masters": [
+      {
+        "host": "efmaster.tjps.eu",
+        "port": 27953
+      },
+      {
+        "host": "master.stef1.daggolin.de",
+        "port": 27953
+      },
+      {
+        "host": "master.stvef.org",
+        "port": 27953
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "24 empty full",
+      "masterEntries": "hex"
+    }
+  },
+  "et": {
+    "id": "et",
+    "name": "Enemy Territory",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "2",
+        "label": "Objective"
+      },
+      {
+        "key": "g_gametype",
+        "value": "3",
+        "label": "Stopwatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "4",
+        "label": "Campaign"
+      },
+      {
+        "key": "g_gametype",
+        "value": "5",
+        "label": "Last Man Standing"
+      },
+      {
+        "key": "g_gametype",
+        "value": "6",
+        "label": "Map Voting"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
+    "masters": [
+      {
+        "host": "etmaster.idsoftware.com",
+        "port": 27950
+      },
+      {
+        "host": "etmaster.etlegacy.com",
+        "port": 27950
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "84 empty full"
+    }
+  },
+  "jk2": {
+    "id": "jk2",
+    "name": "Star Wars Jedi Knight II: Jedi Outcast",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "0",
+        "label": "Free for All"
+      },
+      {
+        "key": "g_gametype",
+        "value": "1",
+        "label": "Holocron FFA"
+      },
+      {
+        "key": "g_gametype",
+        "value": "2",
+        "label": "Jedi Master"
+      },
+      {
+        "key": "g_gametype",
+        "value": "3",
+        "label": "Duel"
+      },
+      {
+        "key": "g_gametype",
+        "value": "4",
+        "label": "Single Player"
+      },
+      {
+        "key": "g_gametype",
+        "value": "5",
+        "label": "Team FFA"
+      },
+      {
+        "key": "g_gametype",
+        "value": "7",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "g_gametype",
+        "value": "8",
+        "label": "Capture the Ysalamiri"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.jkhub.org",
+        "port": 28060
+      },
+      {
+        "host": "master.jk2mv.org",
+        "port": 28060
+      },
+      {
+        "host": "master.jk2.daggolin.de",
+        "port": 28060
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "15,16 empty full"
+    }
+  },
+  "jka": {
+    "id": "jka",
+    "name": "Star Wars Jedi Knight: Jedi Academy",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "0",
+        "label": "Free for All"
+      },
+      {
+        "key": "g_gametype",
+        "value": "1",
+        "label": "Holocron FFA"
+      },
+      {
+        "key": "g_gametype",
+        "value": "2",
+        "label": "Jedi Master"
+      },
+      {
+        "key": "g_gametype",
+        "value": "3",
+        "label": "Duel"
+      },
+      {
+        "key": "g_gametype",
+        "value": "4",
+        "label": "Power Duel"
+      },
+      {
+        "key": "g_gametype",
+        "value": "5",
+        "label": "Cooperative"
+      },
+      {
+        "key": "g_gametype",
+        "value": "6",
+        "label": "Team FFA"
+      },
+      {
+        "key": "g_gametype",
+        "value": "7",
+        "label": "Siege"
+      },
+      {
+        "key": "g_gametype",
+        "value": "8",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "g_gametype",
+        "value": "9",
+        "label": "Capture the Ysalamiri"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.jkhub.org",
+        "port": 29060
+      },
+      {
+        "host": "master.jk2mv.org",
+        "port": 29060
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "26 empty full"
+    }
+  },
+  "kingpin": {
+    "id": "kingpin",
+    "name": "Kingpin: Life of Crime",
+    "protocol": "gamespy1",
+    "queryPortOffset": -10,
+    "modes": [
+      {
+        "key": "coop",
+        "value": "1",
+        "label": "Co-op"
+      },
+      {
+        "key": "teamplay",
+        "value": "1",
+        "label": "Bagman"
+      },
+      {
+        "key": "deathmatch",
+        "value": "1",
+        "label": "Deathmatch"
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "//maxPlayers": "kpded2 leaves its reserved slots out of maxplayers, so a server whose public slots are full counts as full.",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "//mods": "The gametype is the mod's own title (\"Monkey Mod v2.1\").",
+      "mods": [
+        "gametype",
+        "game"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.kingpin.info",
+        "port": 28900
+      },
+      {
+        "host": "master1.kingpin.info",
+        "port": 28900
+      },
+      {
+        "host": "master2.kingpin.info",
+        "port": 28900
+      },
+      {
+        "host": "master3.kingpin.info",
+        "port": 28900
+      },
+      {
+        "host": "master4.kingpin.info",
+        "port": 28900
+      }
+    ],
+    "protocolOptions": {
+      "masterGame": "kingpin"
+    }
+  },
+  "mohaa": {
+    "id": "mohaa",
+    "name": "Medal of Honor: Allied Assault",
+    "protocol": "gamespy1",
+    "queryPortOffset": 97,
+    "modes": [
+      {
+        "key": "gametype",
+        "value": "Free-For-All",
+        "label": "Free for All"
+      },
+      {
+        "key": "gametype",
+        "value": "Team-Match",
+        "label": "Team Match"
+      },
+      {
+        "key": "gametype",
+        "value": "Round-Based-Match",
+        "label": "Round-Based Match"
+      },
+      {
+        "key": "gametype",
+        "value": "Objective-Match",
+        "label": "Objective"
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "mods": [
+        "gametype"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.333networks.com",
+        "port": 28900
+      },
+      {
+        "host": "master.openspy.net",
+        "port": 28900
+      }
+    ],
+    "protocolOptions": {
+      "masterGame": "mohaa"
+    }
+  },
+  "nexuiz": {
+    "id": "nexuiz",
+    "name": "Nexuiz",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "//password": "DarkPlaces has no join password, so no server sends this rule.",
+      "password": "g_needpass",
+      "mods": [
+        "modname"
+      ]
+    },
+    "masters": [
+      {
+        "host": "dpmaster.deathmask.net",
+        "port": 27950
+      },
+      {
+        "host": "dpmaster.tchr.no",
+        "port": 27950
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "Nexuiz 3 empty full"
+    }
+  },
+  "openarena": {
+    "id": "openarena",
+    "name": "OpenArena",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "0",
+        "label": "Free for All"
+      },
+      {
+        "key": "g_gametype",
+        "value": "1",
+        "label": "Tournament"
+      },
+      {
+        "key": "g_gametype",
+        "value": "2",
+        "label": "Single Player"
+      },
+      {
+        "key": "g_gametype",
+        "value": "3",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "4",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "g_gametype",
+        "value": "5",
+        "label": "One Flag CTF"
+      },
+      {
+        "key": "g_gametype",
+        "value": "6",
+        "label": "Overload"
+      },
+      {
+        "key": "g_gametype",
+        "value": "7",
+        "label": "Harvester"
+      },
+      {
+        "key": "g_gametype",
+        "value": "8",
+        "label": "Elimination"
+      },
+      {
+        "key": "g_gametype",
+        "value": "9",
+        "label": "CTF Elimination"
+      },
+      {
+        "key": "g_gametype",
+        "value": "10",
+        "label": "Last Man Standing"
+      },
+      {
+        "key": "g_gametype",
+        "value": "11",
+        "label": "Double Domination"
+      },
+      {
+        "key": "g_gametype",
+        "value": "12",
+        "label": "Domination"
+      },
+      {
+        "key": "g_gametype",
+        "value": "13",
+        "label": "Possession"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.ioquake3.org",
+        "port": 27950
+      },
+      {
+        "host": "dpmaster.deathmask.net",
+        "port": 27950
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "71 empty full"
+    }
+  },
+  "quake2": {
+    "id": "quake2",
+    "name": "Quake II",
+    "protocol": "quake2",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "ctf",
+        "value": "1",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "coop",
+        "value": "1",
+        "label": "Co-op"
+      },
+      {
+        "key": "deathmatch",
+        "value": "1",
+        "label": "Deathmatch"
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "maxPlayers": "maxclients",
+      "//password": "needpass is a bitmask: 1 a player password, 2 a spectator password.",
+      "password": "needpass",
+      "//mods": "Mods often put a version in gamename instead of their title.",
+      "mods": [
+        "game",
+        "gamename"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.quakeservers.net",
+        "port": 27900
+      },
+      {
+        "host": "master.maraakate.org",
+        "port": 27900
+      }
+    ],
+    "protocolOptions": {}
+  },
+  "quake3": {
+    "id": "quake3",
+    "name": "Quake III Arena",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "0",
+        "label": "Free for All"
+      },
+      {
+        "key": "g_gametype",
+        "value": "1",
+        "label": "Tournament"
+      },
+      {
+        "key": "g_gametype",
+        "value": "2",
+        "label": "Single Player"
+      },
+      {
+        "key": "g_gametype",
+        "value": "3",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "4",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "g_gametype",
+        "value": "5",
+        "label": "One Flag CTF"
+      },
+      {
+        "key": "g_gametype",
+        "value": "6",
+        "label": "Overload"
+      },
+      {
+        "key": "g_gametype",
+        "value": "7",
+        "label": "Harvester"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.quake3arena.com",
+        "port": 27950
+      },
+      {
+        "host": "master.ioquake3.org",
+        "port": 27950
+      },
+      {
+        "host": "dpmaster.deathmask.net",
+        "port": 27950
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "68 empty full"
+    }
+  },
+  "quakeworld": {
+    "id": "quakeworld",
+    "name": "QuakeWorld",
+    "protocol": "quakeworld",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "mode",
+        "value": "ffa",
+        "label": "Free for All"
+      },
+      {
+        "key": "mode",
+        "value": "1on1",
+        "label": "1 on 1"
+      },
+      {
+        "key": "mode",
+        "value": "2on2",
+        "label": "2 on 2"
+      },
+      {
+        "key": "mode",
+        "value": "4on4",
+        "label": "4 on 4"
+      },
+      {
+        "key": "mode",
+        "value": "ctf",
+        "label": "Capture the Flag"
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "map",
+      "maxPlayers": "maxclients",
+      "//password": "needpass is a bitmask: 1 a player password, 2 a spectator password.",
+      "password": "needpass",
+      "mods": [
+        "*gamedir"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.quakeservers.net",
+        "port": 27000
+      },
+      {
+        "host": "qwmaster.fodquake.net",
+        "port": 27000
+      },
+      {
+        "host": "master.quakeworld.nu",
+        "port": 27000
+      }
+    ],
+    "protocolOptions": {}
+  },
+  "rtcw": {
+    "id": "rtcw",
+    "name": "Return to Castle Wolfenstein",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "5",
+        "label": "Objective"
+      },
+      {
+        "key": "g_gametype",
+        "value": "6",
+        "label": "Stopwatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "7",
+        "label": "Checkpoint"
+      },
+      {
+        "key": "g_gametype",
+        "value": "8",
+        "label": "Capture & Hold"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
+    "masters": [
+      {
+        "host": "wolfmaster.idsoftware.com",
+        "port": 27950
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "60 empty full",
+      "//infoRules": "iortcw sets g_needpass but never puts it in the status; its engine gives it only in getinfo, as RTCW's own browser reads it.",
+      "infoRules": "g_needpass"
+    }
+  },
+  "rune": {
+    "id": "rune",
+    "name": "Rune",
+    "protocol": "gamespy1",
+    "queryPortOffset": 1,
+    "modes": [
+      {
+        "key": "gametype",
+        "value": "RuneMultiPlayer",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "Teamgame",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "ArenaGameInfo",
+        "label": "Arena"
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "mods": [
+        "gametype"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.333networks.com",
+        "port": 28900
+      },
+      {
+        "host": "master.openspy.net",
+        "port": 28900
+      }
+    ],
+    "protocolOptions": {
+      "masterGame": "rune"
+    }
+  },
+  "sin": {
+    "id": "sin",
+    "name": "SiN",
+    "protocol": "gamespy1",
+    "queryPortOffset": -1,
+    "modes": [],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "//password": "SiN's GameSpy reply never says whether a server wants a password, so none shows as needing one.",
+      "password": "password"
+    },
+    "masters": [
+      {
+        "host": "master.maraakate.org",
+        "port": 28900
+      }
+    ],
+    "protocolOptions": {
+      "masterGame": "sin"
+    }
+  },
+  "smokinguns": {
+    "id": "smokinguns",
+    "name": "Smokin' Guns",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "0",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "1",
+        "label": "Duel"
+      },
+      {
+        "key": "g_gametype",
+        "value": "2",
+        "label": "Single Player"
+      },
+      {
+        "key": "g_gametype",
+        "value": "3",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "4",
+        "label": "Round Teamplay"
+      },
+      {
+        "key": "g_gametype",
+        "value": "5",
+        "label": "Bank Robbery"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.smokin-guns.org",
+        "port": 27950
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "68 empty full"
+    }
+  },
+  "sof2": {
+    "id": "sof2",
+    "name": "Soldier of Fortune II: Double Helix",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "dm",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "tdm",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "ctf",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "g_gametype",
+        "value": "inf",
+        "label": "Infiltration"
+      },
+      {
+        "key": "g_gametype",
+        "value": "elim",
+        "label": "Elimination"
+      },
+      {
+        "key": "g_gametype",
+        "value": "dem",
+        "label": "Demolition"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.1fxmod.org",
+        "port": 20110
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "2004 empty full"
+    }
+  },
+  "tremulous": {
+    "id": "tremulous",
+    "name": "Tremulous",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass"
+    },
+    "masters": [
+      {
+        "host": "master.tremulous.net",
+        "port": 30700
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "71 empty full"
+    }
+  },
+  "unreal": {
+    "id": "unreal",
+    "name": "Unreal",
+    "protocol": "gamespy1",
+    "queryPortOffset": 1,
+    "modes": [
+      {
+        "key": "gametype",
+        "value": "DeathMatch",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "Team Game",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "Coop Game",
+        "label": "Co-op"
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "mods": [
+        "gametype"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.333networks.com",
+        "port": 28900
+      },
+      {
+        "host": "master.openspy.net",
+        "port": 28900
+      }
+    ],
+    "protocolOptions": {
+      "masterGame": "unreal"
+    }
+  },
+  "unvanquished": {
+    "id": "unvanquished",
+    "name": "Unvanquished",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass"
+    },
+    "masters": [
+      {
+        "host": "master.unvanquished.net",
+        "port": 27950
+      },
+      {
+        "host": "master2.unvanquished.net",
+        "port": 27950
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "86 empty full"
+    }
+  },
+  "urbanterror": {
+    "id": "urbanterror",
+    "name": "Urban Terror",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "g_gametype",
+        "value": "0",
+        "label": "Free for All"
+      },
+      {
+        "key": "g_gametype",
+        "value": "1",
+        "label": "Last Man Standing"
+      },
+      {
+        "key": "g_gametype",
+        "value": "2",
+        "label": "Single Player"
+      },
+      {
+        "key": "g_gametype",
+        "value": "3",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "g_gametype",
+        "value": "4",
+        "label": "Team Survivor"
+      },
+      {
+        "key": "g_gametype",
+        "value": "5",
+        "label": "Follow the Leader"
+      },
+      {
+        "key": "g_gametype",
+        "value": "6",
+        "label": "Capture and Hold"
+      },
+      {
+        "key": "g_gametype",
+        "value": "7",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "g_gametype",
+        "value": "8",
+        "label": "Bomb"
+      },
+      {
+        "key": "g_gametype",
+        "value": "9",
+        "label": "Jump"
+      },
+      {
+        "key": "g_gametype",
+        "value": "10",
+        "label": "Freeze Tag"
+      },
+      {
+        "key": "g_gametype",
+        "value": "11",
+        "label": "Gun Game"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass"
+    },
+    "masters": [
+      {
+        "host": "master.urbanterror.info",
+        "port": 27900
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "68 empty full"
+    }
+  },
+  "ut2004": {
+    "id": "ut2004",
+    "name": "Unreal Tournament 2004",
+    "protocol": "unreal2",
+    "queryPortOffset": 1,
+    "modes": [
+      {
+        "key": "gametype",
+        "value": "xDeathMatch",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "xTeamGame",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "xCTFGame",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "gametype",
+        "value": "xVehicleCTFGame",
+        "label": "Vehicle CTF"
+      },
+      {
+        "key": "gametype",
+        "value": "ONSOnslaughtGame",
+        "label": "Onslaught"
+      },
+      {
+        "key": "gametype",
+        "value": "ASGameInfo",
+        "label": "Assault"
+      },
+      {
+        "key": "gametype",
+        "value": "xBombingRun",
+        "label": "Bombing Run"
+      },
+      {
+        "key": "gametype",
+        "value": "xDoubleDom",
+        "label": "Double Domination"
+      },
+      {
+        "key": "gametype",
+        "value": "xLastManStandingGame",
+        "label": "Last Man Standing"
+      },
+      {
+        "key": "gametype",
+        "value": "xMutantGame",
+        "label": "Mutant"
+      },
+      {
+        "key": "gametype",
+        "value": "Invasion",
+        "label": "Invasion"
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "map",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "//mods": "The game type's class, so a mod's own game type, such as Freon or TeamArenaMaster, can be filtered for.",
+      "mods": [
+        "gametype"
+      ]
+    },
+    "masters": [
+      {
+        "host": "ut2004master.333networks.com",
+        "port": 28902
+      },
+      {
+        "host": "utmaster.openspy.net",
+        "port": 28902
+      }
+    ],
+    "protocolOptions": {}
+  },
+  "ut99": {
+    "id": "ut99",
+    "name": "Unreal Tournament",
+    "protocol": "gamespy1",
+    "queryPortOffset": 1,
+    "modes": [
+      {
+        "key": "gametype",
+        "value": "DeathMatchPlus",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "TeamGamePlus",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "CTFGame",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "gametype",
+        "value": "Domination",
+        "label": "Domination"
+      },
+      {
+        "key": "gametype",
+        "value": "Assault",
+        "label": "Assault"
+      },
+      {
+        "key": "gametype",
+        "value": "LastManStanding",
+        "label": "Last Man Standing"
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "//mods": "The game type's class, so a mod's own game type, such as BunnyTrackGame or MonsterHunt, can be filtered for.",
+      "mods": [
+        "gametype"
+      ]
+    },
+    "masters": [
+      {
+        "host": "master.333networks.com",
+        "port": 28900
+      },
+      {
+        "host": "master.openspy.net",
+        "port": 28900
+      }
+    ],
+    "protocolOptions": {
+      "masterGame": "ut"
+    }
+  },
+  "warsow": {
+    "id": "warsow",
+    "name": "Warsow",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [
+      {
+        "key": "gametype",
+        "value": "dm",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "tdm",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "duel",
+        "label": "Duel"
+      },
+      {
+        "key": "gametype",
+        "value": "ffa",
+        "label": "Free for All"
+      },
+      {
+        "key": "gametype",
+        "value": "ca",
+        "label": "Clan Arena"
+      },
+      {
+        "key": "gametype",
+        "value": "ctf",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "gametype",
+        "value": "ctftactics",
+        "label": "CTF: Tactics"
+      },
+      {
+        "key": "gametype",
+        "value": "bomb",
+        "label": "Bomb and Defuse"
+      },
+      {
+        "key": "gametype",
+        "value": "da",
+        "label": "Duel Arena"
+      },
+      {
+        "key": "gametype",
+        "value": "headhunt",
+        "label": "Headhunt"
+      },
+      {
+        "key": "gametype",
+        "value": "race",
+        "label": "Race"
+      },
+      {
+        "key": "gametype",
+        "value": "tutorial",
+        "label": "Tutorial"
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "fs_game"
+      ]
+    },
+    "masters": [
+      {
+        "host": "dpmaster.deathmask.net",
+        "port": 27950
+      },
+      {
+        "host": "dpmaster.tchr.no",
+        "port": 27950
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "Warsow 22 empty full"
+    }
+  },
+  "xonotic": {
+    "id": "xonotic",
+    "name": "Xonotic",
+    "protocol": "quake3",
+    "queryPortOffset": 0,
+    "modes": [],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "//password": "DarkPlaces has no join password, so no server sends this rule.",
+      "password": "g_needpass",
+      "mods": [
+        "modname"
+      ]
+    },
+    "masters": [
+      {
+        "host": "dpmaster.deathmask.net",
+        "port": 27950
+      },
+      {
+        "host": "dpmaster.tchr.no",
+        "port": 27950
+      }
+    ],
+    "protocolOptions": {
+      "masterQuery": "Xonotic 3 empty full"
+    }
+  }
+}
