@@ -1,6 +1,0 @@
-# Server address list for Batman: Arkham Asylum 2  Automatch (PS3) (batmanaa2ps3am)
-# Last fetch (UTC): 2026-11-02T02:43:39Z
-# Category: Console | Protocol: gamespy1 | Default Port: 0
-# Active servers found: 0
-# Format: ip:port
-#

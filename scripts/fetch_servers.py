@@ -34,7 +34,6 @@ SERVERS_DIR = ROOT_DIR / "servers"
 DATA_DIR = ROOT_DIR / "data"
 SUPPORTED_GAMES_JSON = DATA_DIR / "SupportedGames.json"
 LOOKOUT_METADATA_JSON = DATA_DIR / "lookout_metadata.json"
-LOOKOUT_GAMES_JSON = DATA_DIR / "lookout_games.json"
 ALL_SERVERS_TXT = ROOT_DIR / "servers.txt"
 ALL_SERVERS_SYMLINK = ROOT_DIR / "server.txt"
 INDEX_JSON = ROOT_DIR / "servers.json"
@@ -42,6 +41,8 @@ INDEX_JSON = ROOT_DIR / "servers.json"
 OPENSPY_SERVERS_URL = "https://openspy-website.nyc3.digitaloceanspaces.com/servers.json"
 OPENSPY_MASTER_HOST = "master.openspy.net"
 OPENSPY_MASTER_PORT = 28900
+NETWORKS333_MASTER_HOST = "master.333networks.com"
+NETWORKS333_MASTER_PORT = 28900
 GAMESPY_KEY = "mgNUaC"
 
 ADDR_RE = re.compile(r"^(\d{1,3}(?:\.\d{1,3}){3}):(\d{1,5})\b")
@@ -51,6 +52,42 @@ GAMESPY_IP_RE = re.compile(rb"\\ip\\(\d{1,3}(?:\.\d{1,3}){3}):(\d{1,5})")
 OPENSPY_ALIASES: dict[str, str] = {
     "ut": "ut99",
     "bfield1942": "bf1942",
+}
+
+# Aliases mapping variant game IDs to lookout definitions and masters
+LOOKOUT_ALIASES: dict[str, str] = {
+    # Quake 3 engine
+    "q3a": "quake3",
+    "quake3arena": "quake3",
+    "callofduty": "cod",
+    "enemyterritory": "et",
+    "wolfet": "et",
+    "wolf": "rtcw",
+    # Quake 2 engine
+    "q2": "quake2",
+    # QuakeWorld engine
+    "qw": "quakeworld",
+    # Unreal engine
+    "ut": "ut99",
+    "tacticalops": "ut99",
+    # Battlefield
+    "bfield1942": "bf1942",
+    # Medal of Honor
+    "mohaab": "mohaa",
+    "mohaas": "mohaa",
+}
+
+# Games with active retro multiplayer communities to query proactively
+KNOWN_ACTIVE_GAMES: set[str] = {
+    "swat4", "vietcong", "stella", "postal2", "deusex", "heretic2", "blood2",
+    "rune", "kingpin", "fear", "fearxp2", "nolf", "nolf2", "painkiller",
+    "painkillerod", "chaser", "chaserd", "globalops", "undying", "flatout2zp",
+    "contractjack", "bballarenaps3", "bcommander", "bfvietnam", "capricorn",
+    "coj2", "conflictsopc", "dh2004", "dh2005", "dtr2", "gore", "gorese",
+    "jbnightfire", "legendsmm", "mclub3ps2", "nfs6", "projectigi2r", "rethawed",
+    "rmth2003", "serioussamse", "srow2pc", "swrcommando", "terminator3",
+    "thps4pc", "thugpro", "tribesv", "vietcong2", "vietnamso", "nerfarena",
+    "soldieroffortune", "sof", "sof2", "avp2", "halo", "shogo", "daikatana",
 }
 
 
@@ -197,15 +234,18 @@ def fetch_gamespy1_master(
             chal = _read_gamespy_challenge(sock, wait=5.0, nudge_first=(attempt % 2 == 1))
             if b"\\secure\\" not in chal:
                 raise RuntimeError(f"no secure challenge: {chal[:60]!r}")
-            secure = chal.split(b"\\secure\\", 1)[1].split(b"\\", 1)[0].decode("ascii")
-            validate = gamespy_validate(cipher_key, secure, 0)
+            secure = chal.split(b"\\secure\\", 1)[1].split(b"\\", 1)[0].decode("latin-1", errors="replace")
+            # For gspylite master handshake, the client key is always GAMESPY_KEY ("mgNUaC")
+            validate = gamespy_validate(GAMESPY_KEY, secure, 0)
+            if not validate and cipher_key and cipher_key != GAMESPY_KEY:
+                validate = gamespy_validate(cipher_key, secure, 0)
             if not validate:
                 raise RuntimeError("empty validate token")
 
             req = (
                 f"\\gamename\\gspylite\\location\\0\\validate\\{validate}"
                 f"\\final\\\\list\\\\gamename\\{master_game}\\final\\"
-            ).encode("ascii")
+            ).encode("latin-1", errors="replace")
             sock.sendall(req)
 
             body = _recv_tcp(sock, 4.0, 1.0)
@@ -214,7 +254,7 @@ def fetch_gamespy1_master(
 
             addrs: list[str] = []
             for ip_b, port_b in GAMESPY_IP_RE.findall(body):
-                ip = ip_b.decode("ascii")
+                ip = ip_b.decode("latin-1", errors="replace")
                 qport = int(port_b)
                 gport = qport - query_port_offset
                 if 1 <= gport <= 65535:
@@ -561,8 +601,6 @@ def load_all_catalogs() -> tuple[list[dict], dict[str, dict]]:
     lookout_map: dict[str, dict] = {}
     if LOOKOUT_METADATA_JSON.is_file():
         lookout_map = json.loads(LOOKOUT_METADATA_JSON.read_text(encoding="utf-8"))
-    elif LOOKOUT_GAMES_JSON.is_file():
-        lookout_map = json.loads(LOOKOUT_GAMES_JSON.read_text(encoding="utf-8"))
 
     # Map by gamename lowercase
     games_by_name: dict[str, dict] = {}
@@ -583,20 +621,22 @@ def load_all_catalogs() -> tuple[list[dict], dict[str, dict]]:
             "http_sources": [],
         }
 
-        # Check lookout enrichment
+        # Check lookout enrichment with aliases
         lower_gn = gn.lower()
-        lookout_meta = lookout_map.get(lower_gn)
+        lk_target = LOOKOUT_ALIASES.get(lower_gn, lower_gn)
+        lookout_meta = lookout_map.get(lk_target)
         if not lookout_meta:
             for lk_key, lk_val in lookout_map.items():
                 mg = lk_val.get("protocolOptions", {}).get("masterGame", "").lower()
-                if mg == lower_gn or lk_key.lower() == lower_gn:
+                if mg in (lower_gn, lk_target) or lk_key.lower() in (lower_gn, lk_target):
                     lookout_meta = lk_val
                     break
 
         if lookout_meta:
-            g_def["name"] = lookout_meta.get("name", g_def["name"])
+            if not g_def["name"] or g_def["name"] == gn:
+                g_def["name"] = lookout_meta.get("name", g_def["name"])
             g_def["protocol"] = lookout_meta.get("protocol", g_def["protocol"])
-            g_def["protocolOptions"] = lookout_meta.get("protocolOptions", {})
+            g_def["protocolOptions"] = dict(lookout_meta.get("protocolOptions", {}))
             g_def["queryPortOffset"] = lookout_meta.get("queryPortOffset", 0)
             g_def["masters"] = list(lookout_meta.get("masters", []))
             if "q2_masters" in lookout_meta:
@@ -673,9 +713,8 @@ def fetch_game_servers(
         try:
             if proto in ("gamespy1", "unreal", "gamespy2"):
                 master_game = opts.get("masterGame", game_id)
-                cipher = game_def.get("cipher") or GAMESPY_KEY
                 addrs = fetch_gamespy1_master(
-                    host, port or 28900, master_game, q_offset, cipher_key=cipher
+                    host, port or 28900, master_game, q_offset, cipher_key=GAMESPY_KEY
                 )
             elif proto in ("quake2", "quake1"):
                 addrs = fetch_q2_master(host, port or 27900, q_offset)
@@ -770,14 +809,28 @@ def main() -> int:
         g_def = games_by_name.get(gn, {})
         lower_gn = gn.lower()
 
-        # 1. Has explicit masters from lookout or kingpin
+        # 1. Has explicit masters from lookout or kingpin or aliases
         if g_def.get("masters") or g_def.get("q2_masters") or g_def.get("http_sources"):
+            # Ensure GameSpy 1 / Unreal games also query 333networks and OpenSpy
+            if g_def.get("protocol") in ("gamespy1", "unreal"):
+                if not any(m.get("host") == OPENSPY_MASTER_HOST for m in g_def.get("masters", [])):
+                    g_def["masters"].append({"host": OPENSPY_MASTER_HOST, "port": OPENSPY_MASTER_PORT})
+                if not any(m.get("host") == NETWORKS333_MASTER_HOST for m in g_def.get("masters", [])):
+                    g_def["masters"].append({"host": NETWORKS333_MASTER_HOST, "port": NETWORKS333_MASTER_PORT})
             to_query.add(gn)
             continue
 
-        # 2. Reported active on OpenSpy
-        if lower_gn in openspy_active or OPENSPY_ALIASES.get(lower_gn) == lower_gn:
-            g_def["masters"].append({"host": OPENSPY_MASTER_HOST, "port": OPENSPY_MASTER_PORT})
+        # 2. Known active community games or reported active on OpenSpy
+        if (
+            lower_gn in openspy_active
+            or lower_gn in KNOWN_ACTIVE_GAMES
+            or OPENSPY_ALIASES.get(lower_gn) in openspy_active
+            or LOOKOUT_ALIASES.get(lower_gn) in games_by_name
+        ):
+            if not any(m.get("host") == OPENSPY_MASTER_HOST for m in g_def.get("masters", [])):
+                g_def["masters"].append({"host": OPENSPY_MASTER_HOST, "port": OPENSPY_MASTER_PORT})
+            if not any(m.get("host") == NETWORKS333_MASTER_HOST for m in g_def.get("masters", [])):
+                g_def["masters"].append({"host": NETWORKS333_MASTER_HOST, "port": NETWORKS333_MASTER_PORT})
             to_query.add(gn)
             continue
 
@@ -787,7 +840,10 @@ def main() -> int:
         if cache_path.is_file():
             cached = load_cached_file(cache_path)
             if cached:
-                g_def["masters"].append({"host": OPENSPY_MASTER_HOST, "port": OPENSPY_MASTER_PORT})
+                if not any(m.get("host") == OPENSPY_MASTER_HOST for m in g_def.get("masters", [])):
+                    g_def["masters"].append({"host": OPENSPY_MASTER_HOST, "port": OPENSPY_MASTER_PORT})
+                if not any(m.get("host") == NETWORKS333_MASTER_HOST for m in g_def.get("masters", [])):
+                    g_def["masters"].append({"host": NETWORKS333_MASTER_HOST, "port": NETWORKS333_MASTER_PORT})
                 to_query.add(gn)
                 continue
 
@@ -798,6 +854,8 @@ def main() -> int:
             g_def = games_by_name[target]
             if not any(m.get("host") == OPENSPY_MASTER_HOST for m in g_def.get("masters", [])):
                 g_def["masters"].append({"host": OPENSPY_MASTER_HOST, "port": OPENSPY_MASTER_PORT})
+            if not any(m.get("host") == NETWORKS333_MASTER_HOST for m in g_def.get("masters", [])):
+                g_def["masters"].append({"host": NETWORKS333_MASTER_HOST, "port": NETWORKS333_MASTER_PORT})
             to_query.add(target)
 
     print(f"Actively querying upstream masters for {len(to_query)} games with known servers...")
@@ -826,9 +884,10 @@ def main() -> int:
             except Exception as exc:  # noqa: BLE001
                 print(f"  [{gn:15}] ERROR: {exc}", file=sys.stderr)
 
-    # Now write server files for all 4841 games
-    print(f"\nWriting individual server lists for all {len(catalog)} games...")
+    # Now write server files only for active games with servers (>0)
+    print(f"\nWriting individual server lists for games with active servers...")
     manifest_games: dict[str, dict] = {}
+    active_games_written = 0
 
     for item in catalog:
         gn = item["gamename"]
@@ -847,15 +906,37 @@ def main() -> int:
             if cached:
                 all_servers.update(cached)
 
-        write_game_file(gn, gname, g_def, addrs, source_counts, errors, out_path)
+        if addrs:
+            write_game_file(gn, gname, g_def, addrs, source_counts, errors, out_path)
+            active_games_written += 1
+            manifest_games[gn] = {
+                "name": gname,
+                "category": g_def.get("category", "GameSpy PC Classic"),
+                "protocol": g_def.get("protocol", "gamespy1"),
+                "server_count": len(addrs),
+                "file": f"servers/{fname}.txt",
+            }
+        else:
+            if out_path.is_file() or out_path.is_symlink():
+                out_path.unlink()
+            manifest_games[gn] = {
+                "name": gname,
+                "category": g_def.get("category", "GameSpy PC Classic"),
+                "protocol": g_def.get("protocol", "gamespy1"),
+                "server_count": 0,
+                "file": None,
+            }
 
-        manifest_games[gn] = {
-            "name": gname,
-            "category": g_def.get("category", "GameSpy PC Classic"),
-            "protocol": g_def.get("protocol", "gamespy1"),
-            "server_count": len(addrs),
-            "file": f"servers/{fname}.txt",
-        }
+    # Clean up any leftover empty .txt files in SERVERS_DIR
+    for p in SERVERS_DIR.glob("*.txt"):
+        if p.is_file():
+            lines = [
+                line.strip()
+                for line in p.read_text(encoding="utf-8", errors="replace").splitlines()
+                if line.strip() and not line.strip().startswith("#")
+            ]
+            if not lines:
+                p.unlink()
 
     # Write unified servers.txt at root
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -865,7 +946,7 @@ def main() -> int:
         f"# Last fetch (UTC): {now}",
         f"# Total unique servers: {len(sorted_all)}",
         f"# Total games supported: {len(catalog)}",
-        "# Sources: Lookout-games, OpenSpy, Kingpin community masters",
+        "# Sources: Lookout-games, OpenSpy, 333networks, Kingpin community masters",
         "#",
         "# Format: ip:port",
         "#",
@@ -886,6 +967,7 @@ def main() -> int:
         "updated_at": now,
         "total_servers": len(sorted_all),
         "total_games": len(catalog),
+        "active_games_count": active_games_written,
         "games": manifest_games,
     }
     INDEX_JSON.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
@@ -893,10 +975,10 @@ def main() -> int:
     elapsed = time.time() - start_time
     print(
         f"\nDone! Fetched {len(sorted_all)} total unique servers across "
-        f"{len(catalog)} supported games in {elapsed:.2f}s."
+        f"{active_games_written} active games ({len(catalog)} supported) in {elapsed:.2f}s."
     )
     print(f"Master list written to {ALL_SERVERS_TXT}")
-    print(f"All 4841 game lists written to {SERVERS_DIR}/<game>.txt")
+    print(f"Active game lists written to {SERVERS_DIR}/<game>.txt ({active_games_written} files)")
     print(f"Index written to {INDEX_JSON}")
     return 0
 

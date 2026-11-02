@@ -1,6 +1,0 @@
-# Server address list for Americas Army: Special Forces (armygame)
-# Last fetch (UTC): 2026-11-02T02:43:39Z
-# Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 1717
-# Active servers found: 0
-# Format: ip:port
-#

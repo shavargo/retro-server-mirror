@@ -1,11 +1,12 @@
 # Server address list for Heretic II (heretic2)
-# Last fetch (UTC): 2026-11-02T02:43:39Z
+# Last fetch (UTC): 2026-11-02T03:13:16Z
 # Category: idTech / Quake | Protocol: quake2 | Default Port: 6500
 # Active servers found: 2
 # Sources:
 #   - cache: 2 found
 # Master connection issues (cached entries preserved):
 #   - quake2://master.openspy.net:28900: no response from master
+#   - quake2://master.333networks.com:28900: no response from master
 # Format: ip:port
 #
 74.71.46.69:27911

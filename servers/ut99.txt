@@ -1,12 +1,11 @@
-# Server address list for Unreal Tournament (ut99)
-# Last fetch (UTC): 2026-11-02T02:43:40Z
+# Server address list for Unreal Tournament 99 (ut99)
+# Last fetch (UTC): 2026-11-02T03:13:16Z
 # Category: Unreal Engine | Protocol: gamespy1 | Default Port: 7778
-# Active servers found: 938
+# Active servers found: 939
 # Sources:
 #   - cache: 938 found
-#   - gamespy1://master.openspy.net:28900: 0 found
-# Master connection issues (cached entries preserved):
-#   - gamespy1://master.333networks.com:28900: empty list response
+#   - gamespy1://master.333networks.com:28900: 911 found
+#   - gamespy1://master.openspy.net:28900: 544 found
 # Format: ip:port
 #
 3.9.27.12:7777
@@ -525,6 +524,7 @@
 108.16.94.227:7777
 108.16.94.227:7787
 108.16.94.227:7799
+108.46.173.250:7777
 108.61.100.228:7777
 108.61.109.162:7777
 108.61.112.182:7777

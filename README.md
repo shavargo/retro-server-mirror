@@ -6,15 +6,17 @@ Pulls from master servers across **[molycode/lookout-games](https://github.com/m
 
 ## Raw URLs
 
-- **All Servers Combined (8,400+ servers):**  
+- **All Servers Combined (9,500+ servers):**  
   `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers.txt`  
   (also aliased as `server.txt`)
 
 - **JSON Index / Metadata (All 4,841 Games):**  
   `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers.json`
 
-- **Per-Game Server Lists:**  
+- **Per-Game Server Lists (Active Games):**  
   `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers/<game>.txt`
+
+  Individual `.txt` files are maintained for games hosting active online servers (keeping `servers/` free of dead placeholder files, while `servers.json` continues to catalog all 4,841 supported games):
 
   Examples:
   - Kingpin: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers/kingpin.txt`
@@ -25,10 +27,13 @@ Pulls from master servers across **[molycode/lookout-games](https://github.com/m
   - QuakeWorld: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers/quakeworld.txt`
   - Battlefield 1942: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers/bf1942.txt` (alias: `servers/bfield1942.txt`)
   - Wolfenstein Enemy Territory: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers/et.txt`
+  - SWAT 4: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers/swat4.txt`
+  - Vietcong: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers/vietcong.txt`
   - Call of Duty 4: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers/cod4.txt`
   - Painkiller: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers/painkiller.txt`
   - Rune: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers/rune.txt`
-  - ... and 4,830 more games!
+  - Deus Ex: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers/deusex.txt`
+  - Postal 2: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/main/servers/postal2.txt`
 
 ## Supported Protocols & Sources
 

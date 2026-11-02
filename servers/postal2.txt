@@ -1,6 +1,25 @@
 # Server address list for Postal 2 (postal2)
-# Last fetch (UTC): 2026-11-02T02:43:40Z
+# Last fetch (UTC): 2026-11-02T03:13:16Z
 # Category: Unreal Engine | Protocol: unreal | Default Port: 6500
-# Active servers found: 0
+# Active servers found: 16
+# Sources:
+#   - unreal://master.openspy.net:28900: 0 found
+#   - unreal://master.333networks.com:28900: 16 found
 # Format: ip:port
 #
+37.187.144.178:7778
+38.58.66.208:7778
+67.43.209.173:7778
+67.43.209.173:7780
+143.137.56.112:7778
+143.137.56.112:7780
+172.58.2.185:7778
+172.58.2.185:7780
+172.58.2.185:7782
+176.212.20.183:7778
+181.233.17.158:7780
+181.233.17.158:7782
+190.120.126.133:7782
+190.120.126.133:7786
+200.86.237.236:7778
+216.114.75.3:7778

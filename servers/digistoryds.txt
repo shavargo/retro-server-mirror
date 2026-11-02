@@ -1,6 +1,0 @@
-# Server address list for Digimon Story (DS) (digistoryds)
-# Last fetch (UTC): 2026-11-02T02:43:39Z
-# Category: Nintendo DWC | Protocol: gamespy1 | Default Port: 6500
-# Active servers found: 0
-# Format: ip:port
-#

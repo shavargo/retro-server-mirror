@@ -1,13 +1,14 @@
 # Server address list for Unreal Tournament 2004 (ut2004)
-# Last fetch (UTC): 2026-11-02T02:43:40Z
+# Last fetch (UTC): 2026-11-02T03:13:16Z
 # Category: Unreal Engine | Protocol: unreal2 | Default Port: 7787
-# Active servers found: 666
+# Active servers found: 669
 # Sources:
-#   - cache: 665 found
-#   - unreal2://ut2004master.333networks.com:28902: 613 found
+#   - cache: 666 found
+#   - unreal2://ut2004master.333networks.com:28902: 614 found
 #   - unreal2://utmaster.openspy.net:28902: 623 found
 # Master connection issues (cached entries preserved):
 #   - unreal2://master.openspy.net:28900: timed out
+#   - unreal2://master.333networks.com:28900: timed out
 # Format: ip:port
 #
 2.28.199.6:7777
@@ -210,6 +211,7 @@
 75.72.2.170:7777
 75.97.149.71:7786
 76.87.101.100:7930
+76.98.74.165:7777
 76.112.11.44:7777
 76.131.187.116:7877
 77.56.120.38:4777
@@ -299,6 +301,7 @@
 82.64.226.179:7777
 82.181.198.49:7777
 82.196.117.16:7777
+83.242.57.41:7777
 83.242.59.151:7777
 84.40.157.118:7777
 84.75.76.51:7000
@@ -500,6 +503,7 @@
 162.251.160.19:7777
 162.251.160.19:7797
 163.252.65.52:7777
+167.57.26.237:7777
 167.224.129.41:7779
 167.224.204.27:7777
 167.233.154.233:7777

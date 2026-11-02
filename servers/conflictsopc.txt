@@ -1,6 +1,10 @@
 # Server address list for Conflict: Special Ops PC (conflictsopc)
-# Last fetch (UTC): 2026-11-02T02:43:39Z
+# Last fetch (UTC): 2026-11-02T03:13:16Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
-# Active servers found: 0
+# Active servers found: 1
+# Sources:
+#   - gamespy1://master.openspy.net:28900: 1 found
+#   - gamespy1://master.333networks.com:28900: 0 found
 # Format: ip:port
 #
+189.75.169.117:32459

@@ -1,6 +1,0 @@
-# Server address list for Pro Cycling Manager - Tour de France 2009 (ProCManager2009)
-# Last fetch (UTC): 2026-11-02T02:43:40Z
-# Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 0
-# Active servers found: 0
-# Format: ip:port
-#

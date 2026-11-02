@@ -1,6 +1,0 @@
-# Server address list for LEGO Universe (legouniverse)
-# Last fetch (UTC): 2026-11-02T02:43:40Z
-# Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 0
-# Active servers found: 0
-# Format: ip:port
-#

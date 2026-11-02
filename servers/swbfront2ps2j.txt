@@ -1,6 +1,0 @@
-# Server address list for Star Wars Battlefront 2 (PS2) Japanese (swbfront2ps2j)
-# Last fetch (UTC): 2026-11-02T02:43:40Z
-# Category: Console | Protocol: gamespy1 | Default Port: 6500
-# Active servers found: 0
-# Format: ip:port
-#
