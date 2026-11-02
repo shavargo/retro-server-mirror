@@ -1,0 +1,9 @@
+# Merged server address list for Tony Hawk: Pro Skater 4 (PC) (thps4pc)
+# Last fetch (UTC): 2026-11-02T02:29:00Z
+# Sources:
+#   - cache: 2 found
+#   - gamespy1://master.openspy.net:28900: 2 found
+# Format: ip:port
+#
+72.83.151.214:5250
+82.16.40.185:5250

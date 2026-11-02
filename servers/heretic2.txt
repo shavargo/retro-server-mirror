@@ -1,0 +1,9 @@
+# Merged server address list for Heretic II (heretic2)
+# Last fetch (UTC): 2026-11-02T02:29:00Z
+# Sources:
+#   - cache: 2 found
+#   - gamespy1://master.openspy.net:28900: 2 found
+# Format: ip:port
+#
+74.71.46.69:27911
+74.71.46.69:28911

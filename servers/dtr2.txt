@@ -1,0 +1,13 @@
+# Merged server address list for Dirt Track Racing II (dtr2)
+# Last fetch (UTC): 2026-11-02T02:29:00Z
+# Sources:
+#   - cache: 6 found
+#   - gamespy1://master.openspy.net:28900: 6 found
+# Format: ip:port
+#
+74.91.122.77:32140
+74.91.122.77:32141
+74.208.94.208:32140
+74.208.94.208:32141
+74.208.94.208:32142
+74.208.94.208:32143

@@ -1,0 +1,20 @@
+# Merged server address list for Unvanquished (unvanquished)
+# Last fetch (UTC): 2026-11-02T02:28:57Z
+# Sources:
+#   - cache: 12 found
+#   - quake3://master.unvanquished.net:27950: 12 found
+#   - quake3://master2.unvanquished.net:27950: 12 found
+# Format: ip:port
+#
+5.45.96.153:23235
+5.45.96.153:27962
+51.178.51.166:27970
+62.210.163.155:27960
+82.165.236.249:27960
+96.9.214.86:27960
+104.248.3.33:27960
+147.93.133.235:28000
+172.86.178.34:27960
+206.189.56.213:27960
+212.129.56.80:27960
+212.129.56.80:27966

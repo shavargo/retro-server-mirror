@@ -1,0 +1,16 @@
+# Merged server address list for Battlefield: Vietnam (bfvietnam)
+# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Sources:
+#   - cache: 9 found
+#   - gamespy1://master.openspy.net:28900: 9 found
+# Format: ip:port
+#
+2.56.99.191:23000
+51.222.249.54:23010
+76.135.89.32:23003
+85.134.107.214:23000
+108.61.119.37:23000
+108.61.119.37:28002
+108.61.236.22:23000
+157.211.26.141:23000
+188.245.154.232:23002

@@ -1,0 +1,12 @@
+# Merged server address list for No One Lives Forever (nolf)
+# Last fetch (UTC): 2026-11-02T02:29:00Z
+# Sources:
+#   - cache: 5 found
+#   - gamespy1://master.openspy.net:28900: 5 found
+# Format: ip:port
+#
+65.109.237.130:27888
+80.203.73.162:27895
+148.251.90.86:50002
+152.42.38.192:27888
+216.225.197.202:28890

@@ -1,0 +1,9 @@
+# Merged server address list for Chaser (chaser)
+# Last fetch (UTC): 2026-11-02T02:28:58Z
+# Sources:
+#   - cache: 2 found
+#   - gamespy1://master.openspy.net:28900: 2 found
+# Format: ip:port
+#
+165.232.113.170:3002
+165.232.113.170:3004

@@ -1,0 +1,14 @@
+# Merged server address list for Tribes Vengeance (tribesv)
+# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Sources:
+#   - cache: 7 found
+#   - gamespy1://master.openspy.net:28900: 7 found
+# Format: ip:port
+#
+66.181.34.110:8889
+68.101.204.25:60163
+72.81.222.235:7778
+72.81.222.235:7779
+72.81.222.235:7781
+72.81.222.235:7784
+157.90.16.68:7778

@@ -1,0 +1,9 @@
+# Merged server address list for Star Trek: Bridge Commander (bcommander)
+# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Sources:
+#   - cache: 2 found
+#   - gamespy1://master.openspy.net:28900: 2 found
+# Format: ip:port
+#
+199.244.48.68:22101
+199.244.48.68:58510

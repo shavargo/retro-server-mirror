@@ -1,0 +1,12 @@
+# Merged server address list for Global Operations (globalops)
+# Last fetch (UTC): 2026-11-02T02:28:58Z
+# Sources:
+#   - cache: 5 found
+#   - gamespy1://master.openspy.net:28900: 5 found
+# Format: ip:port
+#
+75.172.92.73:28672
+84.156.100.107:28672
+162.206.48.100:28672
+162.206.48.101:28672
+212.204.154.82:28672

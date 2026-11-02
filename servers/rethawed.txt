@@ -1,0 +1,14 @@
+# Merged server address list for reTHAWed (rethawed)
+# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Sources:
+#   - cache: 7 found
+#   - gamespy1://master.openspy.net:28900: 7 found
+# Format: ip:port
+#
+24.156.27.234:5150
+35.151.138.167:27422
+86.164.154.58:5150
+88.9.209.221:5150
+104.33.208.116:5150
+108.12.255.189:5150
+108.44.207.44:5150

@@ -1,0 +1,10 @@
+# Merged server address list for Contract Jack (contractjack)
+# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Sources:
+#   - cache: 3 found
+#   - gamespy1://master.openspy.net:28900: 3 found
+# Format: ip:port
+#
+80.203.73.162:27897
+161.13.67.3:61169
+198.244.111.29:4113

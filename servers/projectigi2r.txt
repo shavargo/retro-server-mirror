@@ -1,0 +1,16 @@
+# Merged server address list for IGI 2 Covert Strike (projectigi2r)
+# Last fetch (UTC): 2026-11-02T02:28:58Z
+# Sources:
+#   - cache: 9 found
+#   - gamespy1://master.openspy.net:28900: 9 found
+# Format: ip:port
+#
+3.72.31.27:26002
+3.72.31.27:26003
+3.72.31.27:26004
+3.72.31.27:26005
+15.252.143.160:26001
+31.57.228.32:26001
+81.70.38.151:26002
+178.254.32.194:26001
+178.254.32.194:26002

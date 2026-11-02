@@ -1,0 +1,12 @@
+# Merged server address list for No One Lives Forever 2 (nolf2)
+# Last fetch (UTC): 2026-11-02T02:29:00Z
+# Sources:
+#   - cache: 5 found
+#   - gamespy1://master.openspy.net:28900: 5 found
+# Format: ip:port
+#
+66.181.34.110:27893
+80.203.73.162:27889
+80.203.73.162:27893
+216.225.197.202:29890
+216.225.197.202:29900

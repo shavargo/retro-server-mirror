@@ -1,0 +1,10 @@
+# Merged server address list for Gore Special Edition (gorese)
+# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Sources:
+#   - cache: 3 found
+#   - gamespy1://master.openspy.net:28900: 3 found
+# Format: ip:port
+#
+79.103.158.31:27780
+79.103.158.31:27782
+217.160.191.125:27778

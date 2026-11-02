@@ -1,0 +1,10 @@
+# Merged server address list for SiN (sin)
+# Last fetch (UTC): 2026-11-02T02:28:57Z
+# Sources:
+#   - cache: 3 found
+#   - gamespy1://master.maraakate.org:28900: 3 found
+# Format: ip:port
+#
+52.240.58.168:22450
+52.240.58.168:22550
+52.240.58.168:22650

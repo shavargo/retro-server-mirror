@@ -1,0 +1,15 @@
+# Merged server address list for THUG Pro (thugpro)
+# Last fetch (UTC): 2026-11-02T02:28:58Z
+# Sources:
+#   - cache: 7 found
+#   - gamespy1://master.openspy.net:28900: 8 found
+# Format: ip:port
+#
+47.6.1.27:5153
+47.6.1.27:5155
+104.33.208.116:5153
+104.33.208.116:59533
+108.204.225.149:5153
+146.168.144.92:5153
+162.84.149.179:5153
+173.177.29.102:5153

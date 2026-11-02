@@ -1,0 +1,13 @@
+# Merged server address list for Deus Ex (deusex)
+# Last fetch (UTC): 2026-11-02T02:28:56Z
+# Sources:
+#   - cache: 6 found
+#   - gamespy1://master.333networks.com:28900: 6 found
+# Format: ip:port
+#
+46.142.84.50:17577
+89.70.223.80:7790
+207.180.246.62:7760
+207.180.246.62:7770
+207.180.246.62:7780
+207.180.246.62:7790

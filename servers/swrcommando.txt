@@ -1,0 +1,18 @@
+# Merged server address list for Star Wars Republic Commando (swrcommando)
+# Last fetch (UTC): 2026-11-02T02:28:58Z
+# Sources:
+#   - cache: 11 found
+#   - gamespy1://master.openspy.net:28900: 11 found
+# Format: ip:port
+#
+71.105.161.71:11138
+71.105.161.71:11139
+71.105.161.71:11140
+71.105.161.71:11141
+71.105.161.71:11142
+71.105.161.71:11143
+71.105.161.71:11144
+71.105.161.71:11145
+71.105.161.71:11146
+71.105.161.71:11147
+74.91.119.144:11138

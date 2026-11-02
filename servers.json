@@ -1,0 +1,382 @@
+{
+  "updated_at": "2026-11-02T02:29:04Z",
+  "total_servers": 8267,
+  "total_games": 75,
+  "games": {
+    "alienarena": {
+      "name": "Alien Arena",
+      "server_count": 20,
+      "file": "servers/alienarena.txt"
+    },
+    "bcommander": {
+      "name": "Star Trek: Bridge Commander",
+      "server_count": 2,
+      "file": "servers/bcommander.txt"
+    },
+    "bf1942": {
+      "name": "Battlefield 1942",
+      "server_count": 81,
+      "file": "servers/bf1942.txt"
+    },
+    "bfvietnam": {
+      "name": "Battlefield: Vietnam",
+      "server_count": 9,
+      "file": "servers/bfvietnam.txt"
+    },
+    "blood2": {
+      "name": "Blood II",
+      "server_count": 1,
+      "file": "servers/blood2.txt"
+    },
+    "capricorn": {
+      "name": "Crysis 2 (Capricorn)",
+      "server_count": 6,
+      "file": "servers/capricorn.txt"
+    },
+    "chaser": {
+      "name": "Chaser",
+      "server_count": 2,
+      "file": "servers/chaser.txt"
+    },
+    "chaserd": {
+      "name": "Chaser Demo",
+      "server_count": 2,
+      "file": "servers/chaserd.txt"
+    },
+    "cod": {
+      "name": "Call of Duty",
+      "server_count": 60,
+      "file": "servers/cod.txt"
+    },
+    "cod2": {
+      "name": "Call of Duty 2",
+      "server_count": 501,
+      "file": "servers/cod2.txt"
+    },
+    "cod4": {
+      "name": "Call of Duty 4: Modern Warfare",
+      "server_count": 1272,
+      "file": "servers/cod4.txt"
+    },
+    "coduo": {
+      "name": "Call of Duty: United Offensive",
+      "server_count": 163,
+      "file": "servers/coduo.txt"
+    },
+    "coj2": {
+      "name": "Call of Juarez: Bound in Blood",
+      "server_count": 5,
+      "file": "servers/coj2.txt"
+    },
+    "contractjack": {
+      "name": "Contract Jack",
+      "server_count": 3,
+      "file": "servers/contractjack.txt"
+    },
+    "deusex": {
+      "name": "Deus Ex",
+      "server_count": 6,
+      "file": "servers/deusex.txt"
+    },
+    "dh2004": {
+      "name": "Deer Hunter 2004",
+      "server_count": 2,
+      "file": "servers/dh2004.txt"
+    },
+    "dh2005": {
+      "name": "Deer Hunter 2005",
+      "server_count": 3,
+      "file": "servers/dh2005.txt"
+    },
+    "dtr2": {
+      "name": "Dirt Track Racing II",
+      "server_count": 6,
+      "file": "servers/dtr2.txt"
+    },
+    "eliteforce": {
+      "name": "Star Trek Voyager: Elite Force",
+      "server_count": 32,
+      "file": "servers/eliteforce.txt"
+    },
+    "et": {
+      "name": "Enemy Territory",
+      "server_count": 496,
+      "file": "servers/et.txt"
+    },
+    "fear": {
+      "name": "FEAR: First Encounter Assault Recon",
+      "server_count": 1,
+      "file": "servers/fear.txt"
+    },
+    "fearxp2": {
+      "name": "FEAR Perseus Mandate (PC)",
+      "server_count": 1,
+      "file": "servers/fearxp2.txt"
+    },
+    "flatout2pc": {
+      "name": "FlatOut 2 (PC)",
+      "server_count": 1,
+      "file": "servers/flatout2pc.txt"
+    },
+    "flatout2zp": {
+      "name": "FlatOut 2 (Zoom Platform)",
+      "server_count": 40,
+      "file": "servers/flatout2zp.txt"
+    },
+    "globalops": {
+      "name": "Global Operations",
+      "server_count": 5,
+      "file": "servers/globalops.txt"
+    },
+    "gore": {
+      "name": "Gore",
+      "server_count": 2,
+      "file": "servers/gore.txt"
+    },
+    "gorese": {
+      "name": "Gore Special Edition",
+      "server_count": 3,
+      "file": "servers/gorese.txt"
+    },
+    "heretic2": {
+      "name": "Heretic II",
+      "server_count": 2,
+      "file": "servers/heretic2.txt"
+    },
+    "jbnightfire": {
+      "name": "James Bond: Nightfire",
+      "server_count": 10,
+      "file": "servers/jbnightfire.txt"
+    },
+    "jk2": {
+      "name": "Star Wars Jedi Knight II: Jedi Outcast",
+      "server_count": 78,
+      "file": "servers/jk2.txt"
+    },
+    "jka": {
+      "name": "Star Wars Jedi Knight: Jedi Academy",
+      "server_count": 267,
+      "file": "servers/jka.txt"
+    },
+    "kingpin": {
+      "name": "Kingpin: Life of Crime",
+      "server_count": 70,
+      "file": "servers/kingpin.txt"
+    },
+    "legendsmm": {
+      "name": "Legends of Might and Magic",
+      "server_count": 3,
+      "file": "servers/legendsmm.txt"
+    },
+    "mclub3ps2": {
+      "name": "Midnight Club 3 DUB Edition (PS2)",
+      "server_count": 1,
+      "file": "servers/mclub3ps2.txt"
+    },
+    "mohaa": {
+      "name": "Medal of Honor: Allied Assault",
+      "server_count": 192,
+      "file": "servers/mohaa.txt"
+    },
+    "nexuiz": {
+      "name": "Nexuiz",
+      "server_count": 19,
+      "file": "servers/nexuiz.txt"
+    },
+    "nfs6": {
+      "name": "Need For Speed: Hot Pursuit 2",
+      "server_count": 2,
+      "file": "servers/nfs6.txt"
+    },
+    "nolf": {
+      "name": "No One Lives Forever",
+      "server_count": 5,
+      "file": "servers/nolf.txt"
+    },
+    "nolf2": {
+      "name": "No One Lives Forever 2",
+      "server_count": 5,
+      "file": "servers/nolf2.txt"
+    },
+    "openarena": {
+      "name": "OpenArena",
+      "server_count": 99,
+      "file": "servers/openarena.txt"
+    },
+    "painkiller": {
+      "name": "Painkiller",
+      "server_count": 14,
+      "file": "servers/painkiller.txt"
+    },
+    "painkillerod": {
+      "name": "Painkiller Overdose",
+      "server_count": 1,
+      "file": "servers/painkillerod.txt"
+    },
+    "projectigi2r": {
+      "name": "IGI 2 Covert Strike",
+      "server_count": 9,
+      "file": "servers/projectigi2r.txt"
+    },
+    "quake2": {
+      "name": "Quake II",
+      "server_count": 440,
+      "file": "servers/quake2.txt"
+    },
+    "quake3": {
+      "name": "Quake III Arena",
+      "server_count": 1116,
+      "file": "servers/quake3.txt"
+    },
+    "quakeworld": {
+      "name": "QuakeWorld",
+      "server_count": 816,
+      "file": "servers/quakeworld.txt"
+    },
+    "rethawed": {
+      "name": "reTHAWed",
+      "server_count": 7,
+      "file": "servers/rethawed.txt"
+    },
+    "rmth2003": {
+      "name": "Trophy Hunter 2003",
+      "server_count": 1,
+      "file": "servers/rmth2003.txt"
+    },
+    "rtcw": {
+      "name": "Return to Castle Wolfenstein",
+      "server_count": 84,
+      "file": "servers/rtcw.txt"
+    },
+    "rune": {
+      "name": "Rune",
+      "server_count": 30,
+      "file": "servers/rune.txt"
+    },
+    "serioussamse": {
+      "name": "Serious Sam: Second Encounter",
+      "server_count": 1,
+      "file": "servers/serioussamse.txt"
+    },
+    "sin": {
+      "name": "SiN",
+      "server_count": 3,
+      "file": "servers/sin.txt"
+    },
+    "smokinguns": {
+      "name": "Smokin' Guns",
+      "server_count": 8,
+      "file": "servers/smokinguns.txt"
+    },
+    "sof2": {
+      "name": "Soldier of Fortune II: Double Helix",
+      "server_count": 47,
+      "file": "servers/sof2.txt"
+    },
+    "srow2pc": {
+      "name": "Saint's Row 2 (PC)",
+      "server_count": 11,
+      "file": "servers/srow2pc.txt"
+    },
+    "stella": {
+      "name": "Battlefield 2142",
+      "server_count": 11,
+      "file": "servers/stella.txt"
+    },
+    "swrcommando": {
+      "name": "Star Wars Republic Commando",
+      "server_count": 11,
+      "file": "servers/swrcommando.txt"
+    },
+    "terminator3": {
+      "name": "Terminator 3",
+      "server_count": 2,
+      "file": "servers/terminator3.txt"
+    },
+    "thps4pc": {
+      "name": "Tony Hawk: Pro Skater 4 (PC)",
+      "server_count": 2,
+      "file": "servers/thps4pc.txt"
+    },
+    "thugpro": {
+      "name": "THUG Pro",
+      "server_count": 8,
+      "file": "servers/thugpro.txt"
+    },
+    "tremulous": {
+      "name": "Tremulous",
+      "server_count": 14,
+      "file": "servers/tremulous.txt"
+    },
+    "tribesv": {
+      "name": "Tribes Vengeance",
+      "server_count": 7,
+      "file": "servers/tribesv.txt"
+    },
+    "undying": {
+      "name": "Clive Barker's Undying",
+      "server_count": 2,
+      "file": "servers/undying.txt"
+    },
+    "unreal": {
+      "name": "Unreal",
+      "server_count": 86,
+      "file": "servers/unreal.txt"
+    },
+    "unvanquished": {
+      "name": "Unvanquished",
+      "server_count": 12,
+      "file": "servers/unvanquished.txt"
+    },
+    "urbanterror": {
+      "name": "Urban Terror",
+      "server_count": 277,
+      "file": "servers/urbanterror.txt"
+    },
+    "ut2": {
+      "name": "Unreal Tournament 2003",
+      "server_count": 10,
+      "file": "servers/ut2.txt"
+    },
+    "ut2004": {
+      "name": "Unreal Tournament 2004",
+      "server_count": 665,
+      "file": "servers/ut2004.txt"
+    },
+    "ut3pc": {
+      "name": "Unreal Tournament 3 (PC)",
+      "server_count": 39,
+      "file": "servers/ut3pc.txt"
+    },
+    "ut99": {
+      "name": "Unreal Tournament",
+      "server_count": 938,
+      "file": "servers/ut99.txt"
+    },
+    "vietcong2": {
+      "name": "Vietcong 2",
+      "server_count": 2,
+      "file": "servers/vietcong2.txt"
+    },
+    "vietnamso": {
+      "name": "Line of Sight: Vietnam",
+      "server_count": 1,
+      "file": "servers/vietnamso.txt"
+    },
+    "warsow": {
+      "name": "Warsow",
+      "server_count": 23,
+      "file": "servers/warsow.txt"
+    },
+    "xmenlegpc": {
+      "name": "X-Men Legends PC",
+      "server_count": 1,
+      "file": "servers/xmenlegpc.txt"
+    },
+    "xonotic": {
+      "name": "Xonotic",
+      "server_count": 302,
+      "file": "servers/xonotic.txt"
+    }
+  }
+}

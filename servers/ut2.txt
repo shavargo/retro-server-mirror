@@ -1,0 +1,17 @@
+# Merged server address list for Unreal Tournament 2003 (ut2)
+# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Sources:
+#   - cache: 10 found
+#   - gamespy1://master.openspy.net:28900: 10 found
+# Format: ip:port
+#
+76.208.35.203:7777
+85.223.43.183:7777
+85.223.43.183:7779
+85.223.43.183:7781
+91.98.228.35:7777
+93.107.154.27:7767
+93.107.154.27:7777
+93.107.154.27:7899
+146.52.84.66:7777
+159.196.128.63:7777

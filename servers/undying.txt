@@ -1,0 +1,9 @@
+# Merged server address list for Clive Barker's Undying (undying)
+# Last fetch (UTC): 2026-11-02T02:29:00Z
+# Sources:
+#   - cache: 2 found
+#   - gamespy1://master.openspy.net:28900: 2 found
+# Format: ip:port
+#
+31.40.212.53:12231
+202.61.207.59:7778

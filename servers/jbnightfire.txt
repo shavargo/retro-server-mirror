@@ -1,0 +1,17 @@
+# Merged server address list for James Bond: Nightfire (jbnightfire)
+# Last fetch (UTC): 2026-11-02T02:28:58Z
+# Sources:
+#   - cache: 10 found
+#   - gamespy1://master.openspy.net:28900: 10 found
+# Format: ip:port
+#
+178.63.12.156:6511
+178.63.12.156:6551
+178.63.12.156:6553
+178.63.12.156:6554
+178.63.12.156:6556
+178.63.12.156:6569
+178.63.12.156:6572
+178.63.12.156:6580
+178.63.12.156:6611
+216.225.197.202:6554

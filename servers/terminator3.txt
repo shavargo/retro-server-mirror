@@ -1,0 +1,9 @@
+# Merged server address list for Terminator 3 (terminator3)
+# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Sources:
+#   - cache: 2 found
+#   - gamespy1://master.openspy.net:28900: 2 found
+# Format: ip:port
+#
+72.81.222.235:60005
+72.81.222.235:60007

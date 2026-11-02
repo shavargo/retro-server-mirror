@@ -1,0 +1,9 @@
+# Merged server address list for Vietcong 2 (vietcong2)
+# Last fetch (UTC): 2026-11-02T02:28:58Z
+# Sources:
+#   - cache: 2 found
+#   - gamespy1://master.openspy.net:28900: 2 found
+# Format: ip:port
+#
+95.110.133.131:19967
+152.53.149.87:19967

@@ -1,0 +1,13 @@
+# Merged server address list for Crysis 2 (Capricorn) (capricorn)
+# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Sources:
+#   - cache: 6 found
+#   - gamespy1://master.openspy.net:28900: 6 found
+# Format: ip:port
+#
+114.198.48.80:25401
+114.198.48.80:25900
+159.69.39.203:64200
+159.69.39.203:64201
+159.69.39.203:64202
+159.69.39.203:64203

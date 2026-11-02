@@ -1,0 +1,12 @@
+# Merged server address list for Call of Juarez: Bound in Blood (coj2)
+# Last fetch (UTC): 2026-11-02T02:29:00Z
+# Sources:
+#   - cache: 5 found
+#   - gamespy1://master.openspy.net:28900: 5 found
+# Format: ip:port
+#
+51.77.58.109:44236
+62.83.76.27:46692
+62.83.76.27:59277
+91.227.0.144:32837
+91.227.0.144:33710

@@ -1,0 +1,8 @@
+# Merged server address list for Line of Sight: Vietnam (vietnamso)
+# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Sources:
+#   - cache: 1 found
+#   - gamespy1://master.openspy.net:28900: 1 found
+# Format: ip:port
+#
+213.159.55.253:13242

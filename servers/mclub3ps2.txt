@@ -1,0 +1,8 @@
+# Merged server address list for Midnight Club 3 DUB Edition (PS2) (mclub3ps2)
+# Last fetch (UTC): 2026-11-02T02:28:58Z
+# Sources:
+#   - cache: 1 found
+#   - gamespy1://master.openspy.net:28900: 1 found
+# Format: ip:port
+#
+143.255.180.126:43030

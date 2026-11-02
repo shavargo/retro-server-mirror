@@ -1,0 +1,15 @@
+# Merged server address list for Smokin' Guns (smokinguns)
+# Last fetch (UTC): 2026-11-02T02:28:56Z
+# Sources:
+#   - cache: 8 found
+#   - quake3://master.smokin-guns.org:27950: 8 found
+# Format: ip:port
+#
+82.66.34.87:27970
+82.165.163.95:27960
+91.98.47.59:27960
+161.97.89.117:27960
+162.19.66.146:27970
+162.19.66.146:27971
+162.19.66.146:27974
+212.129.56.80:27959

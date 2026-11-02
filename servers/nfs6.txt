@@ -1,0 +1,9 @@
+# Merged server address list for Need For Speed: Hot Pursuit 2 (nfs6)
+# Last fetch (UTC): 2026-11-02T02:29:00Z
+# Sources:
+#   - cache: 2 found
+#   - gamespy1://master.openspy.net:28900: 2 found
+# Format: ip:port
+#
+173.184.197.233:61220
+173.184.197.233:61221

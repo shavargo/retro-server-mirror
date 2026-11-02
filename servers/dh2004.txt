@@ -1,0 +1,9 @@
+# Merged server address list for Deer Hunter 2004 (dh2004)
+# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Sources:
+#   - cache: 2 found
+#   - gamespy1://master.openspy.net:28900: 2 found
+# Format: ip:port
+#
+66.45.129.118:34568
+129.101.47.66:34569

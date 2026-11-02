@@ -1,0 +1,10 @@
+# Merged server address list for Legends of Might and Magic (legendsmm)
+# Last fetch (UTC): 2026-11-02T02:28:59Z
+# Sources:
+#   - cache: 3 found
+#   - gamespy1://master.openspy.net:28900: 3 found
+# Format: ip:port
+#
+24.12.73.150:29801
+86.21.24.167:29801
+107.12.14.31:29801
