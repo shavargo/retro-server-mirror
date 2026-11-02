@@ -34,6 +34,10 @@ SERVERS_DIR = ROOT_DIR / "servers"
 DATA_DIR = ROOT_DIR / "data"
 SUPPORTED_GAMES_JSON = DATA_DIR / "SupportedGames.json"
 LOOKOUT_METADATA_JSON = DATA_DIR / "lookout_metadata.json"
+LOOKOUT_LICENSE_FILE = DATA_DIR / "LICENSE"
+LOOKOUT_INDEX_URL = "https://raw.githubusercontent.com/molycode/lookout-games/main/index.json"
+LOOKOUT_GAME_URL_TMPL = "https://raw.githubusercontent.com/molycode/lookout-games/main/games/{game}/game.json"
+LOOKOUT_LICENSE_URL = "https://raw.githubusercontent.com/molycode/lookout-games/main/LICENSE"
 ALL_SERVERS_TXT = ROOT_DIR / "servers.txt"
 ALL_SERVERS_SYMLINK = ROOT_DIR / "server.txt"
 INDEX_JSON = ROOT_DIR / "servers.json"
@@ -591,16 +595,85 @@ def discover_openspy_games() -> dict[str, dict]:
         return {}
 
 
+def sync_lookout_metadata() -> dict[str, dict]:
+    """Fetch and sync game definitions dynamically from molycode/lookout-games repo.
+
+    Preserves licensing compliance and pulls master fixes, port offsets, and new games
+    automatically. Gracefully falls back to local data/lookout_metadata.json if offline.
+    """
+    local_data: dict[str, dict] = {}
+    if LOOKOUT_METADATA_JSON.is_file():
+        try:
+            local_data = json.loads(LOOKOUT_METADATA_JSON.read_text(encoding="utf-8"))
+        except Exception as exc:  # noqa: BLE001
+            print(f"[!] Warning reading local {LOOKOUT_METADATA_JSON}: {exc}", file=sys.stderr)
+
+    print("[*] Syncing definitions from molycode/lookout-games...")
+    try:
+        req = urllib.request.Request(
+            LOOKOUT_INDEX_URL,
+            headers={"User-Agent": "retro-server-mirror/1.0 (+https://github.com/shavargo/retro-server-mirror)"},
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            idx = json.loads(resp.read().decode("utf-8"))
+
+        games_dict = idx.get("games", {})
+        if not games_dict:
+            print("[!] lookout-games index returned empty catalog, using local snapshot.")
+            return local_data
+
+        def _fetch_one(gid: str) -> tuple[str, dict | None]:
+            url = LOOKOUT_GAME_URL_TMPL.format(game=gid)
+            try:
+                g_req = urllib.request.Request(
+                    url,
+                    headers={"User-Agent": "retro-server-mirror/1.0"},
+                )
+                with urllib.request.urlopen(g_req, timeout=8) as g_resp:
+                    g_json = json.loads(g_resp.read().decode("utf-8"))
+                    g_json["id"] = gid
+                    return gid, g_json
+            except Exception as e:  # noqa: BLE001
+                print(f"[!] Could not fetch {gid} from lookout-games: {e}", file=sys.stderr)
+                return gid, None
+
+        fetched: dict[str, dict] = {}
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as ex:
+            for gid, g_meta in ex.map(_fetch_one, games_dict.keys()):
+                if g_meta is not None:
+                    fetched[gid] = g_meta
+
+        if fetched:
+            # Sync MIT license from lookout-games alongside the data file
+            try:
+                lic_req = urllib.request.Request(
+                    LOOKOUT_LICENSE_URL,
+                    headers={"User-Agent": "retro-server-mirror/1.0"},
+                )
+                with urllib.request.urlopen(lic_req, timeout=5) as lic_resp:
+                    LOOKOUT_LICENSE_FILE.write_bytes(lic_resp.read())
+            except Exception as lic_err:  # noqa: BLE001
+                print(f"[!] Note: could not refresh lookout LICENSE file: {lic_err}", file=sys.stderr)
+
+            merged = dict(local_data)
+            merged.update(fetched)
+            LOOKOUT_METADATA_JSON.write_text(json.dumps(merged, indent=2) + "\n", encoding="utf-8")
+            print(f"[+] Synced {len(fetched)} game definitions from lookout-games (MIT, Copyright (c) 2026 moly)")
+            return merged
+    except Exception as exc:  # noqa: BLE001
+        print(f"[!] Could not sync live lookout-games definitions ({exc}), using cached snapshot.", file=sys.stderr)
+
+    return local_data
+
+
 def load_all_catalogs() -> tuple[list[dict], dict[str, dict]]:
     """Load SupportedGames.json (4841 games) and build lookup dictionary."""
     if not SUPPORTED_GAMES_JSON.is_file():
         raise FileNotFoundError(f"Missing {SUPPORTED_GAMES_JSON}")
     catalog: list[dict] = json.loads(SUPPORTED_GAMES_JSON.read_text(encoding="utf-8"))
 
-    # Load Lookout metadata if available
-    lookout_map: dict[str, dict] = {}
-    if LOOKOUT_METADATA_JSON.is_file():
-        lookout_map = json.loads(LOOKOUT_METADATA_JSON.read_text(encoding="utf-8"))
+    # Sync and load Lookout metadata
+    lookout_map = sync_lookout_metadata()
 
     # Map by gamename lowercase
     games_by_name: dict[str, dict] = {}

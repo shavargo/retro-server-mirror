@@ -1,19 +1,33 @@
 {
   "alienarena": {
-    "id": "alienarena",
+    "format": 1,
     "name": "Alien Arena",
     "protocol": "quake2",
-    "queryPortOffset": 0,
-    "modes": [
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "printable",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "masters": [
       {
-        "key": "g_teamgame",
-        "value": "1",
-        "label": "Team"
+        "host": "master.alienarena.org",
+        "port": 27900
       },
       {
-        "key": "deathmatch",
-        "value": "1",
-        "label": "Deathmatch"
+        "host": "master2.alienarena.org",
+        "port": 27900
       }
     ],
     "keys": {
@@ -28,23 +42,71 @@
         "game"
       ]
     },
-    "masters": [
+    "//modes": "Servers send no game type; g_teamgame marks a team game.",
+    "modes": [
       {
-        "host": "master.alienarena.org",
-        "port": 27900
+        "key": "g_teamgame",
+        "value": "1",
+        "label": "Team"
       },
       {
-        "host": "master2.alienarena.org",
-        "port": 27900
+        "key": "deathmatch",
+        "value": "1",
+        "label": "Deathmatch"
       }
     ],
-    "protocolOptions": {}
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "alienarena"
   },
   "bf1942": {
-    "id": "bf1942",
+    "format": 1,
     "name": "Battlefield 1942",
     "protocol": "gamespy1",
+    "//queryPortOffset": "Servers answer queries on 23000 for players' 14567.",
     "queryPortOffset": 8433,
+    "text": {
+      "encoding": "utf8OrWindows1252"
+    },
+    "protocolOptions": {
+      "masterGame": "bfield1942"
+    },
+    "masters": [
+      {
+        "host": "master.openspy.net",
+        "port": 28900
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "//mods": "bf1942, or the mod's own name, such as xpack1 or dc_final.",
+      "mods": [
+        "gameId"
+      ]
+    },
     "modes": [
       {
         "key": "gametype",
@@ -67,32 +129,71 @@
         "label": "Co-op"
       }
     ],
-    "keys": {
-      "hostname": "hostname",
-      "map": "mapname",
-      "numPlayers": "numplayers",
-      "maxPlayers": "maxplayers",
-      "password": "password",
-      "//mods": "bf1942, or the mod's own name, such as xpack1 or dc_final.",
-      "mods": [
-        "gameId"
-      ]
+    "join": {
+      "//arguments": "+restart 1 skips the intro.",
+      "arguments": [
+        "+restart",
+        "1",
+        "+joinServer",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+restart",
+        "1",
+        "+joinServer",
+        "{address}",
+        "+password",
+        "{password}"
+      ],
+      "password": {
+        "//maxLength": "A server's password holds at most 32 characters.",
+        "maxLength": 32,
+        "//refusedCharacters": "The game reads its command line as + commands split at spaces.",
+        "refusedCharacters": " \"+"
+      }
+    },
+    "id": "bf1942"
+  },
+  "cod": {
+    "format": 1,
+    "name": "Call of Duty",
+    "protocol": "quake3",
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "//protocolOptions": "Version 1.5 servers list under protocol 6; 1.1 servers, which 1.5 cannot join, under 1.",
+    "protocolOptions": {
+      "masterQuery": "6 full empty"
     },
     "masters": [
       {
-        "host": "master.openspy.net",
-        "port": 28900
+        "host": "codmaster.activision.com",
+        "port": 20510
       }
     ],
-    "protocolOptions": {
-      "masterGame": "bfield1942"
-    }
-  },
-  "cod": {
-    "id": "cod",
-    "name": "Call of Duty",
-    "protocol": "quake3",
-    "queryPortOffset": 0,
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "pswrd",
+      "mods": [
+        "fs_game"
+      ]
+    },
     "modes": [
       {
         "key": "g_gametype",
@@ -125,6 +226,64 @@
         "label": "Headquarters"
       }
     ],
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "cod"
+  },
+  "cod2": {
+    "format": 1,
+    "name": "Call of Duty 2",
+    "protocol": "quake3",
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "//protocolOptions": "Version 1.3 servers list under protocol 118 and CoD2x's under 120; the version column tells them apart.",
+    "protocolOptions": {
+      "masterQuery": "118,120 full empty"
+    },
+    "masters": [
+      {
+        "host": "cod2master.activision.com",
+        "port": 20710
+      },
+      {
+        "host": "master.cod2x.me",
+        "port": 20710
+      }
+    ],
     "keys": {
       "hostname": "sv_hostname",
       "map": "mapname",
@@ -134,21 +293,6 @@
         "fs_game"
       ]
     },
-    "masters": [
-      {
-        "host": "codmaster.activision.com",
-        "port": 20510
-      }
-    ],
-    "protocolOptions": {
-      "masterQuery": "6 full empty"
-    }
-  },
-  "cod2": {
-    "id": "cod2",
-    "name": "Call of Duty 2",
-    "protocol": "quake3",
-    "queryPortOffset": 0,
     "modes": [
       {
         "key": "g_gametype",
@@ -176,34 +320,76 @@
         "label": "Headquarters"
       }
     ],
+    "//foreignServers": "United Offensive servers show up on Call of Duty 2's master.",
+    "foreignServers": [
+      {
+        "key": "gamename",
+        "value": "CoD:United Offensive"
+      }
+    ],
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "cod2"
+  },
+  "cod4": {
+    "format": 1,
+    "name": "Call of Duty 4: Modern Warfare",
+    "protocol": "quake3",
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "6 full empty"
+    },
+    "masters": [
+      {
+        "host": "cod4master.activision.com",
+        "port": 20810
+      }
+    ],
     "keys": {
       "hostname": "sv_hostname",
       "map": "mapname",
       "maxPlayers": "sv_maxclients",
+      "//password": "CoD4X sends it only when a password is set.",
       "password": "pswrd",
       "mods": [
         "fs_game"
       ]
     },
-    "masters": [
-      {
-        "host": "cod2master.activision.com",
-        "port": 20710
-      },
-      {
-        "host": "master.cod2x.me",
-        "port": 20710
-      }
-    ],
-    "protocolOptions": {
-      "masterQuery": "118,120 full empty"
-    }
-  },
-  "cod4": {
-    "id": "cod4",
-    "name": "Call of Duty 4: Modern Warfare",
-    "protocol": "quake3",
-    "queryPortOffset": 0,
     "modes": [
       {
         "key": "g_gametype",
@@ -236,31 +422,68 @@
         "label": "Headquarters"
       }
     ],
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "cod4"
+  },
+  "coduo": {
+    "format": 1,
+    "name": "Call of Duty: United Offensive",
+    "protocol": "quake3",
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "22 full empty"
+    },
+    "masters": [
+      {
+        "host": "coduomaster.activision.com",
+        "port": 20610
+      }
+    ],
     "keys": {
       "hostname": "sv_hostname",
       "map": "mapname",
       "maxPlayers": "sv_maxclients",
-      "//password": "CoD4X sends it only when a password is set.",
       "password": "pswrd",
       "mods": [
         "fs_game"
       ]
     },
-    "masters": [
-      {
-        "host": "cod4master.activision.com",
-        "port": 20810
-      }
-    ],
-    "protocolOptions": {
-      "masterQuery": "6 full empty"
-    }
-  },
-  "coduo": {
-    "id": "coduo",
-    "name": "Call of Duty: United Offensive",
-    "protocol": "quake3",
-    "queryPortOffset": 0,
     "modes": [
       {
         "key": "g_gametype",
@@ -308,40 +531,45 @@
         "label": "Base Assault"
       }
     ],
-    "keys": {
-      "hostname": "sv_hostname",
-      "map": "mapname",
-      "maxPlayers": "sv_maxclients",
-      "password": "pswrd",
-      "mods": [
-        "fs_game"
-      ]
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "coduo"
+  },
+  "deusex": {
+    "format": 1,
+    "name": "Deus Ex",
+    "protocol": "gamespy1",
+    "//queryPortOffset": "Servers answer queries on the port after the one players join.",
+    "queryPortOffset": 1,
+    "text": {
+      "encoding": "utf8OrWindows1252"
+    },
+    "protocolOptions": {
+      "masterGame": "deusex"
     },
     "masters": [
       {
-        "host": "coduomaster.activision.com",
-        "port": 20610
-      }
-    ],
-    "protocolOptions": {
-      "masterQuery": "22 full empty"
-    }
-  },
-  "deusex": {
-    "id": "deusex",
-    "name": "Deus Ex",
-    "protocol": "gamespy1",
-    "queryPortOffset": 1,
-    "modes": [
-      {
-        "key": "gametype",
-        "value": "MTLDeathMatch",
-        "label": "Deathmatch"
-      },
-      {
-        "key": "gametype",
-        "value": "MTLTeam",
-        "label": "Team Deathmatch"
+        "host": "master.333networks.com",
+        "port": 28900
       }
     ],
     "keys": {
@@ -354,21 +582,83 @@
         "gametype"
       ]
     },
-    "masters": [
+    "modes": [
       {
-        "host": "master.333networks.com",
-        "port": 28900
+        "key": "gametype",
+        "value": "MTLDeathMatch",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "MTLTeam",
+        "label": "Team Deathmatch"
       }
     ],
-    "protocolOptions": {
-      "masterGame": "deusex"
-    }
+    "join": {
+      "//arguments": "The address is the game's URL; each option follows it after a '?'.",
+      "arguments": [
+        "{address}"
+      ],
+      "passwordArguments": [
+        "{address}?password={password}"
+      ],
+      "password": {
+        "maxLength": 1024,
+        "//refusedCharacters": "'?' starts the next option, '#' a portal, and a space ends the URL.",
+        "refusedCharacters": " ?#"
+      }
+    },
+    "id": "deusex"
   },
   "eliteforce": {
-    "id": "eliteforce",
+    "format": 1,
     "name": "Star Trek Voyager: Elite Force",
     "protocol": "quake3",
-    "queryPortOffset": 0,
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "24 empty full",
+      "masterEntries": "hex"
+    },
+    "//masters": "Raven's master closed; the community runs these.",
+    "masters": [
+      {
+        "host": "efmaster.tjps.eu",
+        "port": 27953
+      },
+      {
+        "host": "master.stef1.daggolin.de",
+        "port": 27953
+      },
+      {
+        "host": "master.stvef.org",
+        "port": 27953
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
     "modes": [
       {
         "key": "g_gametype",
@@ -396,6 +686,88 @@
         "label": "Capture the Flag"
       }
     ],
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "eliteforce"
+  },
+  "et": {
+    "format": 1,
+    "name": "Enemy Territory",
+    "protocol": "quake3",
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "//colourCodes": "ET: Legacy takes any printable ASCII but a caret after the escape; this is its g_color_table.",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "printable",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff",
+          "#ff8000",
+          "#808080",
+          "#bfbfbf",
+          "#bfbfbf",
+          "#008000",
+          "#808000",
+          "#000080",
+          "#800000",
+          "#804000",
+          "#ff991a",
+          "#008080",
+          "#800080",
+          "#0080ff",
+          "#8000ff",
+          "#3399cc",
+          "#ccffcc",
+          "#006633",
+          "#ff0033",
+          "#b31a1a",
+          "#993300",
+          "#cc9933",
+          "#999933",
+          "#ffffbf",
+          "#ffff80"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "84 empty full"
+    },
+    "masters": [
+      {
+        "host": "etmaster.idsoftware.com",
+        "port": 27950
+      },
+      {
+        "host": "etmaster.etlegacy.com",
+        "port": 27950
+      }
+    ],
     "keys": {
       "hostname": "sv_hostname",
       "map": "mapname",
@@ -405,30 +777,6 @@
         "gamename"
       ]
     },
-    "masters": [
-      {
-        "host": "efmaster.tjps.eu",
-        "port": 27953
-      },
-      {
-        "host": "master.stef1.daggolin.de",
-        "port": 27953
-      },
-      {
-        "host": "master.stvef.org",
-        "port": 27953
-      }
-    ],
-    "protocolOptions": {
-      "masterQuery": "24 empty full",
-      "masterEntries": "hex"
-    }
-  },
-  "et": {
-    "id": "et",
-    "name": "Enemy Territory",
-    "protocol": "quake3",
-    "queryPortOffset": 0,
     "modes": [
       {
         "key": "g_gametype",
@@ -456,6 +804,71 @@
         "label": "Map Voting"
       }
     ],
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "//maxLength": "Info_SetValueForKey refuses 64 characters or more, so a longer password would never reach the server.",
+        "maxLength": 63,
+        "//refusedCharacters": "kpded2 rebuilds \"set password %s\", so a space splits the value; iortcw cuts the command line at every '+' and ends a token at \"//\" or \"/*\"; both refuse '\"', '\\' and ';' in userinfo, and Quake 2 expands '$'.",
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "et"
+  },
+  "jk2": {
+    "format": 1,
+    "name": "Star Wars Jedi Knight II: Jedi Outcast",
+    "protocol": "quake3",
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "printable",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "//protocolOptions": "Version 1.02 servers list under protocol 15 and 1.04 servers under 16; JK2MV joins both.",
+    "protocolOptions": {
+      "masterQuery": "15,16 empty full"
+    },
+    "//masters": "Raven's master closed; the community runs these.",
+    "masters": [
+      {
+        "host": "master.jkhub.org",
+        "port": 28060
+      },
+      {
+        "host": "master.jk2mv.org",
+        "port": 28060
+      },
+      {
+        "host": "master.jk2.daggolin.de",
+        "port": 28060
+      }
+    ],
     "keys": {
       "hostname": "sv_hostname",
       "map": "mapname",
@@ -465,25 +878,6 @@
         "gamename"
       ]
     },
-    "masters": [
-      {
-        "host": "etmaster.idsoftware.com",
-        "port": 27950
-      },
-      {
-        "host": "etmaster.etlegacy.com",
-        "port": 27950
-      }
-    ],
-    "protocolOptions": {
-      "masterQuery": "84 empty full"
-    }
-  },
-  "jk2": {
-    "id": "jk2",
-    "name": "Star Wars Jedi Knight II: Jedi Outcast",
-    "protocol": "quake3",
-    "queryPortOffset": 0,
     "modes": [
       {
         "key": "g_gametype",
@@ -526,6 +920,73 @@
         "label": "Capture the Ysalamiri"
       }
     ],
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "jk2"
+  },
+  "jka": {
+    "format": 1,
+    "name": "Star Wars Jedi Knight: Jedi Academy",
+    "protocol": "quake3",
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "//colourCodes": "OpenJK's table: ten colours, the rest black.",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff",
+          "#ff8000",
+          "#808080",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "26 empty full"
+    },
+    "//masters": "Raven's master closed; the community runs these.",
+    "masters": [
+      {
+        "host": "master.jkhub.org",
+        "port": 29060
+      },
+      {
+        "host": "master.jk2mv.org",
+        "port": 29060
+      }
+    ],
     "keys": {
       "hostname": "sv_hostname",
       "map": "mapname",
@@ -535,29 +996,6 @@
         "gamename"
       ]
     },
-    "masters": [
-      {
-        "host": "master.jkhub.org",
-        "port": 28060
-      },
-      {
-        "host": "master.jk2mv.org",
-        "port": 28060
-      },
-      {
-        "host": "master.jk2.daggolin.de",
-        "port": 28060
-      }
-    ],
-    "protocolOptions": {
-      "masterQuery": "15,16 empty full"
-    }
-  },
-  "jka": {
-    "id": "jka",
-    "name": "Star Wars Jedi Knight: Jedi Academy",
-    "protocol": "quake3",
-    "queryPortOffset": 0,
     "modes": [
       {
         "key": "g_gametype",
@@ -610,63 +1048,43 @@
         "label": "Capture the Ysalamiri"
       }
     ],
-    "keys": {
-      "hostname": "sv_hostname",
-      "map": "mapname",
-      "maxPlayers": "sv_maxclients",
-      "password": "g_needpass",
-      "mods": [
-        "gamename"
-      ]
-    },
-    "masters": [
-      {
-        "host": "master.jkhub.org",
-        "port": 29060
-      },
-      {
-        "host": "master.jk2mv.org",
-        "port": 29060
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
       }
-    ],
-    "protocolOptions": {
-      "masterQuery": "26 empty full"
-    }
+    },
+    "id": "jka"
   },
   "kingpin": {
-    "id": "kingpin",
+    "format": 1,
     "name": "Kingpin: Life of Crime",
     "protocol": "gamespy1",
-    "queryPortOffset": -10,
-    "modes": [
-      {
-        "key": "coop",
-        "value": "1",
-        "label": "Co-op"
-      },
-      {
-        "key": "teamplay",
-        "value": "1",
-        "label": "Bagman"
-      },
-      {
-        "key": "deathmatch",
-        "value": "1",
-        "label": "Deathmatch"
-      }
-    ],
-    "keys": {
-      "hostname": "hostname",
-      "map": "mapname",
-      "//maxPlayers": "kpded2 leaves its reserved slots out of maxplayers, so a server whose public slots are full counts as full.",
-      "maxPlayers": "maxplayers",
-      "password": "password",
-      "//mods": "The gametype is the mod's own title (\"Monkey Mod v2.1\").",
-      "mods": [
-        "gametype",
-        "game"
-      ]
+    "protocolOptions": {
+      "masterGame": "kingpin"
     },
+    "//queryPortOffset": "Servers answer GameSpy queries 10 ports below the one players join; their reply names that port.",
+    "queryPortOffset": -10,
+    "//text": "Quake 2 engines mark coloured text with the high bit, which only their own font can show.",
+    "text": {
+      "encoding": "ascii7"
+    },
+    "//masters": "Masters list over GameSpy's TCP protocol on 28900; 27900 is where servers send their heartbeats.",
     "masters": [
       {
         "host": "master.kingpin.info",
@@ -689,15 +1107,106 @@
         "port": 28900
       }
     ],
-    "protocolOptions": {
-      "masterGame": "kingpin"
-    }
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "//maxPlayers": "kpded2 leaves its reserved slots out of maxplayers, so a server whose public slots are full counts as full.",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "//mods": "The gametype is the mod's own title (\"Monkey Mod v2.1\").",
+      "mods": [
+        "gametype",
+        "game"
+      ]
+    },
+    "//modes": "In order: bagman sets deathmatch as well as teamplay.",
+    "modes": [
+      {
+        "key": "coop",
+        "value": "1",
+        "label": "Co-op"
+      },
+      {
+        "key": "teamplay",
+        "value": "1",
+        "label": "Bagman"
+      },
+      {
+        "key": "deathmatch",
+        "value": "1",
+        "label": "Deathmatch"
+      }
+    ],
+    "launch": {
+      "//desktopFiles": "Only names seen on real installs; Steam's Kingpin.desktop runs a steam:// URL, which drops the connect arguments.",
+      "desktopFiles": [
+        "kingpin-native.desktop"
+      ],
+      "installDir": "Games/Kingpin",
+      "program": "run-game.sh",
+      "requiredFiles": [
+        "kingpin.x86",
+        "main/pak0.pak"
+      ]
+    },
+    "join": {
+      "//arguments": "Each its own argument: run-game.sh recognises a join by \" +connect \".",
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "//maxLength": "Info_SetValueForKey refuses 64 characters or more, so a longer password would never reach the server.",
+        "maxLength": 63,
+        "//refusedCharacters": "kpded2 rebuilds \"set password %s\", so a space splits the value; iortcw cuts the command line at every '+' and ends a token at \"//\" or \"/*\"; both refuse '\"', '\\' and ';' in userinfo, and Quake 2 expands '$'.",
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "kingpin"
   },
   "mohaa": {
-    "id": "mohaa",
+    "format": 1,
     "name": "Medal of Honor: Allied Assault",
     "protocol": "gamespy1",
+    "//queryPortOffset": "Servers answer queries 97 ports above the one players join.",
     "queryPortOffset": 97,
+    "text": {
+      "encoding": "utf8OrWindows1252"
+    },
+    "protocolOptions": {
+      "masterGame": "mohaa"
+    },
+    "masters": [
+      {
+        "host": "master.333networks.com",
+        "port": 28900
+      },
+      {
+        "host": "master.openspy.net",
+        "port": 28900
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "mods": [
+        "gametype"
+      ]
+    },
     "modes": [
       {
         "key": "gametype",
@@ -720,45 +1229,64 @@
         "label": "Objective"
       }
     ],
-    "keys": {
-      "hostname": "hostname",
-      "map": "mapname",
-      "numPlayers": "numplayers",
-      "maxPlayers": "maxplayers",
-      "password": "password",
-      "mods": [
-        "gametype"
-      ]
-    },
-    "masters": [
-      {
-        "host": "master.333networks.com",
-        "port": 28900
-      },
-      {
-        "host": "master.openspy.net",
-        "port": 28900
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
       }
-    ],
-    "protocolOptions": {
-      "masterGame": "mohaa"
-    }
+    },
+    "id": "mohaa"
   },
   "nexuiz": {
-    "id": "nexuiz",
+    "format": 1,
     "name": "Nexuiz",
     "protocol": "quake3",
-    "queryPortOffset": 0,
-    "modes": [],
-    "keys": {
-      "hostname": "hostname",
-      "map": "mapname",
-      "maxPlayers": "sv_maxclients",
-      "//password": "DarkPlaces has no join password, so no server sends this rule.",
-      "password": "g_needpass",
-      "mods": [
-        "modname"
-      ]
+    "text": {
+      "//encoding": "Nexuiz 2.5 predates DarkPlaces' UTF-8; its high bytes are the Quake font's glyphs.",
+      "encoding": "ascii7",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0d26ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff",
+          "#ffffff",
+          "#808080",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff"
+        ],
+        "hexCodes": [
+          "xRGB"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "Nexuiz 3 empty full"
     },
     "masters": [
       {
@@ -770,15 +1298,82 @@
         "port": 27950
       }
     ],
-    "protocolOptions": {
-      "masterQuery": "Nexuiz 3 empty full"
-    }
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "//password": "DarkPlaces has no join password, so no server sends this rule.",
+      "password": "g_needpass",
+      "mods": [
+        "modname"
+      ]
+    },
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "nexuiz"
   },
   "openarena": {
-    "id": "openarena",
+    "format": 1,
     "name": "OpenArena",
     "protocol": "quake3",
-    "queryPortOffset": 0,
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "71 empty full"
+    },
+    "masters": [
+      {
+        "host": "master.ioquake3.org",
+        "port": 27950
+      },
+      {
+        "host": "dpmaster.deathmask.net",
+        "port": 27950
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
     "modes": [
       {
         "key": "g_gametype",
@@ -851,34 +1446,59 @@
         "label": "Possession"
       }
     ],
-    "keys": {
-      "hostname": "sv_hostname",
-      "map": "mapname",
-      "maxPlayers": "sv_maxclients",
-      "password": "g_needpass",
-      "mods": [
-        "gamename"
-      ]
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "openarena"
+  },
+  "quake2": {
+    "format": 1,
+    "name": "Quake II",
+    "protocol": "quake2",
+    "//text": "Quake 2 engines mark coloured text with the high bit, which only their own font can show.",
+    "text": {
+      "encoding": "ascii7"
     },
     "masters": [
       {
-        "host": "master.ioquake3.org",
-        "port": 27950
+        "host": "master.quakeservers.net",
+        "port": 27900
       },
       {
-        "host": "dpmaster.deathmask.net",
-        "port": 27950
+        "host": "master.maraakate.org",
+        "port": 27900
       }
     ],
-    "protocolOptions": {
-      "masterQuery": "71 empty full"
-    }
-  },
-  "quake2": {
-    "id": "quake2",
-    "name": "Quake II",
-    "protocol": "quake2",
-    "queryPortOffset": 0,
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "maxPlayers": "maxclients",
+      "//password": "needpass is a bitmask: 1 a player password, 2 a spectator password.",
+      "password": "needpass",
+      "//mods": "Mods often put a version in gamename instead of their title.",
+      "mods": [
+        "game",
+        "gamename"
+      ]
+    },
     "modes": [
       {
         "key": "ctf",
@@ -896,35 +1516,79 @@
         "label": "Deathmatch"
       }
     ],
-    "keys": {
-      "hostname": "hostname",
-      "map": "mapname",
-      "maxPlayers": "maxclients",
-      "//password": "needpass is a bitmask: 1 a player password, 2 a spectator password.",
-      "password": "needpass",
-      "//mods": "Mods often put a version in gamename instead of their title.",
-      "mods": [
-        "game",
-        "gamename"
-      ]
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "//maxLength": "Info_SetValueForKey refuses 64 characters or more, so a longer password would never reach the server.",
+        "maxLength": 63,
+        "//refusedCharacters": "kpded2 rebuilds \"set password %s\", so a space splits the value; iortcw cuts the command line at every '+' and ends a token at \"//\" or \"/*\"; both refuse '\"', '\\' and ';' in userinfo, and Quake 2 expands '$'.",
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "quake2"
+  },
+  "quake3": {
+    "format": 1,
+    "name": "Quake III Arena",
+    "protocol": "quake3",
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "//colourCodes": "ioquake3 and iortcw take only letters and digits after the escape; a caret before anything else is shown.",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "68 empty full"
     },
     "masters": [
       {
-        "host": "master.quakeservers.net",
-        "port": 27900
+        "host": "master.quake3arena.com",
+        "port": 27950
       },
       {
-        "host": "master.maraakate.org",
-        "port": 27900
+        "host": "master.ioquake3.org",
+        "port": 27950
+      },
+      {
+        "host": "dpmaster.deathmask.net",
+        "port": 27950
       }
     ],
-    "protocolOptions": {}
-  },
-  "quake3": {
-    "id": "quake3",
-    "name": "Quake III Arena",
-    "protocol": "quake3",
-    "queryPortOffset": 0,
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
     "modes": [
       {
         "key": "g_gametype",
@@ -967,38 +1631,79 @@
         "label": "Harvester"
       }
     ],
-    "keys": {
-      "hostname": "sv_hostname",
-      "map": "mapname",
-      "maxPlayers": "sv_maxclients",
-      "password": "g_needpass",
-      "mods": [
-        "gamename"
-      ]
+    "//foreignServers": "Urban Terror and OpenArena list themselves on Quake III's masters.",
+    "foreignServers": [
+      {
+        "key": "gamename",
+        "value": "q3urt42"
+      },
+      {
+        "key": "gamename",
+        "value": "q3urt43"
+      },
+      {
+        "key": "gamename",
+        "value": "baseoa"
+      }
+    ],
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "//maxLength": "Info_SetValueForKey refuses 64 characters or more, so a longer password would never reach the server.",
+        "maxLength": 63,
+        "//refusedCharacters": "kpded2 rebuilds \"set password %s\", so a space splits the value; iortcw cuts the command line at every '+' and ends a token at \"//\" or \"/*\"; both refuse '\"', '\\' and ';' in userinfo, and Quake 2 expands '$'.",
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "quake3"
+  },
+  "quakeworld": {
+    "format": 1,
+    "name": "QuakeWorld",
+    "protocol": "quakeworld",
+    "//text": "Quake engines mark coloured text with the high bit, which only their own font can show.",
+    "text": {
+      "encoding": "ascii7"
     },
     "masters": [
       {
-        "host": "master.quake3arena.com",
-        "port": 27950
+        "host": "master.quakeservers.net",
+        "port": 27000
       },
       {
-        "host": "master.ioquake3.org",
-        "port": 27950
+        "host": "qwmaster.fodquake.net",
+        "port": 27000
       },
       {
-        "host": "dpmaster.deathmask.net",
-        "port": 27950
+        "host": "master.quakeworld.nu",
+        "port": 27000
       }
     ],
-    "protocolOptions": {
-      "masterQuery": "68 empty full"
-    }
-  },
-  "quakeworld": {
-    "id": "quakeworld",
-    "name": "QuakeWorld",
-    "protocol": "quakeworld",
-    "queryPortOffset": 0,
+    "keys": {
+      "hostname": "hostname",
+      "map": "map",
+      "maxPlayers": "maxclients",
+      "//password": "needpass is a bitmask: 1 a player password, 2 a spectator password.",
+      "password": "needpass",
+      "mods": [
+        "*gamedir"
+      ]
+    },
+    "//modes": "KTX, the mod most servers run, names its mode.",
     "modes": [
       {
         "key": "mode",
@@ -1026,37 +1731,71 @@
         "label": "Capture the Flag"
       }
     ],
-    "keys": {
-      "hostname": "hostname",
-      "map": "map",
-      "maxPlayers": "maxclients",
-      "//password": "needpass is a bitmask: 1 a player password, 2 a spectator password.",
-      "password": "needpass",
-      "mods": [
-        "*gamedir"
-      ]
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "quakeworld"
+  },
+  "rtcw": {
+    "format": 1,
+    "name": "Return to Castle Wolfenstein",
+    "protocol": "quake3",
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "//colourCodes": "ioquake3 and iortcw take only letters and digits after the escape; a caret before anything else is shown.",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "60 empty full",
+      "//infoRules": "iortcw sets g_needpass but never puts it in the status; its engine gives it only in getinfo, as RTCW's own browser reads it.",
+      "infoRules": "g_needpass"
     },
     "masters": [
       {
-        "host": "master.quakeservers.net",
-        "port": 27000
-      },
-      {
-        "host": "qwmaster.fodquake.net",
-        "port": 27000
-      },
-      {
-        "host": "master.quakeworld.nu",
-        "port": 27000
+        "host": "wolfmaster.idsoftware.com",
+        "port": 27950
       }
     ],
-    "protocolOptions": {}
-  },
-  "rtcw": {
-    "id": "rtcw",
-    "name": "Return to Castle Wolfenstein",
-    "protocol": "quake3",
-    "queryPortOffset": 0,
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
     "modes": [
       {
         "key": "g_gametype",
@@ -1079,32 +1818,74 @@
         "label": "Capture & Hold"
       }
     ],
-    "keys": {
-      "hostname": "sv_hostname",
-      "map": "mapname",
-      "maxPlayers": "sv_maxclients",
-      "password": "g_needpass",
-      "mods": [
-        "gamename"
+    "launch": {
+      "desktopFiles": [
+        "id-linux-rtcw-mp.desktop"
+      ],
+      "installDir": "Games/id-linux",
+      "program": "rtcw-mp",
+      "requiredFiles": [
+        "kit/id-run",
+        "rtcw/.installed-rtcw-mp"
       ]
+    },
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "//maxLength": "Info_SetValueForKey refuses 64 characters or more, so a longer password would never reach the server.",
+        "maxLength": 63,
+        "//refusedCharacters": "kpded2 rebuilds \"set password %s\", so a space splits the value; iortcw cuts the command line at every '+' and ends a token at \"//\" or \"/*\"; both refuse '\"', '\\' and ';' in userinfo, and Quake 2 expands '$'.",
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "rtcw"
+  },
+  "rune": {
+    "format": 1,
+    "name": "Rune",
+    "protocol": "gamespy1",
+    "//queryPortOffset": "Servers answer queries on the port after the one players join.",
+    "queryPortOffset": 1,
+    "text": {
+      "encoding": "utf8OrWindows1252"
+    },
+    "protocolOptions": {
+      "masterGame": "rune"
     },
     "masters": [
       {
-        "host": "wolfmaster.idsoftware.com",
-        "port": 27950
+        "host": "master.333networks.com",
+        "port": 28900
+      },
+      {
+        "host": "master.openspy.net",
+        "port": 28900
       }
     ],
-    "protocolOptions": {
-      "masterQuery": "60 empty full",
-      "//infoRules": "iortcw sets g_needpass but never puts it in the status; its engine gives it only in getinfo, as RTCW's own browser reads it.",
-      "infoRules": "g_needpass"
-    }
-  },
-  "rune": {
-    "id": "rune",
-    "name": "Rune",
-    "protocol": "gamespy1",
-    "queryPortOffset": 1,
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "mods": [
+        "gametype"
+      ]
+    },
     "modes": [
       {
         "key": "gametype",
@@ -1122,36 +1903,42 @@
         "label": "Arena"
       }
     ],
-    "keys": {
-      "hostname": "hostname",
-      "map": "mapname",
-      "numPlayers": "numplayers",
-      "maxPlayers": "maxplayers",
-      "password": "password",
-      "mods": [
-        "gametype"
-      ]
+    "join": {
+      "//arguments": "The address is the game's URL; each option follows it after a '?'.",
+      "arguments": [
+        "{address}"
+      ],
+      "passwordArguments": [
+        "{address}?password={password}"
+      ],
+      "password": {
+        "maxLength": 1024,
+        "//refusedCharacters": "'?' starts the next option, '#' a portal, and a space ends the URL.",
+        "refusedCharacters": " ?#"
+      }
     },
+    "id": "rune"
+  },
+  "sin": {
+    "format": 1,
+    "name": "SiN",
+    "protocol": "gamespy1",
+    "protocolOptions": {
+      "masterGame": "sin"
+    },
+    "//queryPortOffset": "Servers answer GameSpy queries on the port before the one players join; their reply names that port.",
+    "queryPortOffset": -1,
+    "//text": "Quake 2 engines mark coloured text with the high bit, which only their own font can show.",
+    "text": {
+      "encoding": "ascii7"
+    },
+    "//masters": "The only master that lists SiN servers; 333networks and OpenSpy know the game but list none.",
     "masters": [
       {
-        "host": "master.333networks.com",
-        "port": 28900
-      },
-      {
-        "host": "master.openspy.net",
+        "host": "master.maraakate.org",
         "port": 28900
       }
     ],
-    "protocolOptions": {
-      "masterGame": "rune"
-    }
-  },
-  "sin": {
-    "id": "sin",
-    "name": "SiN",
-    "protocol": "gamespy1",
-    "queryPortOffset": -1,
-    "modes": [],
     "keys": {
       "hostname": "hostname",
       "map": "mapname",
@@ -1160,21 +1947,107 @@
       "//password": "SiN's GameSpy reply never says whether a server wants a password, so none shows as needing one.",
       "password": "password"
     },
-    "masters": [
-      {
-        "host": "master.maraakate.org",
-        "port": 28900
+    "launch": {
+      "//desktopFiles": "From Dominatrix's CD installer; its archive, which Steam and GOG owners fill with the game's files, comes with none.",
+      "desktopFiles": [
+        "rohit_itch_io-sin_1.desktop"
+      ],
+      "//installDir": "Where Dominatrix's CD installer puts the game for a user who is not root.",
+      "installDir": "sin",
+      "program": "sin",
+      "requiredFiles": [
+        "base/game.so",
+        "base/pak0.sin"
+      ]
+    },
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "//maxLength": "Info_SetValueForKey refuses 64 characters or more, so a longer password would never reach the server.",
+        "maxLength": 63,
+        "//refusedCharacters": "SiN reads its command line as Quake 2 does: '+' starts the next command, a space adds a word that set refuses, '$' is expanded, and userinfo refuses '\"', '\\' and ';'.",
+        "refusedCharacters": " \"$;+\\",
+        "//refusedSequences": "\"//\" starts a comment.",
+        "refusedSequences": [
+          "//"
+        ]
       }
-    ],
-    "protocolOptions": {
-      "masterGame": "sin"
-    }
+    },
+    "id": "sin"
   },
   "smokinguns": {
-    "id": "smokinguns",
+    "format": 1,
     "name": "Smokin' Guns",
     "protocol": "quake3",
-    "queryPortOffset": 0,
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "printable",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff",
+          "#ff8000",
+          "#808080",
+          "#bfbfbf",
+          "#bfbfbf",
+          "#008000",
+          "#808000",
+          "#000080",
+          "#800000",
+          "#804000",
+          "#ff991a",
+          "#008080",
+          "#800080",
+          "#0080ff",
+          "#8000ff",
+          "#3399cc",
+          "#ccffcc",
+          "#006633",
+          "#ff0033",
+          "#b31a1a",
+          "#993300",
+          "#cc9933",
+          "#999933",
+          "#ffffbf",
+          "#ffff80"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "68 empty full"
+    },
+    "masters": [
+      {
+        "host": "master.smokin-guns.org",
+        "port": 27950
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "gamename"
+      ]
+    },
     "modes": [
       {
         "key": "g_gametype",
@@ -1207,6 +2080,61 @@
         "label": "Bank Robbery"
       }
     ],
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "smokinguns"
+  },
+  "sof2": {
+    "format": 1,
+    "name": "Soldier of Fortune II: Double Helix",
+    "protocol": "quake3",
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "printable",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "//protocolOptions": "Version 1.03 servers list under protocol 2004; 1.00 servers, which 1.03 cannot join, under 2002.",
+    "protocolOptions": {
+      "masterQuery": "2004 empty full"
+    },
+    "//masters": "Raven's master closed; the 1fx community runs this one.",
+    "masters": [
+      {
+        "host": "master.1fxmod.org",
+        "port": 20110
+      }
+    ],
     "keys": {
       "hostname": "sv_hostname",
       "map": "mapname",
@@ -1216,21 +2144,6 @@
         "gamename"
       ]
     },
-    "masters": [
-      {
-        "host": "master.smokin-guns.org",
-        "port": 27950
-      }
-    ],
-    "protocolOptions": {
-      "masterQuery": "68 empty full"
-    }
-  },
-  "sof2": {
-    "id": "sof2",
-    "name": "Soldier of Fortune II: Double Helix",
-    "protocol": "quake3",
-    "queryPortOffset": 0,
     "modes": [
       {
         "key": "g_gametype",
@@ -1263,36 +2176,178 @@
         "label": "Demolition"
       }
     ],
-    "keys": {
-      "hostname": "sv_hostname",
-      "map": "mapname",
-      "maxPlayers": "sv_maxclients",
-      "password": "g_needpass",
-      "mods": [
-        "gamename"
-      ]
-    },
-    "masters": [
-      {
-        "host": "master.1fxmod.org",
-        "port": 20110
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
       }
-    ],
-    "protocolOptions": {
-      "masterQuery": "2004 empty full"
-    }
+    },
+    "id": "sof2"
   },
   "tremulous": {
-    "id": "tremulous",
+    "format": 1,
     "name": "Tremulous",
     "protocol": "quake3",
-    "queryPortOffset": 0,
-    "modes": [],
-    "keys": {
-      "hostname": "sv_hostname",
-      "map": "mapname",
-      "maxPlayers": "sv_maxclients",
-      "password": "g_needpass"
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "//colourCodes": "GrangerHub's 62 colours, placed where a letter or digit finds them.",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#404040",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff",
+          "#808080",
+          "#ffaf00",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ff3f34",
+          "#228b22",
+          "#ecbd2c",
+          "#7b68ee",
+          "#b2ffff",
+          "#865040",
+          "#dbd7d2",
+          "#0f0f0f",
+          "#65000b",
+          "#7b785a",
+          "#df9d5b",
+          "#355e4f",
+          "#35514f",
+          "#8e593c",
+          "#faf0be",
+          "#100c08",
+          "#ff033e",
+          "#39ff14",
+          "#faed27",
+          "#120a8f",
+          "#00ffef",
+          "#8b008b",
+          "#aaf0d1",
+          "#d3d3d3",
+          "#ff9999",
+          "#90ee90",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#feab9a",
+          "#98fb98",
+          "#eee8aa",
+          "#9bddff",
+          "#afeeee",
+          "#db7093",
+          "#e8e5dc",
+          "#3b3c36",
+          "#ff6347",
+          "#bfff00",
+          "#fff700",
+          "#4f86f7",
+          "#40e0d0",
+          "#fd5b78",
+          "#eef3e5",
+          "#9fa3a7",
+          "#b7410e",
+          "#6e8d71",
+          "#ffd700",
+          "#4682b4",
+          "#7b9095",
+          "#cd7f32",
+          "#c0c0c0",
+          "#a9a9a9",
+          "#ff8c00",
+          "#006400",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff"
+        ],
+        "hexCodes": [
+          "#RGB",
+          "##RRGGBB"
+        ]
+      }
+    },
+    "//protocolOptions": "A server lists each protocol it speaks from its own port; 71 is Tremulous 1.3's own.",
+    "protocolOptions": {
+      "masterQuery": "71 empty full"
     },
     "masters": [
       {
@@ -1300,15 +2355,73 @@
         "port": 30700
       }
     ],
-    "protocolOptions": {
-      "masterQuery": "71 empty full"
-    }
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass"
+    },
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "tremulous"
   },
   "unreal": {
-    "id": "unreal",
+    "format": 1,
     "name": "Unreal",
     "protocol": "gamespy1",
+    "//queryPortOffset": "Servers answer queries on the port after the one players join.",
     "queryPortOffset": 1,
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "//colourCodes": "Unreal 227 colours names with ESC and three bytes of red, green and blue.",
+      "colourCodes": {
+        "escape": "\u001b",
+        "codes": "rgb"
+      }
+    },
+    "protocolOptions": {
+      "masterGame": "unreal"
+    },
+    "//masters": "Epic's masters closed; the community runs these, and each lists servers the other does not.",
+    "masters": [
+      {
+        "host": "master.333networks.com",
+        "port": 28900
+      },
+      {
+        "host": "master.openspy.net",
+        "port": 28900
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "mods": [
+        "gametype"
+      ]
+    },
     "modes": [
       {
         "key": "gametype",
@@ -1326,41 +2439,88 @@
         "label": "Co-op"
       }
     ],
-    "keys": {
-      "hostname": "hostname",
-      "map": "mapname",
-      "numPlayers": "numplayers",
-      "maxPlayers": "maxplayers",
-      "password": "password",
-      "mods": [
-        "gametype"
+    "launch": {
+      "//desktopFiles": "From OldUnreal's installer, which passes the URL to the game.",
+      "desktopFiles": [
+        "OldUnreal-UnrealGold.desktop"
+      ],
+      "//installDir": "Where OldUnreal's installer puts the game, and its x86_64 binary.",
+      "installDir": ".local/share/OldUnreal/UnrealGold",
+      "program": "System64/unreal-bin-amd64",
+      "requiredFiles": [
+        "System/Core.u",
+        "System/Engine.u",
+        "System/Default.ini"
       ]
     },
-    "masters": [
-      {
-        "host": "master.333networks.com",
-        "port": 28900
-      },
-      {
-        "host": "master.openspy.net",
-        "port": 28900
+    "join": {
+      "//arguments": "The address is the game's URL; each option follows it after a '?'.",
+      "arguments": [
+        "{address}"
+      ],
+      "passwordArguments": [
+        "{address}?password={password}"
+      ],
+      "password": {
+        "maxLength": 1024,
+        "//refusedCharacters": "'?' starts the next option, '#' a portal, and a space ends the URL.",
+        "refusedCharacters": " ?#"
       }
-    ],
-    "protocolOptions": {
-      "masterGame": "unreal"
-    }
+    },
+    "id": "unreal"
   },
   "unvanquished": {
-    "id": "unvanquished",
+    "format": 1,
     "name": "Unvanquished",
     "protocol": "quake3",
-    "queryPortOffset": 0,
-    "modes": [],
-    "keys": {
-      "hostname": "sv_hostname",
-      "map": "mapname",
-      "maxPlayers": "sv_maxclients",
-      "password": "g_needpass"
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "printable",
+        "palette": [
+          "#333333",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff",
+          "#ff8000",
+          "#808080",
+          "#bfbfbf",
+          "#bfbfbf",
+          "#008000",
+          "#808000",
+          "#000080",
+          "#800000",
+          "#804000",
+          "#ff991a",
+          "#008080",
+          "#800080",
+          "#0080ff",
+          "#8000ff",
+          "#3399cc",
+          "#ccffcc",
+          "#006633",
+          "#ff0033",
+          "#b31a1a",
+          "#993300",
+          "#cc9933",
+          "#999933",
+          "#ffffbf",
+          "#ffff80"
+        ],
+        "hexCodes": [
+          "xRGB",
+          "XRGB",
+          "#RRGGBB"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "86 empty full"
     },
     "masters": [
       {
@@ -1372,15 +2532,93 @@
         "port": 27950
       }
     ],
-    "protocolOptions": {
-      "masterQuery": "86 empty full"
-    }
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass"
+    },
+    "//foreignServers": "A Smokin' Guns port to Unvanquished's engine lists itself on these masters.",
+    "foreignServers": [
+      {
+        "key": "gamename",
+        "value": "smokinguns"
+      }
+    ],
+    "launch": {
+      "//desktopFiles": "From Flathub, the updater and the AUR; each passes its arguments to the game.",
+      "desktopFiles": [
+        "net.unvanquished.Unvanquished.desktop",
+        "unvanquished.desktop"
+      ],
+      "installDir": ".local/share/unvanquished/base",
+      "program": "updater",
+      "requiredFiles": [
+        "updater",
+        "daemon"
+      ]
+    },
+    "join": {
+      "//arguments": "The desktop entries and the updater take the server as one unv:// URL.",
+      "arguments": [
+        "unv://{address}"
+      ],
+      "passwordArguments": [
+        "unv://{password}@{address}"
+      ],
+      "password": {
+        "//maxLength": "The client copies the password into 64 bytes.",
+        "maxLength": 63,
+        "//refusedCharacters": "The updater lets only letters, digits and ./-]_:@ through, and the password ends at the first @.",
+        "refusedCharacters": " !\"#$%&'()*+,;<=>?@[\\^`{|}~"
+      }
+    },
+    "id": "unvanquished"
   },
   "urbanterror": {
-    "id": "urbanterror",
+    "format": 1,
     "name": "Urban Terror",
     "protocol": "quake3",
-    "queryPortOffset": 0,
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff",
+          "#e04f21",
+          "#4a4d30",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "68 empty full"
+    },
+    "masters": [
+      {
+        "host": "master.urbanterror.info",
+        "port": 27900
+      }
+    ],
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass"
+    },
     "modes": [
       {
         "key": "g_gametype",
@@ -1443,27 +2681,78 @@
         "label": "Gun Game"
       }
     ],
-    "keys": {
-      "hostname": "sv_hostname",
-      "map": "mapname",
-      "maxPlayers": "sv_maxclients",
-      "password": "g_needpass"
+    "launch": {
+      "//desktopFiles": "From Flathub and the AUR; each passes its arguments to the game.",
+      "desktopFiles": [
+        "info.urbanterror.UrbanTerror.desktop",
+        "urbanterror.desktop"
+      ],
+      "installDir": "UrbanTerror43",
+      "program": "Quake3-UrT.x86_64",
+      "requiredFiles": [
+        "Quake3-UrT.x86_64",
+        "q3ut4/readme43.txt"
+      ]
     },
-    "masters": [
-      {
-        "host": "master.urbanterror.info",
-        "port": 27900
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
       }
-    ],
-    "protocolOptions": {
-      "masterQuery": "68 empty full"
-    }
+    },
+    "id": "urbanterror"
   },
   "ut2004": {
-    "id": "ut2004",
+    "format": 1,
     "name": "Unreal Tournament 2004",
     "protocol": "unreal2",
+    "//queryPortOffset": "Servers answer queries on the port after the one players join.",
     "queryPortOffset": 1,
+    "//text": "Names colour their parts with ESC and three bytes of red, green and blue; servers send UTF-8 as well as Latin-1.",
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "\u001b",
+        "codes": "rgb"
+      }
+    },
+    "//masters": "Epic's masters closed in 2023; the community runs these, and each lists servers the other does not.",
+    "masters": [
+      {
+        "host": "ut2004master.333networks.com",
+        "port": 28902
+      },
+      {
+        "host": "utmaster.openspy.net",
+        "port": 28902
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "map",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "//mods": "The game type's class, so a mod's own game type, such as Freon or TeamArenaMaster, can be filtered for.",
+      "mods": [
+        "gametype"
+      ]
+    },
     "modes": [
       {
         "key": "gametype",
@@ -1521,34 +2810,73 @@
         "label": "Invasion"
       }
     ],
+    "launch": {
+      "//desktopFiles": "From OldUnreal's installer, the AUR and nixpkgs packages, and Flathub; each passes its arguments to the game.",
+      "desktopFiles": [
+        "OldUnreal-UT2004.desktop",
+        "ut2004.desktop",
+        "com.epicgames.ut2004.desktop"
+      ],
+      "//installDir": "Where OldUnreal's installer puts the game, and its x86_64 binary.",
+      "installDir": ".local/share/OldUnreal/UT2004",
+      "program": "System/UT2004",
+      "requiredFiles": [
+        "System/Core.u",
+        "System/Engine.u",
+        "System/Default.ini"
+      ]
+    },
+    "join": {
+      "//arguments": "The address is the game's URL; each option follows it after a '?'.",
+      "arguments": [
+        "{address}"
+      ],
+      "passwordArguments": [
+        "{address}?password={password}"
+      ],
+      "password": {
+        "//maxLength": "The game reads the password from the URL whole, so only the format's own limit applies.",
+        "maxLength": 1024,
+        "//refusedCharacters": "'?' starts the next option, '#' a portal, and a space ends the URL.",
+        "refusedCharacters": " ?#"
+      }
+    },
+    "id": "ut2004"
+  },
+  "ut99": {
+    "format": 1,
+    "name": "Unreal Tournament",
+    "protocol": "gamespy1",
+    "//queryPortOffset": "Servers answer queries on the port after the one players join.",
+    "queryPortOffset": 1,
+    "text": {
+      "encoding": "utf8OrWindows1252"
+    },
+    "protocolOptions": {
+      "masterGame": "ut"
+    },
+    "//masters": "Epic's masters closed; the community runs these, and each lists servers the other does not.",
+    "masters": [
+      {
+        "host": "master.333networks.com",
+        "port": 28900
+      },
+      {
+        "host": "master.openspy.net",
+        "port": 28900
+      }
+    ],
     "keys": {
       "hostname": "hostname",
-      "map": "map",
+      "map": "mapname",
       "numPlayers": "numplayers",
       "maxPlayers": "maxplayers",
       "password": "password",
-      "//mods": "The game type's class, so a mod's own game type, such as Freon or TeamArenaMaster, can be filtered for.",
+      "//mods": "The game type's class, so a mod's own game type, such as BunnyTrackGame or MonsterHunt, can be filtered for.",
       "mods": [
         "gametype"
       ]
     },
-    "masters": [
-      {
-        "host": "ut2004master.333networks.com",
-        "port": 28902
-      },
-      {
-        "host": "utmaster.openspy.net",
-        "port": 28902
-      }
-    ],
-    "protocolOptions": {}
-  },
-  "ut99": {
-    "id": "ut99",
-    "name": "Unreal Tournament",
-    "protocol": "gamespy1",
-    "queryPortOffset": 1,
     "modes": [
       {
         "key": "gametype",
@@ -1581,36 +2909,87 @@
         "label": "Last Man Standing"
       }
     ],
-    "keys": {
-      "hostname": "hostname",
-      "map": "mapname",
-      "numPlayers": "numplayers",
-      "maxPlayers": "maxplayers",
-      "password": "password",
-      "//mods": "The game type's class, so a mod's own game type, such as BunnyTrackGame or MonsterHunt, can be filtered for.",
-      "mods": [
-        "gametype"
+    "launch": {
+      "//desktopFiles": "From OldUnreal's installer, which passes the URL to the game.",
+      "desktopFiles": [
+        "OldUnreal-UnrealTournament.desktop"
+      ],
+      "//installDir": "Where OldUnreal's installer puts the game, and its x86_64 binary.",
+      "installDir": ".local/share/OldUnreal/UnrealTournament",
+      "program": "System/ut-bin-amd64",
+      "requiredFiles": [
+        "System/Core.u",
+        "System/Engine.u",
+        "System/Default.ini"
       ]
+    },
+    "join": {
+      "//arguments": "The address is the game's URL; each option follows it after a '?'.",
+      "arguments": [
+        "{address}"
+      ],
+      "passwordArguments": [
+        "{address}?password={password}"
+      ],
+      "password": {
+        "maxLength": 1024,
+        "//refusedCharacters": "'?' starts the next option, '#' a portal, and a space ends the URL.",
+        "refusedCharacters": " ?#"
+      }
+    },
+    "id": "ut99"
+  },
+  "warsow": {
+    "format": 1,
+    "name": "Warsow",
+    "protocol": "quake3",
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0000ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff",
+          "#ff8000",
+          "#808080",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "Warsow 22 empty full"
     },
     "masters": [
       {
-        "host": "master.333networks.com",
-        "port": 28900
+        "host": "dpmaster.deathmask.net",
+        "port": 27950
       },
       {
-        "host": "master.openspy.net",
-        "port": 28900
+        "host": "dpmaster.tchr.no",
+        "port": 27950
       }
     ],
-    "protocolOptions": {
-      "masterGame": "ut"
-    }
-  },
-  "warsow": {
-    "id": "warsow",
-    "name": "Warsow",
-    "protocol": "quake3",
-    "queryPortOffset": 0,
+    "keys": {
+      "hostname": "sv_hostname",
+      "map": "mapname",
+      "maxPlayers": "sv_maxclients",
+      "password": "g_needpass",
+      "mods": [
+        "fs_game"
+      ]
+    },
     "modes": [
       {
         "key": "gametype",
@@ -1673,14 +3052,63 @@
         "label": "Tutorial"
       }
     ],
-    "keys": {
-      "hostname": "sv_hostname",
-      "map": "mapname",
-      "maxPlayers": "sv_maxclients",
-      "password": "g_needpass",
-      "mods": [
-        "fs_game"
-      ]
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
+      }
+    },
+    "id": "warsow"
+  },
+  "xonotic": {
+    "format": 1,
+    "name": "Xonotic",
+    "protocol": "quake3",
+    "text": {
+      "encoding": "utf8OrWindows1252",
+      "colourCodes": {
+        "escape": "^",
+        "codes": "alphanumeric",
+        "palette": [
+          "#000000",
+          "#ff0000",
+          "#00ff00",
+          "#ffff00",
+          "#0d26ff",
+          "#00ffff",
+          "#ff00ff",
+          "#ffffff",
+          "#ffffff",
+          "#808080",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff"
+        ],
+        "hexCodes": [
+          "xRGB"
+        ]
+      }
+    },
+    "protocolOptions": {
+      "masterQuery": "Xonotic 3 empty full"
     },
     "masters": [
       {
@@ -1692,16 +3120,6 @@
         "port": 27950
       }
     ],
-    "protocolOptions": {
-      "masterQuery": "Warsow 22 empty full"
-    }
-  },
-  "xonotic": {
-    "id": "xonotic",
-    "name": "Xonotic",
-    "protocol": "quake3",
-    "queryPortOffset": 0,
-    "modes": [],
     "keys": {
       "hostname": "hostname",
       "map": "mapname",
@@ -1712,18 +3130,41 @@
         "modname"
       ]
     },
-    "masters": [
-      {
-        "host": "dpmaster.deathmask.net",
-        "port": 27950
-      },
-      {
-        "host": "dpmaster.tchr.no",
-        "port": 27950
+    "launch": {
+      "//desktopFiles": "From Flathub and Arch; each passes its arguments to the game.",
+      "desktopFiles": [
+        "org.xonotic.Xonotic.desktop",
+        "xonotic.desktop"
+      ],
+      "//installDir": "Where the release zip unpacks, and its launcher, which passes its arguments on.",
+      "installDir": "Xonotic",
+      "program": "xonotic-linux-sdl.sh",
+      "requiredFiles": [
+        "xonotic-linux64-sdl",
+        "key_0.d0pk"
+      ]
+    },
+    "join": {
+      "arguments": [
+        "+connect",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "+set",
+        "password",
+        "{password}",
+        "+connect",
+        "{address}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \"$;+\\",
+        "refusedSequences": [
+          "//",
+          "/*"
+        ]
       }
-    ],
-    "protocolOptions": {
-      "masterQuery": "Xonotic 3 empty full"
-    }
+    },
+    "id": "xonotic"
   }
 }

@@ -65,9 +65,9 @@ python3 scripts/fetch_servers.py
 
 ## Attribution & Acknowledgements
 
-Server list data originates from community masters:
-- [molycode/lookout-games](https://github.com/molycode/lookout-games/)
-- [OpenSpy Master Server](https://openspy.net/)
-- [333networks](https://333networks.com/)
-- [M. Hambloch Kingpin Server List](https://hambloch.com/kingpin/)
-- id Software / community master operators
+- Game definitions in `data/lookout_metadata.json` come from [lookout-games](https://github.com/molycode/lookout-games/) (MIT, Copyright (c) 2026 moly; copy of license in [data/LICENSE](data/LICENSE)).
+- Server list data originates from community masters and directories:
+  - [OpenSpy Master Server](https://openspy.net/)
+  - [333networks](https://333networks.com/)
+  - [M. Hambloch Kingpin Server List](https://hambloch.com/kingpin/)
+  - id Software / community master operators
