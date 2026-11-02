@@ -1,4 +1,4 @@
-# game-servers-mirror
+# retro-server-mirror
 
 Regularly updated multi-game server address lists for launchers, server browsers, and community tools.
 
@@ -7,27 +7,27 @@ Pulls from master servers across **[molycode/lookout-games](https://github.com/m
 ## Raw URLs
 
 - **All Servers Combined (8,400+ servers):**  
-  `https://raw.githubusercontent.com/shavargo/game-servers-mirror/master/servers.txt`  
+  `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers.txt`  
   (also aliased as `server.txt`)
 
 - **JSON Index / Metadata (All 4,841 Games):**  
-  `https://raw.githubusercontent.com/shavargo/game-servers-mirror/master/servers.json`
+  `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers.json`
 
 - **Per-Game Server Lists:**  
-  `https://raw.githubusercontent.com/shavargo/game-servers-mirror/master/servers/<game>.txt`
+  `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers/<game>.txt`
 
   Examples:
-  - Kingpin: `servers/kingpin.txt`
-  - Unreal Tournament (UT99): `servers/ut99.txt` (alias: `servers/ut.txt`)
-  - Unreal Tournament 2004: `servers/ut2004.txt`
-  - Quake III Arena: `servers/quake3.txt`
-  - Quake II: `servers/quake2.txt`
-  - QuakeWorld: `servers/quakeworld.txt`
-  - Battlefield 1942: `servers/bf1942.txt` (alias: `servers/bfield1942.txt`)
-  - Wolfenstein Enemy Territory: `servers/et.txt`
-  - Call of Duty 4: `servers/cod4.txt`
-  - Painkiller: `servers/painkiller.txt`
-  - Rune: `servers/rune.txt`
+  - Kingpin: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers/kingpin.txt`
+  - Unreal Tournament (UT99): `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers/ut99.txt` (alias: `servers/ut.txt`)
+  - Unreal Tournament 2004: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers/ut2004.txt`
+  - Quake III Arena: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers/quake3.txt`
+  - Quake II: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers/quake2.txt`
+  - QuakeWorld: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers/quakeworld.txt`
+  - Battlefield 1942: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers/bf1942.txt` (alias: `servers/bfield1942.txt`)
+  - Wolfenstein Enemy Territory: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers/et.txt`
+  - Call of Duty 4: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers/cod4.txt`
+  - Painkiller: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers/painkiller.txt`
+  - Rune: `https://raw.githubusercontent.com/shavargo/retro-server-mirror/master/servers/rune.txt`
   - ... and 4,830 more games!
 
 ## Supported Protocols & Sources
