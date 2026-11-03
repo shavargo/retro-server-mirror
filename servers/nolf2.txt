@@ -1,15 +1,20 @@
 # Server address list for No One Lives Forever 2 (nolf2)
-# Last fetch (UTC): 2026-11-02T12:02:26Z
+# Last fetch (UTC): 2026-11-03T12:02:10Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
-# Active servers found: 5
+# Active servers found: 10
 # Sources:
 #   - cache: 5 found
 #   - gamespy1://master.openspy.net:28900: 5 found
 #   - gamespy1://master.333networks.com:28900: 0 found
 # Format: ip:port
 #
+66.181.34.110:27892
 66.181.34.110:27893
+80.203.73.162:27888
 80.203.73.162:27889
+80.203.73.162:27892
 80.203.73.162:27893
+216.225.197.202:29889
 216.225.197.202:29890
+216.225.197.202:29899
 216.225.197.202:29900

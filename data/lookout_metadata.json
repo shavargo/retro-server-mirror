@@ -1072,7 +1072,7 @@
     "id": "jka"
   },
   "kingpin": {
-    "format": 1,
+    "format": 3,
     "name": "Kingpin: Life of Crime",
     "protocol": "gamespy1",
     "protocolOptions": {
@@ -1138,16 +1138,30 @@
       }
     ],
     "launch": {
-      "//desktopFiles": "Only names seen on real installs; Steam's Kingpin.desktop runs a steam:// URL, which drops the connect arguments.",
-      "desktopFiles": [
-        "kingpin-native.desktop"
-      ],
-      "installDir": "Games/Kingpin",
-      "program": "run-game.sh",
-      "requiredFiles": [
-        "kingpin.x86",
-        "main/pak0.pak"
-      ]
+      "linux": {
+        "//desktopFiles": "Only names seen on real installs; Steam's Kingpin.desktop runs a steam:// URL, which drops the connect arguments.",
+        "desktopFiles": [
+          "kingpin-native.desktop"
+        ],
+        "installDir": "Games/Kingpin",
+        "program": "run-game.sh",
+        "requiredFiles": [
+          "kingpin.x86",
+          "main/pak0.pak"
+        ]
+      },
+      "windows": {
+        "steamAppId": 38430,
+        "gogId": 9,
+        "//installDirs": "Where the CD installs it.",
+        "installDirs": [
+          "{programFilesX86}/Kingpin"
+        ],
+        "program": "kingpin.exe",
+        "requiredFiles": [
+          "main/pak0.pak"
+        ]
+      }
     },
     "join": {
       "//arguments": "Each its own argument: run-game.sh recognises a join by \" +connect \".",
@@ -1755,7 +1769,7 @@
     "id": "quakeworld"
   },
   "rtcw": {
-    "format": 1,
+    "format": 3,
     "name": "Return to Castle Wolfenstein",
     "protocol": "quake3",
     "text": {
@@ -1819,15 +1833,30 @@
       }
     ],
     "launch": {
-      "desktopFiles": [
-        "id-linux-rtcw-mp.desktop"
-      ],
-      "installDir": "Games/id-linux",
-      "program": "rtcw-mp",
-      "requiredFiles": [
-        "kit/id-run",
-        "rtcw/.installed-rtcw-mp"
-      ]
+      "linux": {
+        "desktopFiles": [
+          "id-linux-rtcw-mp.desktop"
+        ],
+        "installDir": "Games/id-linux",
+        "program": "rtcw-mp",
+        "requiredFiles": [
+          "kit/id-run",
+          "rtcw/.installed-rtcw-mp"
+        ]
+      },
+      "windows": {
+        "steamAppId": 9010,
+        "//gogId": "The installable game; the store's 1443699418 is a pack without installers.",
+        "gogId": 1441704976,
+        "//installDirs": "Where the retail CD installs it.",
+        "installDirs": [
+          "{programFilesX86}/Return to Castle Wolfenstein"
+        ],
+        "program": "WolfMP.exe",
+        "requiredFiles": [
+          "Main/mp_pak0.pk3"
+        ]
+      }
     },
     "join": {
       "arguments": [
@@ -1920,7 +1949,7 @@
     "id": "rune"
   },
   "sin": {
-    "format": 1,
+    "format": 3,
     "name": "SiN",
     "protocol": "gamespy1",
     "protocolOptions": {
@@ -1948,17 +1977,27 @@
       "password": "password"
     },
     "launch": {
-      "//desktopFiles": "From Dominatrix's CD installer; its archive, which Steam and GOG owners fill with the game's files, comes with none.",
-      "desktopFiles": [
-        "rohit_itch_io-sin_1.desktop"
-      ],
-      "//installDir": "Where Dominatrix's CD installer puts the game for a user who is not root.",
-      "installDir": "sin",
-      "program": "sin",
-      "requiredFiles": [
-        "base/game.so",
-        "base/pak0.sin"
-      ]
+      "linux": {
+        "//desktopFiles": "From Dominatrix's CD installer; its archive, which Steam and GOG owners fill with the game's files, comes with none.",
+        "desktopFiles": [
+          "rohit_itch_io-sin_1.desktop"
+        ],
+        "//installDir": "Where Dominatrix's CD installer puts the game for a user who is not root.",
+        "installDir": "sin",
+        "program": "sin",
+        "requiredFiles": [
+          "base/game.so",
+          "base/pak0.sin"
+        ]
+      },
+      "windows": {
+        "steamAppId": 1313,
+        "gogId": 1207660343,
+        "program": "sin.exe",
+        "requiredFiles": [
+          "base/pak0.sin"
+        ]
+      }
     },
     "join": {
       "arguments": [
@@ -2385,7 +2424,7 @@
     "id": "tremulous"
   },
   "unreal": {
-    "format": 1,
+    "format": 3,
     "name": "Unreal",
     "protocol": "gamespy1",
     "//queryPortOffset": "Servers answer queries on the port after the one players join.",
@@ -2440,18 +2479,36 @@
       }
     ],
     "launch": {
-      "//desktopFiles": "From OldUnreal's installer, which passes the URL to the game.",
-      "desktopFiles": [
-        "OldUnreal-UnrealGold.desktop"
-      ],
-      "//installDir": "Where OldUnreal's installer puts the game, and its x86_64 binary.",
-      "installDir": ".local/share/OldUnreal/UnrealGold",
-      "program": "System64/unreal-bin-amd64",
-      "requiredFiles": [
-        "System/Core.u",
-        "System/Engine.u",
-        "System/Default.ini"
-      ]
+      "linux": {
+        "//desktopFiles": "From OldUnreal's installer, which passes the URL to the game.",
+        "desktopFiles": [
+          "OldUnreal-UnrealGold.desktop"
+        ],
+        "//installDir": "Where OldUnreal's installer puts the game, and its x86_64 binary.",
+        "installDir": ".local/share/OldUnreal/UnrealGold",
+        "program": "System64/unreal-bin-amd64",
+        "requiredFiles": [
+          "System/Core.u",
+          "System/Engine.u",
+          "System/Default.ini"
+        ]
+      },
+      "windows": {
+        "steamAppId": 13250,
+        "gogId": 1207658679,
+        "//installDirs": "Where OldUnreal's installer and the first CD put it, and where the Gold CD does.",
+        "installDirs": [
+          "{systemDrive}/Unreal",
+          "{systemDrive}/UnrealGold"
+        ],
+        "//program": "Every install has it; OldUnreal's 227 adds a 64-bit one in System64.",
+        "program": "System/Unreal.exe",
+        "requiredFiles": [
+          "System/Core.u",
+          "System/Engine.u",
+          "System/Default.ini"
+        ]
+      }
     },
     "join": {
       "//arguments": "The address is the game's URL; each option follows it after a '?'.",
@@ -2470,7 +2527,7 @@
     "id": "unreal"
   },
   "unvanquished": {
-    "format": 1,
+    "format": 3,
     "name": "Unvanquished",
     "protocol": "quake3",
     "text": {
@@ -2546,17 +2603,31 @@
       }
     ],
     "launch": {
-      "//desktopFiles": "From Flathub, the updater and the AUR; each passes its arguments to the game.",
-      "desktopFiles": [
-        "net.unvanquished.Unvanquished.desktop",
-        "unvanquished.desktop"
-      ],
-      "installDir": ".local/share/unvanquished/base",
-      "program": "updater",
-      "requiredFiles": [
-        "updater",
-        "daemon"
-      ]
+      "linux": {
+        "//desktopFiles": "From Flathub, the updater and the AUR; each passes its arguments to the game.",
+        "desktopFiles": [
+          "net.unvanquished.Unvanquished.desktop",
+          "unvanquished.desktop"
+        ],
+        "installDir": ".local/share/unvanquished/base",
+        "program": "updater",
+        "requiredFiles": [
+          "updater",
+          "daemon"
+        ]
+      },
+      "windows": {
+        "//installDirs": "Where the official updater installs it.",
+        "installDirs": [
+          "{programFiles}/Unvanquished"
+        ],
+        "//program": "The updater takes the unv:// URL; daemon.exe does not.",
+        "program": "updater.exe",
+        "requiredFiles": [
+          "updater.exe",
+          "daemon.exe"
+        ]
+      }
     },
     "join": {
       "//arguments": "The desktop entries and the updater take the server as one unv:// URL.",
@@ -2718,7 +2789,7 @@
     "id": "urbanterror"
   },
   "ut2004": {
-    "format": 1,
+    "format": 3,
     "name": "Unreal Tournament 2004",
     "protocol": "unreal2",
     "//queryPortOffset": "Servers answer queries on the port after the one players join.",
@@ -2811,20 +2882,37 @@
       }
     ],
     "launch": {
-      "//desktopFiles": "From OldUnreal's installer, the AUR and nixpkgs packages, and Flathub; each passes its arguments to the game.",
-      "desktopFiles": [
-        "OldUnreal-UT2004.desktop",
-        "ut2004.desktop",
-        "com.epicgames.ut2004.desktop"
-      ],
-      "//installDir": "Where OldUnreal's installer puts the game, and its x86_64 binary.",
-      "installDir": ".local/share/OldUnreal/UT2004",
-      "program": "System/UT2004",
-      "requiredFiles": [
-        "System/Core.u",
-        "System/Engine.u",
-        "System/Default.ini"
-      ]
+      "linux": {
+        "//desktopFiles": "From OldUnreal's installer, the AUR and nixpkgs packages, and Flathub; each passes its arguments to the game.",
+        "desktopFiles": [
+          "OldUnreal-UT2004.desktop",
+          "ut2004.desktop",
+          "com.epicgames.ut2004.desktop"
+        ],
+        "//installDir": "Where OldUnreal's installer puts the game, and its x86_64 binary.",
+        "installDir": ".local/share/OldUnreal/UT2004",
+        "program": "System/UT2004",
+        "requiredFiles": [
+          "System/Core.u",
+          "System/Engine.u",
+          "System/Default.ini"
+        ]
+      },
+      "windows": {
+        "steamAppId": 13230,
+        "gogId": 1207658691,
+        "//installDirs": "Where OldUnreal's installer puts it, and the retail DVD.",
+        "installDirs": [
+          "{systemDrive}/UnrealTournament2004",
+          "{systemDrive}/UT2004"
+        ],
+        "program": "System/UT2004.exe",
+        "requiredFiles": [
+          "System/Core.u",
+          "System/Engine.u",
+          "System/Default.ini"
+        ]
+      }
     },
     "join": {
       "//arguments": "The address is the game's URL; each option follows it after a '?'.",
@@ -2844,7 +2932,7 @@
     "id": "ut2004"
   },
   "ut99": {
-    "format": 1,
+    "format": 3,
     "name": "Unreal Tournament",
     "protocol": "gamespy1",
     "//queryPortOffset": "Servers answer queries on the port after the one players join.",
@@ -2910,18 +2998,34 @@
       }
     ],
     "launch": {
-      "//desktopFiles": "From OldUnreal's installer, which passes the URL to the game.",
-      "desktopFiles": [
-        "OldUnreal-UnrealTournament.desktop"
-      ],
-      "//installDir": "Where OldUnreal's installer puts the game, and its x86_64 binary.",
-      "installDir": ".local/share/OldUnreal/UnrealTournament",
-      "program": "System/ut-bin-amd64",
-      "requiredFiles": [
-        "System/Core.u",
-        "System/Engine.u",
-        "System/Default.ini"
-      ]
+      "linux": {
+        "//desktopFiles": "From OldUnreal's installer, which passes the URL to the game.",
+        "desktopFiles": [
+          "OldUnreal-UnrealTournament.desktop"
+        ],
+        "//installDir": "Where OldUnreal's installer puts the game, and its x86_64 binary.",
+        "installDir": ".local/share/OldUnreal/UnrealTournament",
+        "program": "System/ut-bin-amd64",
+        "requiredFiles": [
+          "System/Core.u",
+          "System/Engine.u",
+          "System/Default.ini"
+        ]
+      },
+      "windows": {
+        "steamAppId": 13240,
+        "gogId": 1207658692,
+        "//installDirs": "Where the CD and OldUnreal's installer put it.",
+        "installDirs": [
+          "{systemDrive}/UnrealTournament"
+        ],
+        "program": "System/UnrealTournament.exe",
+        "requiredFiles": [
+          "System/Core.u",
+          "System/Engine.u",
+          "System/Default.ini"
+        ]
+      }
     },
     "join": {
       "//arguments": "The address is the game's URL; each option follows it after a '?'.",
@@ -3166,5 +3270,290 @@
       }
     },
     "id": "xonotic"
+  },
+  "nolf": {
+    "format": 1,
+    "name": "The Operative: No One Lives Forever",
+    "protocol": "gamespy1",
+    "text": {
+      "encoding": "utf8OrWindows1252"
+    },
+    "protocolOptions": {
+      "masterGame": "nolf"
+    },
+    "masters": [
+      {
+        "host": "master.openspy.net",
+        "port": 28900
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password"
+    },
+    "modes": [
+      {
+        "key": "gametype",
+        "value": "deathmatch",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "H.A.R.M. vs. UNITY",
+        "label": "H.A.R.M. vs. UNITY"
+      }
+    ],
+    "join": {
+      "arguments": [
+        "-jointype",
+        "internet",
+        "-join",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "-jointype",
+        "internet",
+        "-join",
+        "{address}",
+        "-password",
+        "{password}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \""
+      }
+    },
+    "id": "nolf"
+  },
+  "nolf2": {
+    "format": 1,
+    "name": "No One Lives Forever 2",
+    "protocol": "gamespy1",
+    "//queryPortOffset": "Servers answer queries on the port after the one players join.",
+    "queryPortOffset": 1,
+    "text": {
+      "encoding": "utf8OrWindows1252"
+    },
+    "protocolOptions": {
+      "masterGame": "nolf2"
+    },
+    "masters": [
+      {
+        "host": "master.openspy.net",
+        "port": 28900
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password"
+    },
+    "modes": [
+      {
+        "key": "gametype",
+        "value": "DeathMatch",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "Cooperative",
+        "label": "Cooperative"
+      },
+      {
+        "key": "gametype",
+        "value": "DoomsDay",
+        "label": "Doomsday"
+      }
+    ],
+    "join": {
+      "arguments": [
+        "-jointype",
+        "internet",
+        "-join",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "-jointype",
+        "internet",
+        "-join",
+        "{address}",
+        "-password",
+        "{password}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \""
+      }
+    },
+    "id": "nolf2"
+  },
+  "swat4": {
+    "format": 1,
+    "name": "SWAT 4",
+    "protocol": "gamespy1",
+    "//queryPortOffset": "Servers answer queries on the port after the one players join.",
+    "queryPortOffset": 1,
+    "text": {
+      "encoding": "utf8OrWindows1252"
+    },
+    "protocolOptions": {
+      "masterGame": "swat4"
+    },
+    "masters": [
+      {
+        "host": "master.openspy.net",
+        "port": 28900
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password",
+      "mods": [
+        "gamevariant"
+      ]
+    },
+    "modes": [
+      {
+        "key": "gametype",
+        "value": "CO-OP",
+        "label": "Cooperative"
+      },
+      {
+        "key": "gametype",
+        "value": "Barricaded Suspects",
+        "label": "Barricaded Suspects"
+      },
+      {
+        "key": "gametype",
+        "value": "VIP Escort",
+        "label": "VIP Escort"
+      },
+      {
+        "key": "gametype",
+        "value": "Rapid Deployment",
+        "label": "Rapid Deployment"
+      },
+      {
+        "key": "gametype",
+        "value": "Smash And Grab",
+        "label": "Smash and Grab"
+      }
+    ],
+    "join": {
+      "arguments": [
+        "{address}"
+      ],
+      "passwordArguments": [
+        "{address}?password={password}"
+      ],
+      "password": {
+        "maxLength": 1024,
+        "refusedCharacters": " ?#"
+      }
+    },
+    "id": "swat4"
+  },
+  "vietcong": {
+    "format": 1,
+    "name": "Vietcong",
+    "protocol": "gamespy1",
+    "//queryPortOffset": "A server usually answers queries 10000 ports above the one players join (15425 for 5425); a host running several may pair them otherwise.",
+    "queryPortOffset": 10000,
+    "text": {
+      "encoding": "utf8OrWindows1252"
+    },
+    "protocolOptions": {
+      "masterGame": "vietcong"
+    },
+    "masters": [
+      {
+        "host": "master.openspy.net",
+        "port": 28900
+      }
+    ],
+    "keys": {
+      "hostname": "hostname",
+      "map": "mapname",
+      "numPlayers": "numplayers",
+      "maxPlayers": "maxplayers",
+      "password": "password"
+    },
+    "//modes": "Servers send co-op as Coop, COOP, coop or CooP, and a value matches only as written.",
+    "modes": [
+      {
+        "key": "gametype",
+        "value": "CTF",
+        "label": "Capture the Flag"
+      },
+      {
+        "key": "gametype",
+        "value": "ATG",
+        "label": "Assault on Team Goal"
+      },
+      {
+        "key": "gametype",
+        "value": "ATG_B",
+        "label": "Assault on Team Goal"
+      },
+      {
+        "key": "gametype",
+        "value": "DM",
+        "label": "Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "TDM",
+        "label": "Team Deathmatch"
+      },
+      {
+        "key": "gametype",
+        "value": "Coop",
+        "label": "Co-op"
+      },
+      {
+        "key": "gametype",
+        "value": "COOP",
+        "label": "Co-op"
+      },
+      {
+        "key": "gametype",
+        "value": "coop",
+        "label": "Co-op"
+      },
+      {
+        "key": "gametype",
+        "value": "CooP",
+        "label": "Co-op"
+      }
+    ],
+    "join": {
+      "arguments": [
+        "-jointype",
+        "internet",
+        "-join",
+        "{address}"
+      ],
+      "passwordArguments": [
+        "-jointype",
+        "internet",
+        "-join",
+        "{address}",
+        "-password",
+        "{password}"
+      ],
+      "password": {
+        "maxLength": 63,
+        "refusedCharacters": " \""
+      }
+    },
+    "id": "vietcong"
   }
 }
