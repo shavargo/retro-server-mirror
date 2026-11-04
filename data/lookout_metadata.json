@@ -2938,7 +2938,12 @@
     "//queryPortOffset": "Servers answer queries on the port after the one players join.",
     "queryPortOffset": 1,
     "text": {
-      "encoding": "utf8OrWindows1252"
+      "encoding": "utf8OrWindows1252",
+      "//colourCodes": "A few UT 469 servers colour their names as Unreal 227 does, with ESC and then red, green and blue.",
+      "colourCodes": {
+        "escape": "\u001b",
+        "codes": "rgb"
+      }
     },
     "protocolOptions": {
       "masterGame": "ut"
