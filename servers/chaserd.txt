@@ -1,9 +1,9 @@
 # Server address list for Chaser Demo (chaserd)
-# Last fetch (UTC): 2026-11-04T12:02:10Z
+# Last fetch (UTC): 2026-11-05T12:02:03Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
-# Active servers found: 5
+# Active servers found: 8
 # Sources:
-#   - cache: 2 found
+#   - cache: 5 found
 #   - gamespy1://master.openspy.net:28900: 5 found
 #   - gamespy1://master.333networks.com:28900: 0 found
 # Format: ip:port
@@ -11,5 +11,8 @@
 79.219.135.46:3000
 79.219.135.46:3001
 79.219.135.46:3002
+79.219.138.6:3000
+79.219.138.6:3001
+79.219.138.6:3002
 165.232.113.170:8778
 165.232.113.170:8779

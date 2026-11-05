@@ -1,5 +1,5 @@
 # Server address list for No One Lives Forever 2 (nolf2)
-# Last fetch (UTC): 2026-11-04T12:02:10Z
+# Last fetch (UTC): 2026-11-05T12:02:03Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
 # Active servers found: 10
 # Sources:

@@ -1,5 +1,5 @@
 # Server address list for QuakeWorld (qw)
-# Last fetch (UTC): 2026-11-04T12:02:10Z
+# Last fetch (UTC): 2026-11-05T12:02:03Z
 # Category: idTech / Quake | Protocol: quakeworld | Default Port: 27500
 # Active servers found: 809
 # Sources:
