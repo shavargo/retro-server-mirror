@@ -1,13 +1,15 @@
 # Server address list for Midnight Club 3 DUB Edition (PS2) (mclub3ps2)
-# Last fetch (UTC): 2026-11-05T12:02:03Z
+# Last fetch (UTC): 2026-11-06T12:02:07Z
 # Category: Console | Protocol: gamespy1 | Default Port: 6500
-# Active servers found: 3
+# Active servers found: 5
 # Sources:
 #   - cache: 3 found
-#   - gamespy1://master.openspy.net:28900: 0 found
+#   - gamespy1://master.openspy.net:28900: 2 found
 #   - gamespy1://master.333networks.com:28900: 0 found
 # Format: ip:port
 #
 5.163.90.194:41363
 5.163.90.194:47143
+45.174.239.108:3658
+51.235.172.67:62860
 143.255.180.126:43030

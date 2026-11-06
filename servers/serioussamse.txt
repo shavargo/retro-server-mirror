@@ -1,11 +1,11 @@
 # Server address list for Serious Sam: The Second Encounter (serioussamse)
-# Last fetch (UTC): 2026-11-05T12:02:03Z
+# Last fetch (UTC): 2026-11-06T12:02:07Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
-# Active servers found: 109
+# Active servers found: 118
 # Sources:
-#   - cache: 107 found
+#   - cache: 109 found
 #   - gamespy1://master.openspy.net:28900: 1 found
-#   - gamespy1://master.333networks.com:28900: 68 found
+#   - gamespy1://master.333networks.com:28900: 79 found
 # Format: ip:port
 #
 5.136.24.213:25601
@@ -35,6 +35,7 @@
 85.173.114.155:25607
 91.98.228.35:25611
 91.99.75.33:25601
+94.153.10.79:25601
 109.252.175.192:28479
 116.202.216.176:27971
 116.202.216.176:27975
@@ -98,6 +99,14 @@
 116.202.216.176:28535
 116.202.216.176:28555
 116.202.216.176:28563
+136.169.233.64:25605
+136.169.233.64:25607
+136.169.233.64:25611
+136.169.233.64:25620
+136.169.233.64:25638
+136.169.233.64:25646
+136.169.233.64:25695
+136.169.233.64:25699
 169.224.2.29:25601
 178.141.242.210:25601
 178.214.245.73:25605

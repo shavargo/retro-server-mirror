@@ -1,11 +1,11 @@
 # Server address list for Unreal (unreal)
-# Last fetch (UTC): 2026-11-05T12:02:03Z
+# Last fetch (UTC): 2026-11-06T12:02:07Z
 # Category: Unreal Engine | Protocol: gamespy1 | Default Port: 7778
-# Active servers found: 102
+# Active servers found: 106
 # Sources:
-#   - cache: 98 found
-#   - gamespy1://master.333networks.com:28900: 84 found
-#   - gamespy1://master.openspy.net:28900: 60 found
+#   - cache: 102 found
+#   - gamespy1://master.333networks.com:28900: 82 found
+#   - gamespy1://master.openspy.net:28900: 58 found
 # Format: ip:port
 #
 31.20.113.73:7777
@@ -23,6 +23,9 @@
 46.142.84.128:22222
 46.142.84.128:25555
 46.142.84.128:27777
+46.142.85.45:22222
+46.142.85.45:25555
+46.142.85.45:27777
 46.142.85.65:22222
 46.142.85.65:25555
 46.142.85.65:27777
@@ -47,6 +50,7 @@
 84.181.31.85:7030
 84.181.31.85:7040
 87.106.59.103:7777
+87.123.84.120:7777
 87.123.86.174:7777
 87.123.87.248:7777
 87.123.89.175:7777
