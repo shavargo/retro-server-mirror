@@ -1,5 +1,5 @@
 # Server address list for Vietcong 2 (vietcong2)
-# Last fetch (UTC): 2026-11-06T12:02:07Z
+# Last fetch (UTC): 2026-11-07T12:02:06Z
 # Category: GameSpy PC Classic | Protocol: gamespy2 | Default Port: 6500
 # Active servers found: 2
 # Sources:

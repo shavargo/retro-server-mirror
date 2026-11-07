@@ -1,10 +1,10 @@
 # Server address list for Return to Castle Wolfenstein (wolf)
-# Last fetch (UTC): 2026-11-06T12:02:07Z
+# Last fetch (UTC): 2026-11-07T12:02:06Z
 # Category: idTech / Quake | Protocol: quake3 | Default Port: 27960
-# Active servers found: 113
+# Active servers found: 115
 # Sources:
-#   - cache: 111 found
-#   - quake3://wolfmaster.idsoftware.com:27950: 69 found
+#   - cache: 113 found
+#   - quake3://wolfmaster.idsoftware.com:27950: 66 found
 # Format: ip:port
 #
 5.252.102.102:27960
@@ -73,12 +73,14 @@
 82.67.47.162:26505
 82.196.100.250:27970
 84.84.15.135:1032
+84.84.15.135:1033
 84.84.15.135:27962
 85.190.105.229:27961
 87.162.36.171:27962
 89.163.161.190:27975
 91.98.228.35:27960
 93.239.56.203:27962
+95.102.155.253:27960
 96.255.124.237:27961
 98.253.181.0:27968
 104.148.183.178:1033

@@ -1,14 +1,15 @@
 # Server address list for Battlefield: Vietnam (bfvietnam)
-# Last fetch (UTC): 2026-11-06T12:02:07Z
+# Last fetch (UTC): 2026-11-07T12:02:05Z
 # Category: EA / DICE | Protocol: gamespy2 | Default Port: 6500
-# Active servers found: 12
+# Active servers found: 13
 # Sources:
 #   - cache: 12 found
-#   - gamespy2://master.openspy.net:28900: 9 found
+#   - gamespy2://master.openspy.net:28900: 10 found
 #   - gamespy2://master.333networks.com:28900: 0 found
 # Format: ip:port
 #
 2.56.99.191:23000
+51.154.37.24:23000
 51.222.249.54:23010
 76.135.89.32:23003
 85.134.107.214:23000

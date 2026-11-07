@@ -1,5 +1,5 @@
 # Server address list for Contract J.A.C.K. (contractjack)
-# Last fetch (UTC): 2026-11-06T12:02:07Z
+# Last fetch (UTC): 2026-11-07T12:02:05Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
 # Active servers found: 5
 # Sources:

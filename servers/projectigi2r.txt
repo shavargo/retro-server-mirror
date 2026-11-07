@@ -1,5 +1,5 @@
 # Server address list for IGI 2: Covert Strike (projectigi2r)
-# Last fetch (UTC): 2026-11-06T12:02:07Z
+# Last fetch (UTC): 2026-11-07T12:02:05Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
 # Active servers found: 9
 # Sources:

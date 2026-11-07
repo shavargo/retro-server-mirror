@@ -1,11 +1,11 @@
 # Server address list for Nerf Arena Blast (nerfarena)
-# Last fetch (UTC): 2026-11-06T12:02:07Z
+# Last fetch (UTC): 2026-11-07T12:02:06Z
 # Category: Unreal Engine | Protocol: unreal | Default Port: 6500
 # Active servers found: 1
 # Sources:
 #   - cache: 1 found
 #   - unreal://master.openspy.net:28900: 0 found
-#   - unreal://master.333networks.com:28900: 1 found
+#   - unreal://master.333networks.com:28900: 0 found
 # Format: ip:port
 #
 51.222.14.233:4445
