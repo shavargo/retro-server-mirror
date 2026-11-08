@@ -1,5 +1,5 @@
 # Server address list for Sin (sin)
-# Last fetch (UTC): 2026-11-07T12:02:06Z
+# Last fetch (UTC): 2026-11-08T12:02:03Z
 # Category: idTech / Quake | Protocol: gamespy1 | Default Port: 6500
 # Active servers found: 3
 # Sources:

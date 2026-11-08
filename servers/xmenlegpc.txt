@@ -1,10 +1,10 @@
 # Server address list for X-Men Legends PC (xmenlegpc)
-# Last fetch (UTC): 2026-11-07T12:02:06Z
+# Last fetch (UTC): 2026-11-08T12:02:03Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
 # Active servers found: 1
 # Sources:
 #   - cache: 1 found
-#   - gamespy1://master.openspy.net:28900: 1 found
+#   - gamespy1://master.openspy.net:28900: 0 found
 #   - gamespy1://master.333networks.com:28900: 0 found
 # Format: ip:port
 #
