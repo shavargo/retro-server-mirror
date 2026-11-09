@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-08T12:02:03Z",
-  "total_servers": 15892,
+  "updated_at": "2026-11-09T12:02:17Z",
+  "total_servers": 16761,
   "total_games": 4841,
-  "active_games_count": 96,
+  "active_games_count": 97,
   "games": {
     "1001MinigolfChalle": {
       "name": "1001 Minigolf Challenge",
@@ -2605,7 +2605,7 @@
       "name": "Battlefield: Vietnam",
       "category": "EA / DICE",
       "protocol": "gamespy2",
-      "server_count": 13,
+      "server_count": 14,
       "file": "servers/bfvietnam.txt"
     },
     "bfvietnamt": {
@@ -4299,14 +4299,14 @@
       "name": "Call of Duty",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 203,
+      "server_count": 266,
       "file": "servers/callofduty.txt"
     },
     "cod": {
       "name": "Call of Duty",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 205,
+      "server_count": 268,
       "file": "servers/cod.txt"
     },
     "callofdutyps2d": {
@@ -4327,7 +4327,7 @@
       "name": "Call of Duty 2",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 855,
+      "server_count": 894,
       "file": "servers/cod2.txt"
     },
     "codbigredps2": {
@@ -4348,7 +4348,7 @@
       "name": "Call of Duty 4: Modern Warfare",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 3147,
+      "server_count": 3350,
       "file": "servers/cod4.txt"
     },
     "callofduty4d2d": {
@@ -4474,7 +4474,7 @@
       "name": "Call of Duty: United Offensive",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 352,
+      "server_count": 374,
       "file": "servers/coduo.txt"
     },
     "codwawbeta": {
@@ -7848,7 +7848,7 @@
       "name": "Deus Ex",
       "category": "Unreal Engine",
       "protocol": "gamespy1",
-      "server_count": 14,
+      "server_count": 15,
       "file": "servers/deusex.txt"
     },
     "deusexiw": {
@@ -11691,7 +11691,7 @@
       "name": "Global Operations",
       "category": "GameSpy PC Classic",
       "protocol": "gamespy1",
-      "server_count": 13,
+      "server_count": 14,
       "file": "servers/globalops.txt"
     },
     "globaloperations": {
@@ -14190,7 +14190,7 @@
       "name": "James Bond: Nightfire",
       "category": "GameSpy PC Classic",
       "protocol": "gamespy1",
-      "server_count": 12,
+      "server_count": 14,
       "file": "servers/jbnightfire.txt"
     },
     "jamestownlegendoft": {
@@ -16934,7 +16934,7 @@
       "name": "Medal of Honor: Allied Assault",
       "category": "idTech / Quake",
       "protocol": "gamespy1",
-      "server_count": 541,
+      "server_count": 584,
       "file": "servers/mohaa.txt"
     },
     "medalofhonoralliedassault": {
@@ -16955,7 +16955,7 @@
       "name": "Medal of Honor: Allied Assault Breakthrough",
       "category": "idTech / Quake",
       "protocol": "gamespy1",
-      "server_count": 536,
+      "server_count": 579,
       "file": "servers/mohaab.txt"
     },
     "medalofhonoralliedassaultbreakthrough": {
@@ -17004,7 +17004,7 @@
       "name": "Medal of Honor: Allied Assault Spearhead Demo",
       "category": "idTech / Quake",
       "protocol": "gamespy1",
-      "server_count": 535,
+      "server_count": 578,
       "file": "servers/mohaas.txt"
     },
     "mohaabmac": {
@@ -20210,7 +20210,7 @@
       "name": "OpenArena",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 218,
+      "server_count": 236,
       "file": "servers/openarena.txt"
     },
     "openseasonds": {
@@ -21379,7 +21379,7 @@
       "name": "Postal 2",
       "category": "Unreal Engine",
       "protocol": "unreal",
-      "server_count": 225,
+      "server_count": 240,
       "file": "servers/postal2.txt"
     },
     "postal2d": {
@@ -22065,21 +22065,21 @@
       "name": "Quake III Arena",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 2480,
+      "server_count": 2632,
       "file": "servers/quake3.txt"
     },
     "q3a": {
       "name": "Quake III Arena",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 2169,
+      "server_count": 2321,
       "file": "servers/q3a.txt"
     },
     "quake3arena": {
       "name": "Quake III Arena",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 2167,
+      "server_count": 2319,
       "file": "servers/quake3arena.txt"
     },
     "quake1": {
@@ -22898,7 +22898,7 @@
       "name": "Return to Castle Wolfenstein",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 127,
+      "server_count": 135,
       "file": "servers/rtcw.txt"
     },
     "returntocastlewolfenstein": {
@@ -22912,7 +22912,7 @@
       "name": "Return to Castle Wolfenstein",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 118,
+      "server_count": 126,
       "file": "servers/wolf.txt"
     },
     "rtcwtest": {
@@ -23549,7 +23549,7 @@
       "name": "Rune Demo",
       "category": "Unreal Engine",
       "protocol": "gamespy1",
-      "server_count": 40,
+      "server_count": 41,
       "file": "servers/rune.txt"
     },
     "runedemo": {
@@ -23969,8 +23969,8 @@
       "name": "Saturday Night Speedway",
       "category": "GameSpy PC Classic",
       "protocol": "gamespy1",
-      "server_count": 0,
-      "file": null
+      "server_count": 1,
+      "file": "servers/saturdayns.txt"
     },
     "saturdaynsd": {
       "name": "Saturday Night Speedway Demo",
@@ -25019,7 +25019,7 @@
       "name": "Serious Sam: The Second Encounter",
       "category": "GameSpy PC Classic",
       "protocol": "gamespy1",
-      "server_count": 133,
+      "server_count": 139,
       "file": "servers/serioussamse.txt"
     },
     "SpyNote": {
@@ -25775,7 +25775,7 @@
       "name": "Soldier of Fortune II: Double Helix",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 60,
+      "server_count": 62,
       "file": "servers/sof2.txt"
     },
     "sofpayback": {
@@ -26601,7 +26601,7 @@
       "name": "Star Trek: Voyager - Elite Force",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 57,
+      "server_count": 61,
       "file": "servers/eliteforce.txt"
     },
     "startrekvoyagereliteforce": {
@@ -26720,7 +26720,7 @@
       "name": "Star Wars Jedi Knight II: Jedi Outcast Multiplayer",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 218,
+      "server_count": 233,
       "file": "servers/jk2.txt"
     },
     "starwarsjediknightjediacademy": {
@@ -26734,7 +26734,7 @@
       "name": "Star Wars Jedi Knight: Jedi Academy",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 517,
+      "server_count": 546,
       "file": "servers/jka.txt"
     },
     "rebellion": {
@@ -26748,7 +26748,7 @@
       "name": "Star Wars Republic Commando",
       "category": "GameSpy PC Classic",
       "protocol": "gamespy1",
-      "server_count": 11,
+      "server_count": 21,
       "file": "servers/swrcommando.txt"
     },
     "swrcommandod": {
@@ -26832,7 +26832,7 @@
       "name": "Star Wars: Battlefront - Elite Squadron (PSP)",
       "category": "GameSpy PC Classic",
       "protocol": "gamespy1",
-      "server_count": 1,
+      "server_count": 2,
       "file": "servers/swbfespsp.txt"
     },
     "swbf3pspam": {
@@ -28057,7 +28057,7 @@
       "name": "SWAT 4",
       "category": "Unreal Engine",
       "protocol": "gamespy1",
-      "server_count": 100,
+      "server_count": 101,
       "file": "servers/swat4.txt"
     },
     "swat4d": {
@@ -28197,14 +28197,14 @@
       "name": "Tactical Ops: Assault on Terror",
       "category": "Unreal Engine",
       "protocol": "gamespy1",
-      "server_count": 1089,
+      "server_count": 1109,
       "file": "servers/tacticalops.txt"
     },
     "ut": {
       "name": "Tactical Ops: Assault on Terror",
       "category": "Unreal Engine",
       "protocol": "gamespy1",
-      "server_count": 1105,
+      "server_count": 1125,
       "file": "servers/ut.txt"
     },
     "takameijinwii": {
@@ -29793,7 +29793,7 @@
       "name": "THUG Pro",
       "category": "GameSpy PC Classic",
       "protocol": "gamespy1",
-      "server_count": 45,
+      "server_count": 51,
       "file": "servers/thugpro.txt"
     },
     "Tidalis": {
@@ -30164,7 +30164,7 @@
       "name": "Tony Hawk: Pro Skater 4 (PC)",
       "category": "GameSpy PC Classic",
       "protocol": "gamespy1",
-      "server_count": 4,
+      "server_count": 5,
       "file": "servers/thps4pc.txt"
     },
     "thps4pcr": {
@@ -31284,7 +31284,7 @@
       "name": "Unreal",
       "category": "Unreal Engine",
       "protocol": "gamespy1",
-      "server_count": 113,
+      "server_count": 118,
       "file": "servers/unreal.txt"
     },
     "unreal2d": {
@@ -31354,7 +31354,7 @@
       "name": "Unreal Tournament 2004",
       "category": "Unreal Engine",
       "protocol": "unreal2",
-      "server_count": 824,
+      "server_count": 842,
       "file": "servers/ut2004.txt"
     },
     "unrealtournament2004": {
@@ -31501,7 +31501,7 @@
       "name": "Unreal Tournament 99",
       "category": "Unreal Engine",
       "protocol": "gamespy1",
-      "server_count": 1105,
+      "server_count": 1125,
       "file": "servers/ut99.txt"
     },
     "utdc": {
@@ -31564,7 +31564,7 @@
       "name": "Urban Terror",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 429,
+      "server_count": 453,
       "file": "servers/urbanterror.txt"
     },
     "URUagesbeyondMYST": {
@@ -32369,7 +32369,7 @@
       "name": "Warsow",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 132,
+      "server_count": 144,
       "file": "servers/warsow.txt"
     },
     "wz2100demo": {
@@ -32747,21 +32747,21 @@
       "name": "Wolfenstein: Enemy Territory",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 1123,
+      "server_count": 1196,
       "file": "servers/et.txt"
     },
     "wolfet": {
       "name": "Wolfenstein: Enemy Territory",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 1025,
+      "server_count": 1098,
       "file": "servers/wolfet.txt"
     },
     "enemyterritory": {
       "name": "Wolfenstein: Enemy Territory",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 1026,
+      "server_count": 1099,
       "file": "servers/enemyterritory.txt"
     },
     "rtcwett": {
@@ -33587,7 +33587,7 @@
       "name": "Xonotic",
       "category": "idTech / Quake",
       "protocol": "quake3",
-      "server_count": 1108,
+      "server_count": 1190,
       "file": "servers/xonotic.txt"
     },
     "XpandRally": {
