@@ -1,10 +1,10 @@
 # Server address list for Tremulous (tremulous)
-# Last fetch (UTC): 2026-11-09T12:02:17Z
+# Last fetch (UTC): 2026-11-10T12:01:53Z
 # Category: idTech / Quake | Protocol: quake3 | Default Port: 30710
 # Active servers found: 14
 # Sources:
 #   - cache: 14 found
-#   - quake3://master.tremulous.net:30700: 10 found
+#   - quake3://master.tremulous.net:30700: 8 found
 # Format: ip:port
 #
 66.94.98.116:30720
