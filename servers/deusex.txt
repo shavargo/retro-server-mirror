@@ -1,9 +1,9 @@
 # Server address list for Deus Ex (deusex)
-# Last fetch (UTC): 2026-11-10T12:01:53Z
+# Last fetch (UTC): 2026-11-11T12:02:03Z
 # Category: Unreal Engine | Protocol: gamespy1 | Default Port: 6500
-# Active servers found: 16
+# Active servers found: 17
 # Sources:
-#   - cache: 15 found
+#   - cache: 16 found
 #   - gamespy1://master.333networks.com:28900: 6 found
 #   - gamespy1://master.openspy.net:28900: 0 found
 # Format: ip:port
@@ -18,6 +18,7 @@
 46.142.84.176:17577
 46.142.85.45:17577
 46.142.85.65:17577
+46.142.85.209:17577
 86.147.82.216:7790
 89.70.223.80:7790
 207.180.246.62:7760

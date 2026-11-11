@@ -1,20 +1,20 @@
 # Server address list for Kingpin: Life of Crime (kingpin)
-# Last fetch (UTC): 2026-11-10T12:01:53Z
+# Last fetch (UTC): 2026-11-11T12:02:03Z
 # Category: idTech / Quake | Protocol: gamespy1 | Default Port: 6500
-# Active servers found: 86
+# Active servers found: 90
 # Sources:
-#   - cache: 82 found
-#   - http://hambloch.com/kingpin/servers_active.php?gameport=1: 34 found
-#   - q2udp://master.hambloch.com:27900: 38 found
+#   - cache: 86 found
+#   - http://hambloch.com/kingpin/servers_active.php?gameport=1: 33 found
+#   - q2udp://master.hambloch.com:27900: 34 found
 #   - q2udp://master.shavargo.com:27900: 4 found
-#   - gamespy1://master.kingpin.info:28900: 38 found
-#   - gamespy1://master1.kingpin.info:28900: 29 found
-#   - gamespy1://master2.kingpin.info:28900: 29 found
-#   - gamespy1://master3.kingpin.info:28900: 29 found
+#   - gamespy1://master.kingpin.info:28900: 34 found
+#   - gamespy1://master1.kingpin.info:28900: 28 found
+#   - gamespy1://master2.kingpin.info:28900: 28 found
+#   - gamespy1://master3.kingpin.info:28900: 28 found
 #   - gamespy1://master4.kingpin.info:28900: 4 found
-#   - gamespy1://master.errorist.eu:28900: 29 found
-#   - gamespy1://master.333networks.com:28900: 29 found
-#   - gamespy1://master.frag-net.com:28900: 29 found
+#   - gamespy1://master.errorist.eu:28900: 28 found
+#   - gamespy1://master.333networks.com:28900: 28 found
+#   - gamespy1://master.frag-net.com:28900: 28 found
 #   - gamespy1://master.openspy.net:28900: 0 found
 # Format: ip:port
 #
@@ -50,6 +50,10 @@
 92.41.176.112:47579
 92.41.176.112:47598
 92.41.176.112:47608
+93.226.88.91:31510
+93.226.88.91:31512
+93.226.88.91:31520
+93.226.88.91:31522
 93.226.95.136:31510
 93.226.95.136:31512
 93.226.95.136:31520

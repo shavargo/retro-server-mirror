@@ -1,5 +1,5 @@
 # Server address list for The Operative: No One Lives Forever (nolf)
-# Last fetch (UTC): 2026-11-10T12:01:53Z
+# Last fetch (UTC): 2026-11-11T12:02:03Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
 # Active servers found: 5
 # Sources:
