@@ -1,13 +1,14 @@
 # Server address list for Crysis (PC) (crysis)
-# Last fetch (UTC): 2026-11-11T12:02:03Z
+# Last fetch (UTC): 2026-11-12T12:01:59Z
 # Category: GameSpy PC Classic | Protocol: gamespy2 | Default Port: 6500
-# Active servers found: 3
+# Active servers found: 4
 # Sources:
 #   - cache: 3 found
-#   - gamespy2://master.openspy.net:28900: 0 found
+#   - gamespy2://master.openspy.net:28900: 1 found
 #   - gamespy2://master.333networks.com:28900: 0 found
 # Format: ip:port
 #
 76.146.66.88:27900
 76.146.66.88:29910
 76.146.66.88:64087
+159.26.103.137:62627

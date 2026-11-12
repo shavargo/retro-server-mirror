@@ -1,5 +1,5 @@
 # Server address list for Need For Speed: Hot Pursuit 2 (nfs6)
-# Last fetch (UTC): 2026-11-11T12:02:03Z
+# Last fetch (UTC): 2026-11-12T12:01:59Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
 # Active servers found: 2
 # Sources:
