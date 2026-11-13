@@ -1,13 +1,14 @@
 # Server address list for Saint's Row 2 (PC) (srow2pc)
-# Last fetch (UTC): 2026-11-12T12:01:59Z
+# Last fetch (UTC): 2026-11-13T12:01:50Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 0
-# Active servers found: 25
+# Active servers found: 27
 # Sources:
-#   - cache: 24 found
-#   - gamespy1://master.openspy.net:28900: 2 found
+#   - cache: 25 found
+#   - gamespy1://master.openspy.net:28900: 3 found
 #   - gamespy1://master.333networks.com:28900: 0 found
 # Format: ip:port
 #
+1.39.176.8:12534
 27.49.46.49:6600
 35.149.253.160:52395
 42.4.34.185:6600
@@ -30,6 +31,7 @@
 152.231.107.150:41416
 172.91.249.153:6600
 175.35.208.235:6600
+176.254.108.108:6600
 183.23.66.125:53974
 189.219.54.67:6600
 216.30.159.41:24665

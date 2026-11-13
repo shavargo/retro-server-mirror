@@ -1,5 +1,5 @@
 # Server address list for Deer Hunter 2005 (dh2005)
-# Last fetch (UTC): 2026-11-12T12:01:59Z
+# Last fetch (UTC): 2026-11-13T12:01:50Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
 # Active servers found: 4
 # Sources:
