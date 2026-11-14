@@ -1,12 +1,13 @@
 # Server address list for WWE Smackdown vs RAW (PS2) Retail (smackdnps2r)
-# Last fetch (UTC): 2026-11-13T12:01:50Z
+# Last fetch (UTC): 2026-11-14T12:01:52Z
 # Category: Console | Protocol: gamespy1 | Default Port: 6500
-# Active servers found: 2
+# Active servers found: 3
 # Sources:
 #   - cache: 2 found
-#   - gamespy1://master.openspy.net:28900: 0 found
+#   - gamespy1://master.openspy.net:28900: 1 found
 #   - gamespy1://master.333networks.com:28900: 0 found
 # Format: ip:port
 #
 151.70.3.251:62821
 151.70.3.251:62830
+200.233.244.33:6500

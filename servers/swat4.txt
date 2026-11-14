@@ -1,10 +1,10 @@
 # Server address list for SWAT 4 (swat4)
-# Last fetch (UTC): 2026-11-13T12:01:50Z
+# Last fetch (UTC): 2026-11-14T12:01:52Z
 # Category: Unreal Engine | Protocol: gamespy1 | Default Port: 6500
-# Active servers found: 111
+# Active servers found: 112
 # Sources:
-#   - cache: 110 found
-#   - gamespy1://master.openspy.net:28900: 51 found
+#   - cache: 111 found
+#   - gamespy1://master.openspy.net:28900: 50 found
 #   - gamespy1://master.333networks.com:28900: 0 found
 # Format: ip:port
 #
@@ -93,6 +93,7 @@
 157.90.16.68:10481
 167.57.198.163:10481
 167.57.198.194:10480
+167.60.166.87:10480
 167.61.203.128:10480
 172.93.111.152:10480
 172.96.172.201:10480

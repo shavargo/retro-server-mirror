@@ -1,10 +1,10 @@
 # Server address list for James Bond: Nightfire (jbnightfire)
-# Last fetch (UTC): 2026-11-13T12:01:50Z
+# Last fetch (UTC): 2026-11-14T12:01:52Z
 # Category: GameSpy PC Classic | Protocol: gamespy1 | Default Port: 6500
 # Active servers found: 16
 # Sources:
 #   - cache: 16 found
-#   - gamespy1://master.openspy.net:28900: 12 found
+#   - gamespy1://master.openspy.net:28900: 11 found
 #   - gamespy1://master.333networks.com:28900: 0 found
 # Format: ip:port
 #
